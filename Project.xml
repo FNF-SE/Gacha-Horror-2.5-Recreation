@@ -38,8 +38,12 @@
 	<assets path="assets" />
 	<assets path="images-astc" rename="assets/shared/images" if="ASTC" />
 	<assets path="images-ktx" rename="assets/shared/images" if="ETC2" />
-	<!-- <assets path="images-ktx2" rename="assets/shared/images" embed="true" if="S3TC" /> -->
+	<assets path="images-ktx2" rename="assets/shared/images" embed="true" if="S3TC" />
 	<assets path="images-png" rename="assets/shared/images" embed="true" if="PNG" />
+	
+	<define name="PNG" if="display" />
+	<define name="NO_TEXTURE_FORMAT" unless="ASTC || ETC2 || S3TC || PNG" />
+	<error if="NO_TEXTURE_FORMAT" value="No texture format defined! Please define one of: -D ASTC, -D ETC2, -D S3TC, or -D PNG" />
 
 	<!-- _______________________________ Libraries ______________________________ -->
 

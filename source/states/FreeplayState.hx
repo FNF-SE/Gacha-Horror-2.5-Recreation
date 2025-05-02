@@ -76,7 +76,7 @@ class FreeplayState extends MusicBeatState
 		var leButton:String;
 		var leX:Int;
 
-		if (ClientPrefs.data.controlsAlpha >= 0.1)
+		if (controls.mobileC)
 		{
 			leButton = "C";
 			leX = 860;
@@ -298,7 +298,7 @@ class FreeplayState extends MusicBeatState
 			{
 				FlxFlicker.flicker(spr, 1, 0.06, false, false, function(flick:FlxFlicker)
 				{
-					CoolUtil.loadSong(songs[curSelected]);
+					CoolUtil.loadSong(songs[curSelected], (songs[curSelected] == "Sentient" && (FlxG.keys.pressed.SHIFT || touchPad.buttonC.pressed) ? true : false));
 				});
 			}
 		});

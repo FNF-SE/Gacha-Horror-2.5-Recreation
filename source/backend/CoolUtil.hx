@@ -162,12 +162,14 @@ class CoolUtil
 		// #end
 	}
 
-	public static function loadSong(?name:String = null, ?difficultyNum:Int = -1)
+	public static function loadSong(?name:String = null, ?loadOldSong:Bool = false, ?difficultyNum:Int = -1)
 	{
 		if (name == null || name.length < 1)
 			name = PlayState.SONG.song;
 		if (difficultyNum == -1)
 			difficultyNum = PlayState.storyDifficulty;
+
+		Paths.LOADOLD = loadOldSong;
 
 		var poop:String = Highscore.formatSong(name, difficultyNum);
 		PlayState.SONG = Song.loadFromJson(poop, name);

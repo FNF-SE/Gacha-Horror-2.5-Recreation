@@ -14,8 +14,9 @@ import openfl.media.Sound;
 
 class Paths
 {
-	public static var IMAGE_EXT:String = #if ASTC "astc" #elseif ETC2 "ktx" /*#elseif S3TC "ktx2"*/ #elseif PNG "png" #end;
-	public static var IMAGE_ASSETTYPE:AssetType = #if (ASTC || ETC2 /*|| S3TC*/) AssetType.BINARY #elseif PNG AssetType.IMAGE #end;
+	public static var IMAGE_EXT:String = #if ASTC "astc" #elseif ETC2 "ktx" #elseif S3TC "ktx2" #elseif PNG "png" #end;
+	public static var IMAGE_ASSETTYPE:AssetType = #if (ASTC || ETC2 || S3TC) AssetType.BINARY #elseif PNG AssetType.IMAGE #end;
+	public static var LOADOLD:Bool = false;
 
 	public static function excludeAsset(key:String)
 	{
@@ -210,7 +211,7 @@ class Paths
 
 	inline static public function inst(song:String):Sound
 	{
-		var songKey:String = 'songs/${formatToSongPath(song)}/Inst';
+		var songKey:String = 'songs/${formatToSongPath(song)}/Inst${LOADOLD ? "-Old" : ""}';
 		var inst = returnSound(null, songKey);
 		return inst;
 	}
