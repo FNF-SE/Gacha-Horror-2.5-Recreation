@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Pixie Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				69,
+				9
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Pixie Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				2,
+				-80
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Pixie Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				19
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Pixie Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-66,
+				-26
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Pixie Right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Pixie",
+	"position": [
+		-80,
+		-130
+	],
+	"healthicon": "pixie",
+	"flip_x": true,
+	"healthbar_colors": [
+		39,
+		120,
+		148
+	],
+	"camera_position": [
+		-210,
+		140
+	],
+	"sing_duration": 6.1,
+	"scale": 0.7
+}

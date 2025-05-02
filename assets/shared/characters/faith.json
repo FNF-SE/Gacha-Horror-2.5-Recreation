@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Faith Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-58,
+				-1
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Faith Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				7,
+				0
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Faith Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-4,
+				3
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Faith Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-1,
+				-1
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Faith Right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Faith",
+	"position": [
+		-100,
+		-160
+	],
+	"healthicon": "faith",
+	"flip_x": false,
+	"healthbar_colors": [
+		170,
+		193,
+		255
+	],
+	"camera_position": [
+		370,
+		290
+	],
+	"sing_duration": 6.1,
+	"scale": 0.6
+}

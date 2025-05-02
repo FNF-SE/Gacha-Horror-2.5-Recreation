@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="Azan.png">
+    <SubTexture name="idle0000" x="0" y="0" width="640" height="1030" frameX="-144" frameY="-41" frameWidth="1080" frameHeight="1080" />
+    <SubTexture name="idle0001" x="640" y="0" width="687" height="1019" frameX="-178" frameY="-50" frameWidth="1080" frameHeight="1080" />
+    <SubTexture name="idle0002" x="1327" y="0" width="696" height="1014" frameX="-190" frameY="-55" frameWidth="1080" frameHeight="1080" />
+    <SubTexture name="idle0003" x="1327" y="0" width="696" height="1014" frameX="-190" frameY="-55" frameWidth="1080" frameHeight="1080" />
+    <SubTexture name="idle0004" x="0" y="1030" width="701" height="1012" frameX="-197" frameY="-57" frameWidth="1080" frameHeight="1080" />
+    <SubTexture name="idle0005" x="701" y="1030" width="703" height="1011" frameX="-198" frameY="-58" frameWidth="1080" frameHeight="1080" />
+    <SubTexture name="idle0006" x="1404" y="1030" width="703" height="1011" frameX="-198" frameY="-58" frameWidth="1080" frameHeight="1080" />
+    <SubTexture name="idle0007" x="0" y="2042" width="702" height="1008" frameX="-202" frameY="-60" frameWidth="1080" frameHeight="1080" />
+    <SubTexture name="idle0008" x="702" y="2042" width="708" height="1010" frameX="-196" frameY="-59" frameWidth="1080" frameHeight="1080" />
+</TextureAtlas>

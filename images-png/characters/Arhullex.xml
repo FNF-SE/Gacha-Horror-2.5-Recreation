@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="Arhullex.png">
+    <SubTexture name="Arhullex Idle0000" x="0" y="0" width="498" height="905" frameX="-258" frameY="-43" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex Idle0001" x="498" y="0" width="498" height="905" frameX="-258" frameY="-43" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex Idle0002" x="996" y="0" width="497" height="908" frameX="-256" frameY="-40" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex Idle0003" x="1493" y="0" width="500" height="905" frameX="-258" frameY="-44" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex Idle0004" x="1993" y="0" width="505" height="873" frameX="-276" frameY="-79" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex Idle0005" x="2498" y="0" width="502" height="893" frameX="-264" frameY="-57" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex Idle0006" x="3000" y="0" width="501" height="900" frameX="-261" frameY="-50" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex Idle0007" x="3501" y="0" width="500" height="904" frameX="-258" frameY="-46" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex Idle0008" x="4001" y="0" width="498" height="905" frameX="-258" frameY="-44" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex Idle0009" x="4499" y="0" width="499" height="906" frameX="-257" frameY="-43" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex Idle0010" x="4998" y="0" width="499" height="906" frameX="-257" frameY="-43" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex Idle0011" x="5497" y="0" width="499" height="906" frameX="-257" frameY="-43" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex Down0000" x="0" y="908" width="505" height="833" frameX="-317" frameY="-121" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex Down0001" x="505" y="908" width="503" height="852" frameX="-313" frameY="-102" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex Down0002" x="1008" y="908" width="502" height="857" frameX="-312" frameY="-97" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex Down0003" x="1510" y="908" width="503" height="854" frameX="-312" frameY="-100" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex Down0004" x="2013" y="908" width="502" height="850" frameX="-314" frameY="-104" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex Left0000" x="2515" y="908" width="499" height="873" frameX="-149" frameY="-79" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex Left0001" x="3014" y="908" width="498" height="877" frameX="-166" frameY="-74" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex Left0002" x="3512" y="908" width="496" height="879" frameX="-172" frameY="-72" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex Left0003" x="4008" y="908" width="497" height="879" frameX="-170" frameY="-72" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex Left0004" x="4505" y="908" width="498" height="878" frameX="-166" frameY="-73" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex Right0000" x="5003" y="908" width="503" height="894" frameX="-356" frameY="-56" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex Right0001" x="5506" y="908" width="507" height="904" frameX="-347" frameY="-44" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex Right0002" x="0" y="1812" width="509" height="908" frameX="-343" frameY="-40" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex Right0003" x="509" y="1812" width="509" height="907" frameX="-344" frameY="-41" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex Right0004" x="1018" y="1812" width="508" height="906" frameX="-346" frameY="-42" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex Up0000" x="1526" y="1812" width="484" height="940" frameX="-168" frameY="-4" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex Up0001" x="2010" y="1812" width="483" height="927" frameX="-213" frameY="-21" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex Up0002" x="2493" y="1812" width="489" height="920" frameX="-228" frameY="-28" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex Up0003" x="2982" y="1812" width="488" height="920" frameX="-228" frameY="-28" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex Up0004" x="3470" y="1812" width="487" height="922" frameX="-222" frameY="-26" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex wall0000" x="3957" y="1812" width="500" height="869" frameX="-135" frameY="-83" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex wall0001" x="4457" y="1812" width="499" height="876" frameX="-159" frameY="-76" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex wall0002" x="4956" y="1812" width="498" height="879" frameX="-170" frameY="-72" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex wall0003" x="5454" y="1812" width="497" height="879" frameX="-171" frameY="-72" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex wall0004" x="0" y="2752" width="498" height="879" frameX="-168" frameY="-72" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex door0000" x="498" y="2752" width="520" height="886" frameX="-364" frameY="-66" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex door0001" x="1018" y="2752" width="505" height="900" frameX="-351" frameY="-49" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex door0002" x="1523" y="2752" width="509" height="906" frameX="-344" frameY="-42" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex door0003" x="2032" y="2752" width="509" height="908" frameX="-343" frameY="-40" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex door0004" x="2541" y="2752" width="510" height="906" frameX="-344" frameY="-42" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex door0005" x="3051" y="2752" width="508" height="905" frameX="-346" frameY="-43" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex roof0000" x="3559" y="2752" width="515" height="932" frameX="-197" frameY="-14" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex roof0001" x="4074" y="2752" width="520" height="922" frameX="-224" frameY="-26" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex roof0002" x="4594" y="2752" width="523" height="919" frameX="-230" frameY="-29" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex roof0003" x="5117" y="2752" width="523" height="920" frameX="-225" frameY="-28" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex roof0004" x="5640" y="2752" width="521" height="922" frameX="-221" frameY="-26" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex floor0000" x="0" y="3684" width="505" height="828" frameX="-318" frameY="-126" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex floor0001" x="505" y="3684" width="502" height="850" frameX="-314" frameY="-104" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex floor0002" x="1007" y="3684" width="502" height="857" frameX="-312" frameY="-97" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex floor0003" x="1509" y="3684" width="503" height="854" frameX="-312" frameY="-100" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex floor0004" x="2012" y="3684" width="502" height="851" frameX="-314" frameY="-103" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh gosh0000" x="3012" y="3684" width="502" height="891" frameX="-230" frameY="-63" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh gosh0001" x="2514" y="3684" width="498" height="906" frameX="-243" frameY="-48" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh gosh0002" x="3514" y="3684" width="496" height="910" frameX="-253" frameY="-44" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh gosh0003" x="4010" y="3684" width="497" height="910" frameX="-252" frameY="-44" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh gosh0004" x="4507" y="3684" width="498" height="908" frameX="-254" frameY="-46" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh gosh0005" x="5005" y="3684" width="498" height="908" frameX="-254" frameY="-46" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh gosh0006" x="5503" y="3684" width="498" height="908" frameX="-254" frameY="-46" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh gosh0007" x="2490" y="4594" width="498" height="908" frameX="-254" frameY="-46" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh gosh0008" x="1992" y="4594" width="498" height="908" frameX="-254" frameY="-46" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh gosh0009" x="1494" y="4594" width="498" height="908" frameX="-254" frameY="-46" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh gosh0010" x="996" y="4594" width="498" height="908" frameX="-254" frameY="-46" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh gosh0011" x="498" y="4594" width="498" height="908" frameX="-254" frameY="-46" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh gosh0012" x="0" y="4594" width="498" height="908" frameX="-254" frameY="-46" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex hes dead0000" x="2988" y="4594" width="498" height="908" frameX="-254" frameY="-46" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh gosh0013" x="499" y="5502" width="498" height="908" frameX="-254" frameY="-46" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh gosh0014" x="997" y="5502" width="498" height="908" frameX="-254" frameY="-46" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh gosh0015" x="1495" y="5502" width="498" height="908" frameX="-254" frameY="-46" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh gosh0016" x="1993" y="5502" width="498" height="908" frameX="-254" frameY="-46" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh gosh0017" x="2491" y="5502" width="498" height="908" frameX="-254" frameY="-46" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh nvm0000" x="3486" y="4594" width="503" height="888" frameX="-230" frameY="-66" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh nvm0001" x="0" y="5502" width="499" height="904" frameX="-239" frameY="-50" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh nvm0002" x="4480" y="5502" width="496" height="910" frameX="-252" frameY="-44" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh nvm0003" x="3984" y="5502" width="496" height="910" frameX="-252" frameY="-44" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh nvm0004" x="3487" y="5502" width="497" height="908" frameX="-254" frameY="-46" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh nvm0005" x="2989" y="5502" width="498" height="908" frameX="-254" frameY="-46" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh nvm0006" x="3989" y="4594" width="498" height="908" frameX="-254" frameY="-46" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh nvm0007" x="5483" y="4594" width="498" height="908" frameX="-254" frameY="-46" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh nvm0008" x="4976" y="5502" width="498" height="908" frameX="-254" frameY="-46" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh nvm0009" x="5474" y="5502" width="498" height="908" frameX="-254" frameY="-46" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh nvm0010" x="0" y="6412" width="498" height="908" frameX="-254" frameY="-46" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh nvm0011" x="498" y="6412" width="498" height="908" frameX="-254" frameY="-46" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh nvm0012" x="4487" y="4594" width="498" height="908" frameX="-254" frameY="-46" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh nvm0013" x="4985" y="4594" width="498" height="908" frameX="-254" frameY="-46" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh nvm0014" x="2490" y="6412" width="498" height="908" frameX="-254" frameY="-46" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh nvm0015" x="1992" y="6412" width="498" height="908" frameX="-254" frameY="-46" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh nvm0016" x="1494" y="6412" width="498" height="908" frameX="-254" frameY="-46" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Arhullex oh nvm0017" x="996" y="6412" width="498" height="908" frameX="-254" frameY="-46" frameWidth="960" frameHeight="960" />
+</TextureAtlas>

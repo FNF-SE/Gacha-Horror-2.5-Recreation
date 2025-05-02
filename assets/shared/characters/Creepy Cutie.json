@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Creepy Cutie Idle"
+		},
+		{
+			"offsets": [
+				75,
+				-1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Creepy Cutie Left"
+		},
+		{
+			"offsets": [
+				6,
+				2
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Creepy Cutie Down"
+		},
+		{
+			"offsets": [
+				6,
+				3
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Creepy Cutie Up"
+		},
+		{
+			"offsets": [
+				-60,
+				-4
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Creepy Cutie Right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Creepy Cutie",
+	"position": [
+		-20,
+		100
+	],
+	"healthicon": "cc",
+	"flip_x": false,
+	"healthbar_colors": [
+		159,
+		78,
+		77
+	],
+	"camera_position": [
+		110,
+		60
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

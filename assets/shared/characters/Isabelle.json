@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Isabelle Idle"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Isabelle Left"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Isabelle Down"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Isabelle Up"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Isabelle Right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Isabelle",
+	"position": [
+		-250,
+		0
+	],
+	"healthicon": "isabelle",
+	"flip_x": false,
+	"healthbar_colors": [
+		164,
+		20,
+		3
+	],
+	"camera_position": [
+		-240,
+		50
+	],
+	"sing_duration": 6.1,
+	"scale": 1.2
+}

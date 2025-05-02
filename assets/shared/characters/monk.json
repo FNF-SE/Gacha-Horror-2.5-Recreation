@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				2,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "DeadMonk Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				9,
+				-1
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "DeadMonk Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				2,
+				0
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "DeadMonk Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-1
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "DeadMonk Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-6,
+				4
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "DeadMonk Right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/DeadMonk",
+	"position": [
+		-50,
+		-220
+	],
+	"healthicon": "monk",
+	"flip_x": true,
+	"healthbar_colors": [
+		0,
+		0,
+		0
+	],
+	"camera_position": [
+		-100,
+		270
+	],
+	"sing_duration": 6.1,
+	"scale": 0.6
+}

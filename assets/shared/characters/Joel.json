@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Joel Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Joel Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Joel Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Joel Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Joel Right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Joel",
+	"position": [
+		-100,
+		40
+	],
+	"healthicon": "joel",
+	"flip_x": false,
+	"healthbar_colors": [
+		234,
+		115,
+		230
+	],
+	"camera_position": [
+		-120,
+		-110
+	],
+	"sing_duration": 6.1,
+	"scale": 1.4
+}

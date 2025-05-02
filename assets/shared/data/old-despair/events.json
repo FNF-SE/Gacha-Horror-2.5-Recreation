@@ -1,0 +1,38 @@
+{
+  "song": {
+    "events": [
+      [54000, [["Set Cam ZoomBoom", "1.2", "0.9"]]],
+      [56000, [["Set Cam ZoomBoom", "0.9", "0.9"]]],
+      [62000, [["Set Cam ZoomBoom", "1.2", "0.9"]]],
+      [64000, [["Set Cam ZoomBoom", "0.9", "0.9"]]],
+      [103125, [["Better Cinematic", "1", "90"]]],
+      [103750, [["Replace stage layer", "black", "tre2"]]],
+      [103875, [["Replace stage layer", "black", "tre"]]],
+      [
+        104000,
+        [
+          ["Silhouette", "a", "0.1"],
+          ["Flash Camera", "2", ""],
+          ["Set Cam ZoomBoom", "0.7", "0.9"]
+        ]
+      ],
+      [112000, [["Set Cam ZoomBoom", "0.9", "0.9"]]],
+      [127996.875, [["Replace stage layer", "tre2", "black"]]],
+      [
+        128000,
+        [
+          ["Silhouette", "b", "0.1"],
+          ["Flash Camera", "2", ""],
+          ["Better Cinematic", "1", "0"]
+        ]
+      ],
+      [128125, [["Replace stage layer", "tre", "black"]]],
+      [137000, [["Camera Set Target", "B", ""]]],
+      [139000, [["Camera Set Target", "B", ""]]],
+      [141000, [["Camera Set Target", "B", ""]]],
+      [143000, [["Camera Set Target", "B", ""]]],
+      [144000, [["Set Cam ZoomBoom", "1.4", "4"]]],
+      [146000, [["BlackOut", "true", ""]]]
+    ]
+  }
+}

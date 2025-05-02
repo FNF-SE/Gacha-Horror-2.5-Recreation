@@ -1,0 +1,31 @@
+name: Bug report
+description: Report bugs with the recreation here
+labels: [bug]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "Describe your bug here."
+    validations:
+      required: true
+
+  - type: textarea
+    id: terminal
+    attributes:
+      label: "Crash Log or logcat logs (if existing)"
+      render: bash
+    validations:
+      required: false
+
+  - type: dropdown
+    id: btarget
+    attributes:
+      label: "What platfrom are you playing on?"
+      options:
+        - "Windows"
+        - "Linux"
+        - "Mac"
+        - "Android"
+        - "Other"
+    validations:
+      required: true

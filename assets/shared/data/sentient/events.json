@@ -1,0 +1,131 @@
+{
+  "song": {
+    "events": [
+      [2000, [["Set Cam ZoomBoom", "1.3", "0.1"]]],
+      [2200, [["Set Cam ZoomBoom", "1.1", "0.3"]]],
+      [5200, [["Set Cam ZoomBoom", "1.3", "0.1"]]],
+      [5400, [["Set Cam ZoomBoom", "1.1", "0.3"]]],
+      [12400, [["Add Camera Zoom", "", "0.05"]]],
+      [12800, [["Set Cam ZoomBoom", "1.3", "0.3"]]],
+      [
+        14400,
+        [
+          ["Flash Camera", "2", ""],
+          ["Set Cam ZoomBoom", "1.1", "0.1"]
+        ]
+      ],
+      [14500, [["Add Camera Zoom", "1.1", "0.1"]]],
+      [16200, [["Set Cam ZoomBoom", "1.3", "0.3"]]],
+      [16800, [["Set Cam ZoomBoom", "0.9", "0.3"]]],
+      [17600, [["Set Cam ZoomBoom", "1.1", "1"]]],
+      [25400, [["Add Camera Zoom", "", "0.05"]]],
+      [25600, [["Set Cam ZoomBoom", "1.3", "0.1"]]],
+      [26400, [["Set Cam ZoomBoom", "0.9", "0.1"]]],
+      [27200, [["Set Cam ZoomBoom", "1.3", "0.3"]]],
+      [28000, [["Set Cam ZoomBoom", "1.1", "0.3"]]],
+      [28600, [["Add Camera Zoom", "0.017", ""]]],
+      [29700, [["Set Cam ZoomBoom", "1.3", "0.3"]]],
+      [30400, [["Set Cam ZoomBoom", "1.1", "0.3"]]],
+      [31600, [["Set Cam ZoomBoom", "1.4", "0.1"]]],
+      [32000, [["Set Cam ZoomBoom", "1.1", "0.3"]]],
+      [
+        38400,
+        [
+          ["Set Cam ZoomBoom", "1.3", "0.1"],
+          ["Toggle Trail", "1", ""],
+          ["Screen Shake", "1.7, 0.07", ""]
+        ]
+      ],
+      [
+        40000,
+        [
+          ["Toggle Trail", "0", ""],
+          ["Set Cam ZoomBoom", "1.1", "1"]
+        ]
+      ],
+      [41600, [["Flash Camera", "1", ""]]],
+      [43200, [["Set Cam ZoomBoom", "1.2", "0.1"]]],
+      [43600, [["Set Cam ZoomBoom", "1.3", "0.1"]]],
+      [44000, [["Set Cam ZoomBoom", "1.2", "0.1"]]],
+      [44400, [["Set Cam ZoomBoom", "1.1", "1"]]],
+      [51197.5, [["Silhouette", "a", "0.1"]]],
+      [
+        51200,
+        [
+          ["Set Cam ZoomBoom", "0.7", "1"],
+          ["Flash Camera", "2", ""]
+        ]
+      ],
+      [51300, [["Replace stage layer", "black", "top"]]],
+      [59200, [["Set Cam ZoomBoom", "0.9", "1"]]],
+      [60000, [["Set Cam ZoomBoom", "1.3", "1"]]],
+      [60800, [["Set Cam ZoomBoom", "0.7", "1"]]],
+      [62400, [["Set Cam ZoomBoom", "0.9", "1"]]],
+      [63200, [["Set Cam ZoomBoom", "1.3", "1"]]],
+      [63997.5, [["Silhouette", "b", "0.1"]]],
+      [
+        64000,
+        [
+          ["Flash Camera", "1.5", ""],
+          ["Set Cam ZoomBoom", "1.1", "0.1"]
+        ]
+      ],
+      [64100, [["Replace stage layer", "top", "black"]]],
+      [67200, [["Set Cam ZoomBoom", "1.3", "1"]]],
+      [68000, [["Set Cam ZoomBoom", "1.1", "1"]]],
+      [68800, [["Set Cam ZoomBoom", "1.3", "1"]]],
+      [69600, [["Set Cam ZoomBoom", "1.1", "1"]]],
+      [
+        76800,
+        [
+          ["Flash Camera", "1.5", ""],
+          ["Add Camera Zoom", "1", "1"]
+        ]
+      ],
+      [81000, [["Set Cam ZoomBoom", "1.3", "0.1"]]],
+      [81200, [["Set Cam ZoomBoom", "1.1", "0.3"]]],
+      [
+        89600,
+        [
+          ["Set Cam ZoomBoom", "1.3", "0.1"],
+          ["Toggle Trail", "1", ""],
+          ["Screen Shake", "0.8, 0.07", ""]
+        ]
+      ],
+      [
+        90400,
+        [
+          ["Flash Camera", "2", ""],
+          ["Set Cam ZoomBoom", "1.1", "1"],
+          ["Toggle Trail", "0", ""]
+        ]
+      ],
+      [92800, [["Set Cam ZoomBoom", "1.3", "1"]]],
+      [94400, [["Set Cam ZoomBoom", "1.1", "1"]]],
+      [102400, [["Better Cinematic", "1", "90"]]],
+      [103600, [["Better Cinematic", "0.2", "150"]]],
+      [103800, [["Better Cinematic", "1", "90"]]],
+      [106800, [["Better Cinematic", "0.2", "150"]]],
+      [107200, [["Better Cinematic", "1", "90"]]],
+      [115200, [["Better Cinematic", "1", "0"]]],
+      [116000, [["Set Cam ZoomBoom", "0.9", "0.1"]]],
+      [116800, [["Set Cam ZoomBoom", "1.1", "0.3"]]],
+      [117600, [["Set Cam ZoomBoom", "1.3", "0.3"]]],
+      [118400, [["Set Cam ZoomBoom", "1.1", "0.3"]]],
+      [119300, [["Set Cam ZoomBoom", "1.3", "0.1"]]],
+      [119600, [["Set Cam ZoomBoom", "0.9", "0.1"]]],
+      [120000, [["Set Cam ZoomBoom", "1.1", "1"]]],
+      [121200, [["Toggle Trail", "1", ""]]],
+      [121600, [["Toggle Trail", "0", ""]]],
+      [
+        128000,
+        [
+          ["Add Camera Zoom", "1", "1"],
+          ["Flash Camera", "2", ""]
+        ]
+      ],
+      [134400, [["Opponent Fade", "1", "0"]]],
+      [140800, [["BlackOut", "true", ""]]]
+    ]
+  }
+}

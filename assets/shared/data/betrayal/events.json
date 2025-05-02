@@ -1,0 +1,194 @@
+{
+  "song": {
+    "events": [
+      [-999, [["Black Flash Camera", "30", ""]]],
+      [
+        250,
+        [
+          ["Replace stage layer", "black", "dablack"]
+        ]
+      ],
+      [375, [["Cam Boom Speed", "0", "0"]]],
+      [8000, [["Add Camera Zoom", "", ""]]],
+      [9750, [["Add Camera Zoom", "", ""]]],
+      [10000, [["Add Camera Zoom", "", ""]]],
+      [11500, [["Add Camera Zoom", "", ""]]],
+      [12000, [["Add Camera Zoom", "", ""]]],
+      [12750, [["Add Camera Zoom", "", ""]]],
+      [13000, [["Add Camera Zoom", "", ""]]],
+      [13750, [["Add Camera Zoom", "", ""]]],
+      [14000, [["Add Camera Zoom", "", ""]]],
+      [14125, [["Cam Boom Speed", "1", "1"]]],
+      [14500, [["Add Camera Zoom", "", ""]]],
+      [15000, [["Add Camera Zoom", "", ""]]],
+      [15250, [["Add Camera Zoom", "", ""]]],
+      [15500, [["Add Camera Zoom", "", ""]]],
+      [15625, [["Add Camera Zoom", "", ""]]],
+      [15750, [["Add Camera Zoom", "", ""]]],
+      [15875, [["Add Camera Zoom", "", ""]]],
+      [
+        16000,
+        [
+          ["Add Camera Zoom", "1.5", ""],
+          ["Flash Camera", "1.5", ""]
+        ]
+      ],
+      [
+        32000,
+        [
+          ["Camera Follow Pos", "750", "500"],
+          ["Flash Camera", "1.5", ""]
+        ]
+      ],
+      [40000, [["Camera Follow Pos", "", ""]]],
+      [46000, [["Cam Boom Speed", "0", "0"]]],
+      [47000, [["Set Cam ZoomBoom", "1.3", "1"]]],
+      [47996.875, [["Change Character", "1", "no one"]]],
+      [
+        48000,
+        [
+          ["BlackOut", "true", ""],
+          ["Red Flash Camera", "1", ""]
+        ]
+      ],
+      [48250, [["Set Cam ZoomBoom", "0.9", "1"]]],
+      [49000, [["Red Flash Camera", "1", ""]]],
+      [50000, [["Replace stage layer", "black", "books"]]],
+      [50005.2083333333, [["Red Flash Camera", "1", ""]]],
+      [51000, [["Red Flash Camera", "1", ""]]],
+      [52000, [["Red Flash Camera", "1", ""]]],
+      [53000, [["Red Flash Camera", "1", ""]]],
+      [54000, [["Cam Boom Speed", "2", "2"]]],
+      [54005.2083333333, [["Red Flash Camera", "1", ""]]],
+      [54375, [["Replace stage layer", "black", "room"]]],
+      [54500, [["Red Flash Camera", "1", ""]]],
+      [55000, [["Red Flash Camera", "1", ""]]],
+      [55250, [["Red Flash Camera", "1", ""]]],
+      [55500, [["Red Flash Camera", "1", ""]]],
+      [55625, [["Red Flash Camera", "1", ""]]],
+      [55750, [["Red Flash Camera", "1", ""]]],
+      [55875, [["Red Flash Camera", "1", ""]]],
+      [
+        55993.75,
+        [
+          ["Flash Camera", "1", ""],
+          ["Change Character", "1", "faith"],
+          ["Change Scroll Speed", "1.2", "0.1"]
+        ]
+      ],
+      [56000, [["BlackOut", "false", ""]]],
+      [56093.75, [["HealthDrain", "1.7", "1"]]],
+      [66875, [["Set Cam ZoomBoom", "1.2", "0.3"]]],
+      [67062.5, [["Set Cam ZoomBoom", "1.4", "0.3"]]],
+      [67250, [["Set Cam ZoomBoom", "0.9", "0.3"]]],
+      [68000, [["Flash Camera", "1", ""]]],
+      [72500, [["Set Cam ZoomBoom", "1.3", "0.3"]]],
+      [74000, [["Set Cam ZoomBoom", "0.9", "1"]]],
+      [78500, [["Set Cam ZoomBoom", "1.3", "0.3"]]],
+      [
+        80000,
+        [
+          ["Set Cam ZoomBoom", "0.9", "1"],
+          ["Flash Camera", "1", ""]
+        ]
+      ],
+      [95000, [["Set Cam ZoomBoom", "1.3", "1"]]],
+      [95750, [["Set Cam ZoomBoom", "1.1", "1"]]],
+      [96500, [["Set Cam ZoomBoom", "0.9", "1"]]],
+      [101000, [["Set Cam ZoomBoom", "1.3", "1"]]],
+      [101750, [["Set Cam ZoomBoom", "1.1", "1"]]],
+      [102500, [["Set Cam ZoomBoom", "0.9", "1"]]],
+      [102593.75, [["Cam Boom Speed", "0", "0"]]],
+      [
+        104000,
+        [
+          ["BlackOut", "true", ""],
+          ["Silhouette", "a", "1"],
+          ["Replace stage layer", "black", "bookswblood"]
+        ]
+      ],
+      [106062.5, [["Better Cinematic", "1", "90"]]],
+      [106995.3125, [["Flash Camera", "1", ""]]],
+      [107000, [["BlackOut", "false", ""]]],
+      [125000, [["Add Camera Zoom", "", ""]]],
+      [126500, [["Add Camera Zoom", "", ""]]],
+      [128000, [["Add Camera Zoom", "", ""]]],
+      [128750, [["Add Camera Zoom", "", ""]]],
+      [129500, [["Add Camera Zoom", "", ""]]],
+      [129593.75, [["Cam Boom Speed", "2", "2"]]],
+      [130250, [["Add Camera Zoom", "", ""]]],
+      [130812.5, [["Add Camera Zoom", "", ""]]],
+      [130906.25, [["Add Camera Zoom", "", ""]]],
+      [
+        131000,
+        [
+          ["Flash Camera", "1", ""],
+          ["Silhouette", "b", "0.1"],
+          ["Replace stage layer", "bookswblood", "black"]
+        ]
+      ],
+      [143000, [["Flash Camera", "1", ""]]],
+      [152000, [["Cam Boom Speed", "0", "0"]]],
+      [153500, [["Set Cam ZoomBoom", "1.3", "0.3"]]],
+      [154995.3125, [["Flash Camera", "1", ""]]],
+      [155000, [["BlackOut", "true", ""]]],
+      [155187.5, [["Set Cam ZoomBoom", "0.9", "0.3"]]],
+      [
+        157997.65625,
+        [
+          ["Flash Camera", "1.5", ""],
+          ["Change Character", "2", "Candice"],
+          ["Change_Icon", "P2, candice", ""]
+        ]
+      ],
+      [158000, [["BlackOut", "false", ""]]],
+      [
+        161000,
+        [
+          ["Flash Camera", "1.5", ""],
+          ["Add Camera Zoom", "1.5", ""]
+        ]
+      ],
+      [161093.75, [["Better Cinematic", "1", "0"]]],
+      [
+        170000,
+        [
+          ["Set Cam ZoomBoom", "1.3", "25"],
+          ["Flash Camera", "1.5", ""],
+          ["Change_Icon", "P2, faithwcandice", ""]
+        ]
+      ],
+      [175997.65625, [["Red Flash Camera", "1.5", ""]]],
+      [
+        176000,
+        [
+          ["Replace stage layer", "black", "noob"],
+          ["Change_Icon", "P1, ghost", ""]
+        ]
+      ],
+      [
+        177500,
+        [
+          ["Set Cam ZoomBoom", "0.9", "1"],
+          ["Flash Camera", "2", ""],
+          ["Change_Icon", "P1, bfwghost", ""]
+        ]
+      ],
+      [182000, [["Change_Icon", "P2, candice", ""]]],
+      [183500, [["Change_Icon", "P2, faithwcandice", ""]]],
+      [188000, [["Change_Icon", "P1, ghost", ""]]],
+      [189500, [["Change_Icon", "P1, bfwghost", ""]]],
+      [195500, [["BlackOut", "true", ""]]],
+      [200000, [["Better Cinematic", "0.2", "90"]]],
+      [
+        201495.3125,
+        [
+          ["Red Flash Camera", "2", ""],
+          ["Screen Shake", "2.7, 0.02", ""]
+        ]
+      ],
+      [201500, [["BlackOut", "false", ""]]],
+      [204500, [["BlackOut", "true", ""]]]
+    ]
+  }
+}

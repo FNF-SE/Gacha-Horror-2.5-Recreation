@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-33,
+				6
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "EvilLuck Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				11,
+				9
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "EvilLuck Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-4,
+				9
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "EvilLuck Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				27,
+				15
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "EvilLuck Right",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-1,
+				9
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceLeft",
+			"indices": [8,9,10,11,12,13,14,15,16],
+			"name": "EvilLuck Idle"
+		},
+		{
+			"offsets": [
+				-1,
+				9
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceRight",
+			"indices": [0,1,2,3,4,5,6,7],
+			"name": "EvilLuck Idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/EvilLuck",
+	"position": [
+		-540,
+		-245
+	],
+	"healthicon": "luck",
+	"flip_x": false,
+	"healthbar_colors": [
+		205,
+		197,
+		238
+	],
+	"camera_position": [
+		360,
+		300
+	],
+	"sing_duration": 6.1,
+	"scale": 0.7
+}

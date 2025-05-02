@@ -1,0 +1,121 @@
+{
+  "song": {
+    "events": [
+      [18500, [["Set Cam ZoomBoom", "1.3", "0.5"]]],
+      [19000, [["Set Cam ZoomBoom", "0.9", "0.5"]]],
+      [19500, [["Set Cam ZoomBoom", "1.1", "0.5"]]],
+      [20000, [["Set Cam ZoomBoom", "0.9", "0.5"]]],
+      [22000, [["Set Cam ZoomBoom", "1.3", "0.5"]]],
+      [24000, [["Set Cam ZoomBoom", "0.9", "0.5"]]],
+      [26500, [["Set Cam ZoomBoom", "1.3", "0.5"]]],
+      [27000, [["Set Cam ZoomBoom", "0.9", "0.5"]]],
+      [27500, [["Set Cam ZoomBoom", "1.1", "0.5"]]],
+      [28000, [["Set Cam ZoomBoom", "0.9", "0.5"]]],
+      [30000, [["Set Cam ZoomBoom", "1.3", "0.5"]]],
+      [32000, [["Set Cam ZoomBoom", "0.9", "0.5"]]],
+      [34000, [["Set Cam ZoomBoom", "1.2", "0.5"]]],
+      [35000, [["Set Cam ZoomBoom", "0.9", "0.5"]]],
+      [38000, [["Set Cam ZoomBoom", "1.2", "0.5"]]],
+      [39000, [["Set Cam ZoomBoom", "0.9", "0.5"]]],
+      [40000, [["Add Camera Zoom", "0.0015", "0.04"]]],
+      [40375, [["Add Camera Zoom", "0.0015", "0.04"]]],
+      [40750, [["Add Camera Zoom", "1", "0.04"]]],
+      [43000, [["Set Cam ZoomBoom", "1.3", "0.5"]]],
+      [
+        44000,
+        [
+          ["Add Camera Zoom", "0.0015", "0.04"],
+          ["Set Cam ZoomBoom", "0.9", "0.5"]
+        ]
+      ],
+      [44375, [["Add Camera Zoom", "0.0015", "0.04"]]],
+      [44750, [["Add Camera Zoom", "1", "0.04"]]],
+      [47000, [["Set Cam ZoomBoom", "1.3", "0.5"]]],
+      [48000, [["Set Cam ZoomBoom", "0.9", "0.5"]]],
+      [50000, [["Set Cam ZoomBoom", "1.3", "0.7"]]],
+      [52000, [["Set Cam ZoomBoom", "0.9", "0.5"]]],
+      [53000, [["Set Cam ZoomBoom", "1.1", "0.5"]]],
+      [53500, [["Set Cam ZoomBoom", "0.9", "0.5"]]],
+      [54000, [["Set Cam ZoomBoom", "1.3", "0.5"]]],
+      [56000, [["Set Cam ZoomBoom", "0.9", "0.5"]]],
+      [58000, [["Set Cam ZoomBoom", "0.9", "0.5"]]],
+      [60000, [["Set Cam ZoomBoom", "0.9", "0.5"]]],
+      [61000, [["Set Cam ZoomBoom", "1.1", "0.5"]]],
+      [61500, [["Set Cam ZoomBoom", "0.9", "0.5"]]],
+      [62000, [["Set Cam ZoomBoom", "1.3", "0.5"]]],
+      [64000, [["Set Cam ZoomBoom", "0.9", "1"]]],
+      [67000, [["Set Cam ZoomBoom", "1.3", "0.5"]]],
+      [67500, [["Set Cam ZoomBoom", "0.9", "0.5"]]],
+      [68000, [["Flash Camera", "0.8", ""]]],
+      [69000, [["Set Cam ZoomBoom", "1.3", "0.5"]]],
+      [69500, [["Set Cam ZoomBoom", "0.9", "0.5"]]],
+      [75000, [["Set Cam ZoomBoom", "1.3", "0.5"]]],
+      [75500, [["Set Cam ZoomBoom", "0.9", "0.5"]]],
+      [76000, [["Flash Camera", "0.8", ""]]],
+      [77000, [["Set Cam ZoomBoom", "1.3", "0.5"]]],
+      [77500, [["Set Cam ZoomBoom", "0.9", "0.5"]]],
+      [79000, [["Set Cam ZoomBoom", "1.3", "0.5"]]],
+      [80000, [["Set Cam ZoomBoom", "0.9", "0.5"]]],
+      [83000, [["Set Cam ZoomBoom", "1.3", "0.5"]]],
+      [85000, [["Set Cam ZoomBoom", "0.7", "0.5"]]],
+      [86000, [["Set Cam ZoomBoom", "0.9", "0.5"]]],
+      [94000, [["Set Cam ZoomBoom", "1.3", "1"]]],
+      [
+        95996.875,
+        [
+          ["Flash Camera", "5", ""],
+          ["Change Character", "1", "Blair"],
+          ["Set Cam ZoomBoom", "1.1", "1"]
+        ]
+      ],
+      [
+        96000,
+        [["Replace stage layer", "black", "Creepy Cutie shinaniganz/bg"]]
+      ],
+      [
+        96006.25,
+        [["Replace stage layer", "black", "Creepy Cutie shinaniganz/tre2"]]
+      ],
+      [
+        96025,
+        [["Replace stage layer", "black", "Creepy Cutie shinaniganz/tre"]]
+      ],
+      [99000, [["Set Cam ZoomBoom", "1.3", "1"]]],
+      [99500, [["Set Cam ZoomBoom", "1.2", "1"]]],
+      [101000, [["Set Cam ZoomBoom", "1.4", "1"]]],
+      [101500, [["Set Cam ZoomBoom", "1.2", "1"]]],
+      [103000, [["Set Cam ZoomBoom", "1.3", "1"]]],
+      [103500, [["Set Cam ZoomBoom", "1.2", "1"]]],
+      [109000, [["Set Cam ZoomBoom", "1.5", "1"]]],
+      [109500, [["Set Cam ZoomBoom", "1.2", "1"]]],
+      [112000, [["Flash Camera", "2", ""]]],
+      [
+        127996.875,
+        [
+          ["Flash Camera", "5", ""],
+          ["Change Character", "1", "Creepy Cutie"],
+          ["Set Cam ZoomBoom", "0.9", "1"]
+        ]
+      ],
+      [
+        128000,
+        [["Replace stage layer", "Creepy Cutie shinaniganz/bg", "black"]]
+      ],
+      [
+        128012.5,
+        [["Replace stage layer", "Creepy Cutie shinaniganz/tre", "black"]]
+      ],
+      [
+        128018.75,
+        [["Replace stage layer", "Creepy Cutie shinaniganz/tre2", "black"]]
+      ],
+      [130000, [["Set Cam ZoomBoom", "1.3", "1"]]],
+      [132000, [["Set Cam ZoomBoom", "0.9", "1"]]],
+      [134000, [["Set Cam ZoomBoom", "1.3", "1"]]],
+      [136000, [["Set Cam ZoomBoom", "0.9", "1"]]],
+      [142000, [["Set Cam ZoomBoom", "1.2", "1"]]],
+      [144000, [["Set Cam ZoomBoom", "1.4", "1"]]],
+      [146000, [["BlackOut", "true", ""]]]
+    ]
+  }
+}

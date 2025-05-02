@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Muu Idle"
+		},
+		{
+			"offsets": [
+				160,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Muu Left"
+		},
+		{
+			"offsets": [
+				20,
+				-80
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Muu Down"
+		},
+		{
+			"offsets": [
+				0,
+				110
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Muu Up"
+		},
+		{
+			"offsets": [
+				-180,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Muu Right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Muu",
+	"position": [
+		-210,
+		-210
+	],
+	"healthicon": "muu",
+	"flip_x": true,
+	"healthbar_colors": [
+		161,
+		161,
+		161
+	],
+	"camera_position": [
+		-90,
+		390
+	],
+	"sing_duration": 6.1,
+	"scale": 0.5
+}

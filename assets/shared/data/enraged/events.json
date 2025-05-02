@@ -1,0 +1,321 @@
+{
+  "song": {
+    "events": [
+      [
+        0,
+        [
+          ["Set Cam ZoomBoom", "1.3", "0.2"],
+          ["Replace stage layer", "black", "dablack"],
+          ["Cam Boom Speed", "0", "0"],
+          ["Fade in", "10", ""]
+        ]
+      ],
+      [75, [["Set Cam ZoomBoom", "0.7", "45"]]],
+      [1200, [["Set Cam ZoomBoom", "1.3", "0.2"]]],
+      [1275, [["Set Cam ZoomBoom", "0.7", "45"]]],
+      [2400, [["Set Cam ZoomBoom", "1.3", "0.2"]]],
+      [2475, [["Set Cam ZoomBoom", "0.7", "45"]]],
+      [3600, [["Set Cam ZoomBoom", "1.3", "0.2"]]],
+      [3675, [["Set Cam ZoomBoom", "0.7", "45"]]],
+      [4800, [["Set Cam ZoomBoom", "1.3", "0.2"]]],
+      [4875, [["Set Cam ZoomBoom", "0.7", "45"]]],
+      [6000, [["Set Cam ZoomBoom", "1.3", "0.2"]]],
+      [6075, [["Set Cam ZoomBoom", "0.7", "45"]]],
+      [7200, [["Set Cam ZoomBoom", "1.3", "0.2"]]],
+      [7275, [["Set Cam ZoomBoom", "0.7", "45"]]],
+      [8400, [["Set Cam ZoomBoom", "1.3", "0.2"]]],
+      [8475, [["Set Cam ZoomBoom", "0.7", "45"]]],
+      [9600, [["Set Cam ZoomBoom", "1.3", "0.2"]]],
+      [9675, [["Set Cam ZoomBoom", "0.7", "45"]]],
+      [10800, [["Set Cam ZoomBoom", "1.3", "0.2"]]],
+      [10875, [["Set Cam ZoomBoom", "0.7", "45"]]],
+      [12000, [["Set Cam ZoomBoom", "1.3", "0.2"]]],
+      [12075, [["Set Cam ZoomBoom", "0.7", "45"]]],
+      [13200, [["Set Cam ZoomBoom", "1.3", "0.2"]]],
+      [13275, [["Set Cam ZoomBoom", "0.7", "45"]]],
+      [
+        14400,
+        [
+          ["Set Cam ZoomBoom", "1.3", "0.2"],
+          ["Cam Boom Speed", "1", "1"]
+        ]
+      ],
+      [14475, [["Set Cam ZoomBoom", "0.7", "45"]]],
+      [15600, [["Set Cam ZoomBoom", "1.3", "0.2"]]],
+      [15675, [["Set Cam ZoomBoom", "0.7", "45"]]],
+      [16800, [["Set Cam ZoomBoom", "1.3", "0.2"]]],
+      [16875, [["Set Cam ZoomBoom", "0.7", "45"]]],
+      [18000, [["Set Cam ZoomBoom", "1.3", "0.2"]]],
+      [18075, [["Set Cam ZoomBoom", "0.7", "45"]]],
+      [
+        19200,
+        [
+          ["BlackOut", "true", ""],
+          ["Flash Camera", "1", ""],
+          ["Set Cam ZoomBoom", "1.3", "1"],
+          ["OpponentNotesFade", "0.1", "0"],
+          ["Cam Boom Speed", "0", "0"]
+        ]
+      ],
+      [
+        25200,
+        [
+          ["Set Cam ZoomBoom", "1.3", "1"],
+          ["Fade in", "45", ""],
+          ["BlackOut", "false", ""],
+          ["Change Character", "BF", "Crazy Mo Isolation"]
+        ]
+      ],
+      [
+        33600,
+        [
+          ["Fade in", "0", ""],
+          ["Flash Camera", "1", ""],
+          ["Set Cam ZoomBoom", "0.8", "1.5"],
+          ["HealthDrain", "0.9", "0.01"],
+          ["Cam Boom Speed", "1", "1.5"]
+        ]
+      ],
+      [34800, [["Set Cam ZoomBoom", "0.8", "0.5"]]],
+      [35400, [["Set Cam ZoomBoom", "0.9", "0.5"]]],
+      [36000, [["Set Cam ZoomBoom", "0.7", ""]]],
+      [37200, [["Set Cam ZoomBoom", "1", "0.5"]]],
+      [38400, [["Set Cam ZoomBoom", "0.7", "0.5"]]],
+      [39600, [["Set Cam ZoomBoom", "0.8", "0.5"]]],
+      [40200, [["Set Cam ZoomBoom", "0.9", "0.5"]]],
+      [40800, [["Set Cam ZoomBoom", "0.7", ""]]],
+      [42000, [["Set Cam ZoomBoom", "1", "0.2"]]],
+      [43200, [["Set Cam ZoomBoom", "0.7", "0.2"]]],
+      [44400, [["Set Cam ZoomBoom", "1.3", "0.2"]]],
+      [45600, [["Set Cam ZoomBoom", "1", "0.2"]]],
+      [46800, [["Set Cam ZoomBoom", "1.2", "0.2"]]],
+      [48000, [["Set Cam ZoomBoom", "0.7", "0.2"]]],
+      [49200, [["Set Cam ZoomBoom", "1.3", "0.2"]]],
+      [50400, [["Set Cam ZoomBoom", "1.1", "0.2"]]],
+      [51600, [["Set Cam ZoomBoom", "1.2", "0.2"]]],
+      [
+        52800,
+        [
+          ["Set Cam ZoomBoom", "0.8", "0.2"],
+          ["Flash Camera", "1", ""],
+          ["Danceboi", "2", "2"]
+        ]
+      ],
+      [55200, [["Set Cam ZoomBoom", "0.9", "0.2"]]],
+      [55800, [["Set Cam ZoomBoom", "1.1", "0.2"]]],
+      [55875, [["Set Cam ZoomBoom", "1.2", "0.2"]]],
+      [55950, [["Set Cam ZoomBoom", "1.1", "0.2"]]],
+      [56100, [["Set Cam ZoomBoom", "1.2", "0.2"]]],
+      [56175, [["Set Cam ZoomBoom", "1.1", "0.2"]]],
+      [56250, [["Set Cam ZoomBoom", "1.2", "0.2"]]],
+      [56400, [["Set Cam ZoomBoom", "0.8", "0.2"]]],
+      [57600, [["Set Cam ZoomBoom", "0.8", "0.2"]]],
+      [60000, [["Set Cam ZoomBoom", "0.9", "0.2"]]],
+      [60600, [["Set Cam ZoomBoom", "1.1", "0.2"]]],
+      [60675, [["Set Cam ZoomBoom", "1.2", "0.2"]]],
+      [60750, [["Set Cam ZoomBoom", "1.1", "0.2"]]],
+      [60900, [["Set Cam ZoomBoom", "1.2", "0.2"]]],
+      [60975, [["Set Cam ZoomBoom", "1.1", "0.2"]]],
+      [61050, [["Set Cam ZoomBoom", "1.2", "0.2"]]],
+      [61200, [["Set Cam ZoomBoom", "0.8", "0.2"]]],
+      [63600, [["Set Cam ZoomBoom", "0.9", "0.2"]]],
+      [66000, [["Set Cam ZoomBoom", "0.8", "0.2"]]],
+      [68400, [["Set Cam ZoomBoom", "0.9", "0.2"]]],
+      [70800, [["Set Cam ZoomBoom", "0.8", "0.2"]]],
+      [72000, [["Set Cam ZoomBoom", "1", "10"]]],
+      [73200, [["Set Cam ZoomBoom", "1.2", "0.1"]]],
+      [74400, [["Set Cam ZoomBoom", "0.8", "10"]]],
+      [75600, [["Set Cam ZoomBoom", "1", "0.1"]]],
+      [76800, [["Set Cam ZoomBoom", "1", "10"]]],
+      [78000, [["Set Cam ZoomBoom", "1.2", "0.1"]]],
+      [79200, [["Set Cam ZoomBoom", "0.8", "10"]]],
+      [80400, [["Set Cam ZoomBoom", "1", "0.1"]]],
+      [81600, [["Set Cam ZoomBoom", "0.8", "0.2"]]],
+      [82800, [["Set Cam ZoomBoom", "1", "0.2"]]],
+      [84000, [["Set Cam ZoomBoom", "0.8", "0.2"]]],
+      [85200, [["Set Cam ZoomBoom", "1", "0.2"]]],
+      [86400, [["Set Cam ZoomBoom", "0.7", "0.2"]]],
+      [87600, [["Set Cam ZoomBoom", "0.8", "0.2"]]],
+      [88800, [["Set Cam ZoomBoom", "1", "0.2"]]],
+      [89400, [["Set Cam ZoomBoom", "0.9", "0.2"]]],
+      [90000, [["Set Cam ZoomBoom", "0.8", "0.2"]]],
+      [90600, [["Set Cam ZoomBoom", "0.7", "0.2"]]],
+      [91200, [["Set Cam ZoomBoom", "0.8", "0.2"]]],
+      [
+        92400,
+        [
+          ["Set Cam ZoomBoom", "1", "0.2"],
+          ["Toggle Trail", "", "1"]
+        ]
+      ],
+      [
+        93600,
+        [
+          ["Set Cam ZoomBoom", "0.8", "0.2"],
+          ["Toggle Trail", "", "0"]
+        ]
+      ],
+      [
+        94800,
+        [
+          ["Set Cam ZoomBoom", "1.2", "0.2"],
+          ["Toggle Trail", "", "1"]
+        ]
+      ],
+      [96000, [["Set Cam ZoomBoom", "0.8", "0.2"]]],
+      [97200, [["Set Cam ZoomBoom", "1", "0.2"]]],
+      [98400, [["Set Cam ZoomBoom", "0.9", "0.2"]]],
+      [99600, [["Set Cam ZoomBoom", "1.1", "0.2"]]],
+      [100800, [["Set Cam ZoomBoom", "0.9", "0.2"]]],
+      [103200, [["Set Cam ZoomBoom", "1", "0.2"]]],
+      [105600, [["Toggle Trail", "", "1"]]],
+      [108000, [["Toggle Trail", "", "0"]]],
+      [
+        110400,
+        [
+          ["Set Cam ZoomBoom", "0.8", "0.2"],
+          ["Flash Camera", "1", ""],
+          ["Better Cinematic", "1", "90"]
+        ]
+      ],
+      [113025, [["Set Cam ZoomBoom", "1", "0.2"]]],
+      [115200, [["Set Cam ZoomBoom", "0.8", "0.2"]]],
+      [117825, [["Set Cam ZoomBoom", "1", "0.2"]]],
+      [120000, [["Set Cam ZoomBoom", "0.7", "0.2"]]],
+      [120600, [["Set Cam ZoomBoom", "0.8", "0.2"]]],
+      [121200, [["Set Cam ZoomBoom", "0.9", "0.2"]]],
+      [121800, [["Set Cam ZoomBoom", "1", "0.2"]]],
+      [122400, [["Set Cam ZoomBoom", "0.8", "0.2"]]],
+      [124800, [["Set Cam ZoomBoom", "0.7", "0.2"]]],
+      [125400, [["Set Cam ZoomBoom", "0.8", "0.2"]]],
+      [126000, [["Set Cam ZoomBoom", "0.9", "0.2"]]],
+      [126600, [["Set Cam ZoomBoom", "1", "0.2"]]],
+      [127200, [["Set Cam ZoomBoom", "0.8", ""]]],
+      [
+        129600,
+        [
+          ["Set Cam ZoomBoom", "0.8", "0.2"],
+          ["Better Cinematic", "1", "0"]
+        ]
+      ],
+      [130800, [["Set Cam ZoomBoom", "1", "0.2"]]],
+      [132000, [["Set Cam ZoomBoom", "0.9", "0.2"]]],
+      [134400, [["Set Cam ZoomBoom", "0.8", "0.2"]]],
+      [135600, [["Set Cam ZoomBoom", "1", "0.2"]]],
+      [136800, [["Set Cam ZoomBoom", "0.9", "0.2"]]],
+      [139200, [["Set Cam ZoomBoom", "0.8", "0.2"]]],
+      [141600, [["Set Cam ZoomBoom", "1", "0.2"]]],
+      [144000, [["Set Cam ZoomBoom", "0.7", "0.2"]]],
+      [145200, [["Set Cam ZoomBoom", "0.9", "0.2"]]],
+      [145650, [["Set Cam ZoomBoom", "1.1", "0.2"]]],
+      [146100, [["Set Cam ZoomBoom", "1.3", "0.2"]]],
+      [146400, [["Set Cam ZoomBoom", "0.8", "0.2"]]],
+      [
+        168000,
+        [
+          ["Set Cam ZoomBoom", "0.9", "0.2"],
+          ["Flash Camera", "1", ""]
+        ]
+      ],
+      [170400, [["Set Cam ZoomBoom", "1", "0.2"]]],
+      [171600, [["Set Cam ZoomBoom", "0.7", "0.2"]]],
+      [172800, [["Set Cam ZoomBoom", "0.8", "0.2"]]],
+      [175200, [["Set Cam ZoomBoom", "1", "0.2"]]],
+      [176400, [["Set Cam ZoomBoom", "0.7", "0.2"]]],
+      [177600, [["Set Cam ZoomBoom", "0.8", "0.2"]]],
+      [180000, [["Set Cam ZoomBoom", "0.9", "0.2"]]],
+      [180300, [["Set Cam ZoomBoom", "1", "0.2"]]],
+      [180600, [["Set Cam ZoomBoom", "1.1", "0.1"]]],
+      [180675, [["Set Cam ZoomBoom", "1.2", "0.1"]]],
+      [180750, [["Set Cam ZoomBoom", "1.1", "0.1"]]],
+      [180900, [["Set Cam ZoomBoom", "1.2", "0.1"]]],
+      [180975, [["Set Cam ZoomBoom", "1.1", "0.1"]]],
+      [181050, [["Set Cam ZoomBoom", "1.2", "0.1"]]],
+      [181200, [["Set Cam ZoomBoom", "0.9", "0.1"]]],
+      [182400, [["Set Cam ZoomBoom", "0.8", "0.2"]]],
+      [184800, [["Set Cam ZoomBoom", "0.9", "0.2"]]],
+      [185100, [["Set Cam ZoomBoom", "1", "0.2"]]],
+      [185400, [["Set Cam ZoomBoom", "1.1", "0.1"]]],
+      [185475, [["Set Cam ZoomBoom", "1.2", "0.1"]]],
+      [185550, [["Set Cam ZoomBoom", "1.1", "0.1"]]],
+      [185700, [["Set Cam ZoomBoom", "1.2", "0.1"]]],
+      [185775, [["Set Cam ZoomBoom", "1.1", "0.1"]]],
+      [185850, [["Set Cam ZoomBoom", "1.2", "0.1"]]],
+      [186000, [["Set Cam ZoomBoom", "0.9", "0.1"]]],
+      [187200, [["Set Cam ZoomBoom", "0.8", "0.1"]]],
+      [190800, [["Set Cam ZoomBoom", "1", "0.1"]]],
+      [192000, [["Set Cam ZoomBoom", "0.8", "0.1"]]],
+      [195600, [["Set Cam ZoomBoom", "0.8", "0.2"]]],
+      [196800, [["Set Cam ZoomBoom", "0.8", "0.2"]]],
+      [200400, [["Set Cam ZoomBoom", "1", "0.2"]]],
+      [201600, [["Set Cam ZoomBoom", "0.8", "0.2"]]],
+      [205200, [["Set Cam ZoomBoom", "1", "0.2"]]],
+      [206400, [["Set Cam ZoomBoom", "0.8", "0.2"]]],
+      [208800, [["Set Cam ZoomBoom", "0.9", "0.2"]]],
+      [209400, [["Set Cam ZoomBoom", "1", "0.2"]]],
+      [210000, [["Set Cam ZoomBoom", "1.1", "0.2"]]],
+      [210600, [["Set Cam ZoomBoom", "1.2", "0.2"]]],
+      [211200, [["Set Cam ZoomBoom", "1.3", "0.2"]]],
+      [211800, [["Set Cam ZoomBoom", "1.4", "0.2"]]],
+      [213000, [["Set Cam ZoomBoom", "1.2", "0.2"]]],
+      [213600, [["Set Cam ZoomBoom", "1", "0.2"]]],
+      [214200, [["Set Cam ZoomBoom", "0.9", "0.2"]]],
+      [214800, [["Set Cam ZoomBoom", "0.7", "0.2"]]],
+      [215400, [["Set Cam ZoomBoom", "0.9", "0.2"]]],
+      [216000, [["Set Cam ZoomBoom", "0.8", "0.2"]]],
+      [218400, [["Set Cam ZoomBoom", "0.9", "0.2"]]],
+      [219000, [["Set Cam ZoomBoom", "1", "0.2"]]],
+      [219600, [["Set Cam ZoomBoom", "1.1", "0.2"]]],
+      [220200, [["Set Cam ZoomBoom", "1.2", "0.2"]]],
+      [220800, [["Set Cam ZoomBoom", "1.3", "0.2"]]],
+      [221400, [["Set Cam ZoomBoom", "1.4", "0.2"]]],
+      [222600, [["Set Cam ZoomBoom", "1.2", "0.2"]]],
+      [223200, [["Set Cam ZoomBoom", "1", "0.2"]]],
+      [223800, [["Set Cam ZoomBoom", "0.9", "0.2"]]],
+      [224400, [["Set Cam ZoomBoom", "0.7", "0.2"]]],
+      [225000, [["Set Cam ZoomBoom", "0.9", "0.2"]]],
+      [225600, [["Set Cam ZoomBoom", "0.8", "0.2"]]],
+      [228000, [["Set Cam ZoomBoom", "0.9", "0.2"]]],
+      [230400, [["Set Cam ZoomBoom", "0.8", "0.2"]]],
+      [232800, [["Set Cam ZoomBoom", "1", "0.2"]]],
+      [235200, [["Set Cam ZoomBoom", "0.8", "0.2"]]],
+      [237600, [["Set Cam ZoomBoom", "1", "0.2"]]],
+      [240000, [["Set Cam ZoomBoom", "1.1", "0.2"]]],
+      [242400, [["Set Cam ZoomBoom", "1.3", "0.2"]]],
+      [244800, [["Set Cam ZoomBoom", "0.8", "0.2"]]],
+      [249600, [["Set Cam ZoomBoom", "0.9", "0.2"]]],
+      [254400, [["Set Cam ZoomBoom", "1", "0.1"]]],
+      [255600, [["Set Cam ZoomBoom", "0.8", "0.1"]]],
+      [256200, [["Set Cam ZoomBoom", "1", "0.1"]]],
+      [256800, [["Set Cam ZoomBoom", "0.9", "0.1"]]],
+      [258000, [["Set Cam ZoomBoom", "0.7", "0.1"]]],
+      [259200, [["Set Cam ZoomBoom", "1", "0.1"]]],
+      [260400, [["Set Cam ZoomBoom", "0.8", "0.1"]]],
+      [261000, [["Set Cam ZoomBoom", "1", "0.1"]]],
+      [261600, [["Set Cam ZoomBoom", "0.9", "0.1"]]],
+      [262800, [["Set Cam ZoomBoom", "0.7", "0.1"]]],
+      [
+        264000,
+        [
+          ["Set Cam ZoomBoom", "0.8", "0.1"],
+          ["Flash Camera", "1", ""]
+        ]
+      ],
+      [266400, [["Set Cam ZoomBoom", "0.9", "0.1"]]],
+      [268800, [["Set Cam ZoomBoom", "1", "0.1"]]],
+      [271200, [["Set Cam ZoomBoom", "1.1", "0.1"]]],
+      [273600, [["Set Cam ZoomBoom", "0.8", "0.5"]]],
+      [278400, [["Set Cam ZoomBoom", "1", "0.5"]]],
+      [282900, [["Set Cam ZoomBoom", "1.3", "0.5"]]],
+      [
+        283200,
+        [
+          ["BlackOut", "true", ""],
+          ["Danceboi", "0", "0"],
+          ["Cam Boom Speed", "0", "0"],
+          ["Flash Camera", "1", ""]
+        ]
+      ]
+    ]
+  }
+}

@@ -1,0 +1,111 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-9
+			],
+			"anim": "cheer",
+			"fps": 24,
+			"name": "GachaGirlFriend Yay",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-9
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "GachaGirlFriend Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-7
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "GachaGirlFriend Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-9
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "GachaGirlFriend Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-9
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "GachaGirlFriend Right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-9
+			],
+			"anim": "sad",
+			"fps": 24,
+			"name": "GachaGirlFriend Sad",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				14,
+				-9
+			],
+			"anim": "scared",
+			"fps": 24,
+			"name": "GachaGirlFriend Scared",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				-9
+			],
+			"indices": [],
+			"fps": 18,
+			"anim": "idle",
+			"loop": true,
+			"name": "GachaGirlFriend Idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/GachaGirlFriend",
+	"position": [
+		-290,
+		-240
+	],
+	"healthicon": "gf",
+	"flip_x": true,
+	"healthbar_colors": [
+		165,
+		0,
+		77
+	],
+	"camera_position": [
+		360,
+		280
+	],
+	"sing_duration": 4,
+	"scale": 0.5
+}

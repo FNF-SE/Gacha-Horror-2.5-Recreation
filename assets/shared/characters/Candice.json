@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Candice Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-1,
+				0
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Candice Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				2,
+				2
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Candice Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				1,
+				-2
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Candice Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-1,
+				-1
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Candice Right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Candice",
+	"position": [
+		-100,
+		-60
+	],
+	"healthicon": "candice",
+	"flip_x": false,
+	"healthbar_colors": [
+		94,
+		163,
+		62
+	],
+	"camera_position": [
+		730,
+		270
+	],
+	"sing_duration": 6.1,
+	"scale": 0.6
+}

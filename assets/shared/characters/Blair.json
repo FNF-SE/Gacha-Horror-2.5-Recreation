@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Blair Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				10,
+				0
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Blair Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Blair Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Blair Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Blair Right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Blair",
+	"position": [
+		-380,
+		-160
+	],
+	"healthicon": "blair",
+	"flip_x": false,
+	"healthbar_colors": [
+		236,
+		168,
+		255
+	],
+	"camera_position": [
+		410,
+		320
+	],
+	"sing_duration": 6.1,
+	"scale": 0.5
+}

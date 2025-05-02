@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Red but second person Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Red but second person Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Red but second person Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Red but second person Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Red but second person Right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Red but second person",
+	"position": [
+		-420,
+		-410
+	],
+	"healthicon": "red",
+	"flip_x": false,
+	"healthbar_colors": [
+		183,
+		63,
+		63
+	],
+	"camera_position": [
+		351,
+		398
+	],
+	"sing_duration": 6.1,
+	"scale": 0.5
+}

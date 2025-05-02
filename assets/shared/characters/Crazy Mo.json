@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Mo Down"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Mo Up"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Mo Idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				170,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Mo Left"
+		},
+		{
+			"offsets": [
+				-140,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Mo Right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/CrazyMo",
+	"position": [
+		-230,
+		-70
+	],
+	"healthicon": "mo",
+	"flip_x": true,
+	"healthbar_colors": [
+		115,
+		25,
+		11
+	],
+	"camera_position": [
+		-90,
+		190
+	],
+	"sing_duration": 6.1,
+	"scale": 0.7
+}

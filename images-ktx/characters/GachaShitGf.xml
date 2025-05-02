@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="GachaShitGf.png">
+    <SubTexture name="GachaShitGf Idle0000" x="360" y="545" width="361" height="475" frameX="-97" frameY="-89" frameWidth="580" frameHeight="580" />
+    <SubTexture name="GachaShitGf Idle0001" x="0" y="545" width="360" height="486" frameX="-102" frameY="-78" frameWidth="580" frameHeight="580" />
+    <SubTexture name="GachaShitGf Idle0002" x="724" y="0" width="361" height="500" frameX="-107" frameY="-64" frameWidth="580" frameHeight="580" />
+    <SubTexture name="GachaShitGf Idle0003" x="362" y="0" width="362" height="515" frameX="-112" frameY="-49" frameWidth="580" frameHeight="580" />
+    <SubTexture name="GachaShitGf Idle0004" x="0" y="0" width="362" height="545" frameX="-111" frameY="-19" frameWidth="580" frameHeight="580" />
+</TextureAtlas>

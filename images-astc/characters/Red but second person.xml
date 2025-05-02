@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="Red but second person.png">
+    <SubTexture name="Red but second person Idle0000" x="6618" y="1333" width="682" height="1311" frameX="-279" frameY="-216" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Idle0001" x="5254" y="0" width="682" height="1388" frameX="-264" frameY="-140" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Idle0002" x="4084" y="2924" width="682" height="1411" frameX="-259" frameY="-117" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Idle0003" x="2712" y="1493" width="681" height="1425" frameX="-257" frameY="-104" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Idle0004" x="4201" y="1429" width="681" height="1428" frameX="-256" frameY="-101" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Idle0005" x="3420" y="1429" width="681" height="1428" frameX="-256" frameY="-101" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Idle0006" x="1376" y="0" width="681" height="1434" frameX="-255" frameY="-95" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Idle0007" x="2057" y="0" width="681" height="1432" frameX="-256" frameY="-97" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Down0000" x="787" y="5722" width="683" height="1276" frameX="-283" frameY="-253" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Down0001" x="6618" y="0" width="682" height="1333" frameX="-272" frameY="-195" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Down0002" x="5254" y="1388" width="682" height="1350" frameX="-270" frameY="-178" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Down0003" x="5254" y="2738" width="682" height="1345" frameX="-271" frameY="-183" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Down0004" x="5936" y="0" width="682" height="1338" frameX="-272" frameY="-190" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Down0005" x="5936" y="1338" width="682" height="1338" frameX="-272" frameY="-190" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Down0006" x="5936" y="2676" width="682" height="1338" frameX="-272" frameY="-190" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Down0007" x="5936" y="4014" width="682" height="1338" frameX="-272" frameY="-190" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Left0000" x="0" y="5722" width="787" height="1301" frameX="-36" frameY="-224" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Left0001" x="4199" y="4348" width="703" height="1360" frameX="-108" frameY="-163" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Left0002" x="0" y="4348" width="690" height="1374" frameX="-118" frameY="-149" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Left0003" x="690" y="4348" width="698" height="1368" frameX="-112" frameY="-155" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Left0004" x="1388" y="4348" width="702" height="1361" frameX="-109" frameY="-162" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Left0005" x="2090" y="4348" width="703" height="1361" frameX="-108" frameY="-162" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Left0006" x="2793" y="4348" width="703" height="1361" frameX="-108" frameY="-162" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Left0007" x="3496" y="4348" width="703" height="1361" frameX="-108" frameY="-162" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Right0000" x="4902" y="4348" width="684" height="1360" frameX="-421" frameY="-166" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Right0001" x="1360" y="2924" width="681" height="1418" frameX="-371" frameY="-108" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Right0002" x="2738" y="0" width="682" height="1431" frameX="-360" frameY="-94" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Right0003" x="0" y="2924" width="682" height="1424" frameX="-367" frameY="-101" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Right0004" x="2041" y="2924" width="682" height="1418" frameX="-371" frameY="-107" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Right0005" x="3420" y="0" width="781" height="1429" frameX="-371" frameY="-107" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Right0006" x="4201" y="0" width="1053" height="1429" frameX="0" frameY="-107" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Right0007" x="2723" y="2924" width="682" height="1418" frameX="-371" frameY="-107" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Up0000" x="0" y="0" width="698" height="1493" frameX="-194" frameY="-33" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Up0001" x="698" y="0" width="678" height="1435" frameX="-236" frameY="-94" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Up0002" x="3405" y="2924" width="679" height="1418" frameX="-244" frameY="-111" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Up0003" x="682" y="2924" width="678" height="1423" frameX="-239" frameY="-106" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Up0004" x="2034" y="1493" width="678" height="1430" frameX="-236" frameY="-99" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Up0005" x="0" y="1493" width="678" height="1431" frameX="-236" frameY="-98" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Up0006" x="678" y="1493" width="678" height="1431" frameX="-236" frameY="-98" frameWidth="1152" frameHeight="1536" />
+    <SubTexture name="Red but second person Up0007" x="1356" y="1493" width="678" height="1431" frameX="-236" frameY="-98" frameWidth="1152" frameHeight="1536" />
+</TextureAtlas>

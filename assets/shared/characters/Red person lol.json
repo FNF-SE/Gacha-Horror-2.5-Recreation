@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Insomnia man Idle"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Insomnia man Left"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Insomnia man Down"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Insomnia man Up"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Insomnia man Right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Insomnia man",
+	"position": [
+		60,
+		80
+	],
+	"healthicon": "red",
+	"flip_x": false,
+	"healthbar_colors": [
+		183,
+		63,
+		63
+	],
+	"camera_position": [
+		-340,
+		-270
+	],
+	"sing_duration": 6.1,
+	"scale": 1.7
+}

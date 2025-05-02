@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="Isabelle.png">
+    <SubTexture name="Isabelle Idle0000" x="0" y="0" width="838" height="768" frameX="-97" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Idle0001" x="838" y="0" width="839" height="768" frameX="-97" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Idle0002" x="1677" y="0" width="839" height="768" frameX="-97" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Idle0003" x="2516" y="0" width="837" height="768" frameX="-97" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Idle0004" x="3353" y="0" width="837" height="768" frameX="-97" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Idle0005" x="4190" y="0" width="838" height="768" frameX="-97" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Idle0006" x="0" y="768" width="838" height="768" frameX="-97" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Idle0007" x="838" y="768" width="838" height="768" frameX="-97" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Idle0008" x="1676" y="768" width="839" height="768" frameX="-97" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Idle0009" x="2515" y="768" width="839" height="768" frameX="-97" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Down0000" x="3354" y="768" width="836" height="768" frameX="-96" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Down0001" x="4190" y="768" width="836" height="768" frameX="-96" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Down0002" x="0" y="1536" width="838" height="759" frameX="-95" frameY="-9" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Down0003" x="838" y="1536" width="837" height="768" frameX="-95" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Down0004" x="1675" y="1536" width="838" height="768" frameX="-95" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Down0005" x="2513" y="1536" width="838" height="768" frameX="-95" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Down0006" x="3351" y="1536" width="838" height="768" frameX="-95" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Down0007" x="4189" y="1536" width="838" height="768" frameX="-95" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Left0000" x="0" y="2304" width="858" height="768" frameX="-22" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Left0001" x="858" y="2304" width="856" height="768" frameX="-39" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Left0002" x="1714" y="2304" width="858" height="768" frameX="-47" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Left0003" x="2572" y="2304" width="858" height="768" frameX="-50" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Left0004" x="3430" y="2304" width="858" height="768" frameX="-50" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Left0005" x="4288" y="2304" width="857" height="768" frameX="-49" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Left0006" x="0" y="3072" width="859" height="768" frameX="-47" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Left0007" x="859" y="3072" width="857" height="768" frameX="-47" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Right0000" x="1716" y="3072" width="864" height="768" frameX="-153" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Right0001" x="2580" y="3072" width="864" height="768" frameX="-132" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Right0002" x="3444" y="3072" width="865" height="768" frameX="-119" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Right0003" x="4309" y="3072" width="867" height="768" frameX="-114" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Right0004" x="0" y="3840" width="871" height="768" frameX="-111" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Right0005" x="871" y="3840" width="870" height="768" frameX="-115" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Right0006" x="1741" y="3840" width="870" height="768" frameX="-116" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Right0007" x="2611" y="3840" width="869" height="768" frameX="-117" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Up0000" x="3480" y="3840" width="848" height="768" frameX="-86" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Up0001" x="4328" y="3840" width="848" height="768" frameX="-87" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Up0002" x="0" y="4608" width="845" height="768" frameX="-88" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Up0003" x="845" y="4608" width="844" height="768" frameX="-89" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Up0004" x="1689" y="4608" width="845" height="768" frameX="-88" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Up0005" x="2534" y="4608" width="845" height="768" frameX="-88" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Up0006" x="3379" y="4608" width="847" height="768" frameX="-88" frameY="0" frameWidth="1024" frameHeight="768" />
+    <SubTexture name="Isabelle Up0007" x="4226" y="4608" width="850" height="768" frameX="-86" frameY="0" frameWidth="1024" frameHeight="768" />
+</TextureAtlas>

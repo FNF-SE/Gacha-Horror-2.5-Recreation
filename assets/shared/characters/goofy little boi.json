@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "goofy boi Idle"
+		},
+		{
+			"offsets": [
+				80,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "goofy boi Left"
+		},
+		{
+			"offsets": [
+				0,
+				-80
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "goofy boi Down"
+		},
+		{
+			"offsets": [
+				0,
+				120
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "goofy boi Up"
+		},
+		{
+			"offsets": [
+				-120,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "goofy boi Right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/goofy boi",
+	"position": [
+		0,
+		-20
+	],
+	"healthicon": "goofy",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		0,
+		0
+	],
+	"camera_position": [
+		-240,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1.4
+}

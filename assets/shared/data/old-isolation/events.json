@@ -1,0 +1,145 @@
+{
+  "song": {
+    "events": [
+      [
+        9600,
+        [
+          ["Replace stage layer", "black", "dablack"],
+          ["Flash Camera", "1", ""]
+        ]
+      ],
+      [49200, [["Camera Set Target", "B", ""]]],
+      [
+        52800,
+        [
+          ["Change Character", "BF", "moe"],
+          ["Replace stage layer", "moe", "mo"],
+          ["Red Flash Camera", "1", ""],
+          ["Set Cam ZoomBoom", "1.3", "0.6"]
+        ]
+      ],
+      [57600, [["Set Cam ZoomBoom", "0.9", "0.9"]]],
+      [
+        69600,
+        [
+          ["Red Flash Camera", "1", ""],
+          ["Change Character", "BF", "mo"],
+          ["Replace stage layer", "mo", "moe"]
+        ]
+      ],
+      [73200, [["Camera Set Target", "B", ""]]],
+      [75000, [["Camera Set Target", "B", ""]]],
+      [75600, [["Camera Set Target", "D", ""]]],
+      [75900, [["Camera Set Target", "B", ""]]],
+      [
+        76200,
+        [
+          ["Change Character", "BF", "moe"],
+          ["Red Flash Camera", "1", ""],
+          ["Set Cam ZoomBoom", "1.3", "0.9"]
+        ]
+      ],
+      [
+        76800,
+        [
+          ["Red Flash Camera", "1", ""],
+          ["Replace stage layer", "moe", "mo"],
+          ["Set Cam ZoomBoom", "0.9", "0.1"]
+        ]
+      ],
+      [81000, [["Camera Set Target", "D", ""]]],
+      [
+        85800,
+        [
+          ["Camera Set Target", "B", ""],
+          ["Change Character", "BF", "mo"],
+          ["Red Flash Camera", "1", ""],
+          ["Set Cam ZoomBoom", "1.3", "0.6"]
+        ]
+      ],
+      [
+        86400,
+        [
+          ["Red Flash Camera", "1", ""],
+          ["Replace stage layer", "mo", "moe"],
+          ["Set Cam ZoomBoom", "0.9", "0.9"]
+        ]
+      ],
+      [
+        89400,
+        [
+          ["Replace stage layer", "moe", "mo"],
+          ["Change Character", "BF", "moe"],
+          ["Red Flash Camera", "1", ""]
+        ]
+      ],
+      [
+        94200,
+        [
+          ["Red Flash Camera", "1", ""],
+          ["Change Character", "BF", "mo"],
+          ["Replace stage layer", "mo", "moe"]
+        ]
+      ],
+      [
+        99000,
+        [
+          ["Replace stage layer", "moe", "mo"],
+          ["Red Flash Camera", "1", ""],
+          ["Change Character", "BF", "moe"]
+        ]
+      ],
+      [112800, [["Better Cinematic", "1", "90"]]],
+      [118800, [["Set Cam ZoomBoom", "1.2", "0.9"]]],
+      [
+        120000,
+        [
+          ["Set Cam ZoomBoom", "0.9", "0.9"],
+          ["Camera Follow Pos", "650", "550"],
+          ["Better Cinematic", "1", "0"]
+        ]
+      ],
+      [
+        124800,
+        [
+          ["Replace stage layer", "mo", "moe"],
+          ["Red Flash Camera", "1", ""],
+          ["Change Character", "BF", "mo"]
+        ]
+      ],
+      [
+        129600,
+        [
+          ["Change Character", "BF", "moe"],
+          ["Replace stage layer", "moe", "mo"],
+          ["Red Flash Camera", "1", ""],
+          ["Camera Follow Pos", "", ""],
+          ["Set Cam ZoomBoom", "1.3", "0.9"]
+        ]
+      ],
+      [
+        136800,
+        [
+          ["Red Flash Camera", "1", ""],
+          ["Change Character", "BF", "mo"],
+          ["Replace stage layer", "mo", "moe"]
+        ]
+      ],
+      [
+        139200,
+        [
+          ["Set Cam ZoomBoom", "0.9", "0.9"],
+          ["Camera Follow Pos", "650", "500"]
+        ]
+      ],
+      [
+        141000,
+        [
+          ["Red Flash Camera", "3", ""],
+          ["Screen Shake", "5, 0.05", ""]
+        ]
+      ],
+      [143400, [["BlackOut", "true", ""]]]
+    ]
+  }
+}

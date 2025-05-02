@@ -1,0 +1,4 @@
+Value 1: 'a' to make the BG white and characters black
+'b' to undo.
+'c' to instantly make the BG white.
+Value 2: Silhouette Fade In/Out Time.

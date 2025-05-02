@@ -1,0 +1,20 @@
+{
+  "storyName": "",
+  "difficulties": "Hard",
+  "hideFreeplay": false,
+  "weekBackground": "",
+  "weekBefore": "tutorial",
+  "freeplayColor": [146, 113, 253],
+  "startUnlocked": true,
+  "hideStoryMode": true,
+  "songs": [
+    ["Old Despair", "cc", [255, 80, 93]],
+    ["Old Isolation", "mo", [146, 0, 0]],
+    ["Old Red Slot", "red", [86, 0, 0]],
+    ["Old Far Lost", "muu", [86, 0, 0]],
+    ["Mike", "mike", [0, 255, 0]]
+  ],
+  "weekCharacters": ["", "", ""],
+  "hiddenUntilUnlocked": false,
+  "weekName": "Silly Songs"
+}

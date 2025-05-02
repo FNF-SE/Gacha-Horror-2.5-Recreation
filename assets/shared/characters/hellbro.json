@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				2,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Hellbro Idle"
+		},
+		{
+			"offsets": [
+				19,
+				-1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Hellbro Left"
+		},
+		{
+			"offsets": [
+				3,
+				-19
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Hellbro Down"
+		},
+		{
+			"offsets": [
+				0,
+				9
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Hellbro Up"
+		},
+		{
+			"offsets": [
+				-26,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Hellbro Right"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/Hellbro",
+	"position": [
+		-50,
+		-220
+	],
+	"healthicon": "hellbro",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		0,
+		0
+	],
+	"camera_position": [
+		-35,
+		120
+	],
+	"sing_duration": 6.1,
+	"scale": 0.8
+}

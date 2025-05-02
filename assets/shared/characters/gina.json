@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				10
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Ginav3 Idle"
+		},
+		{
+			"offsets": [
+				112,
+				10
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Ginav3 Left"
+		},
+		{
+			"offsets": [
+				8,
+				10
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Ginav3 Down"
+		},
+		{
+			"offsets": [
+				-2,
+				10
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Ginav3 Up"
+		},
+		{
+			"offsets": [
+				-67,
+				10
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Ginav3 Right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Gina",
+	"position": [
+		-300,
+		-333
+	],
+	"healthicon": "gina",
+	"flip_x": false,
+	"healthbar_colors": [
+		176,
+		97,
+		146
+	],
+	"camera_position": [
+		100,
+		410
+	],
+	"sing_duration": 6.1,
+	"scale": 0.7
+}

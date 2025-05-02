@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Insomnia man Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Insomnia man Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Insomnia man Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Insomnia man Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Insomnia man Right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/LGRedSlot",
+	"position": [
+		-320,
+		-280
+	],
+	"healthicon": "lgred",
+	"flip_x": false,
+	"healthbar_colors": [
+		183,
+		63,
+		63
+	],
+	"camera_position": [
+		-20,
+		100
+	],
+	"sing_duration": 6.1,
+	"scale": 0.799999999999999
+}

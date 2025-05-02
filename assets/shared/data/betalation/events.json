@@ -1,0 +1,371 @@
+{
+  "song": {
+    "events": [
+      [0, [["Replace stage layer", "black", "JGGHD"]]],
+      [
+        25,
+        [
+          ["Replace stage layer", "black", "dablack"],
+          ["Flash Camera", "1", ""]
+        ]
+      ],
+      [150, [["Cam Boom Speed", "0", "0"]]],
+      [28500, [["Set Song Length", "default", "3.14"]]],
+      [28650, [["Cam Boom Speed", "1", "1"]]],
+      [
+        28800,
+        [
+          ["Change Scroll Speed", "1.9", "1"],
+          ["Red Flash Camera", "1", ""]
+        ]
+      ],
+      [
+        38400,
+        [
+          ["Change Character", "BF", "moebetalation"],
+          ["Change Character", "DAD", "bf but flipped3"],
+          ["Red Flash Camera", "1", ""],
+          ["Red Flash Camera", "1", ""],
+          ["Replace stage layer", "moe", "mo"]
+        ]
+      ],
+      [
+        40800,
+        [
+          ["Change Character", "BF", "moisolation"],
+          ["Change Character", "DAD", "bf but flipped"],
+          ["Red Flash Camera", "1", ""],
+          ["Replace stage layer", "mo", "moe"]
+        ]
+      ],
+      [
+        41400,
+        [
+          ["Change Character", "BF", "moebetalation"],
+          ["Change Character", "DAD", "bf but flipped3"],
+          ["Red Flash Camera", "1", ""],
+          ["Replace stage layer", "moe", "mo"]
+        ]
+      ],
+      [43800, [["Camera Set Target", "D", ""]]],
+      [
+        46200,
+        [
+          ["Change Character", "BF", "moisolation"],
+          ["Change Character", "DAD", "bf but flipped"],
+          ["Red Flash Camera", "1", ""],
+          ["Replace stage layer", "mo", "moe"]
+        ]
+      ],
+      [
+        49200,
+        [
+          ["Change Character", "BF", "moebetalation"],
+          ["Change Character", "DAD", "bf but flipped3"],
+          ["Camera Set Target", "B", ""],
+          ["Red Flash Camera", "1", ""],
+          ["Replace stage layer", "moe", "mo"]
+        ]
+      ],
+      [54000, [["Camera Set Target", "D", ""]]],
+      [58800, [["Camera Set Target", "B", ""]]],
+      [70650, [["Cam Boom Speed", "1", "2"]]],
+      [
+        70800,
+        [
+          ["Change Scroll Speed", "2.5", "1"],
+          ["Change Character", "BF", "moisolation"],
+          ["Change Character", "DAD", "bf but flipped"],
+          ["Red Flash Camera", "1", ""],
+          ["Replace stage layer", "mo", "moe"]
+        ]
+      ],
+      [75600, [["Camera Set Target", "D", ""]]],
+      [80400, [["Camera Set Target", "B", ""]]],
+      [81600, [["Camera Set Target", "D", ""]]],
+      [
+        82800,
+        [
+          ["Change Character", "BF", "moebetalation"],
+          ["Change Character", "DAD", "bf but flipped3"],
+          ["Red Flash Camera", "1", ""],
+          ["Replace stage layer", "moe", "mo"]
+        ]
+      ],
+      [98250, [["Cam Boom Speed", "1", "3"]]],
+      [
+        98400,
+        [
+          ["Change Character", "BF", "moisolation"],
+          ["Change Character", "DAD", "bf but flipped"],
+          ["Red Flash Camera", "1", ""],
+          ["Replace stage layer", "mo", "moe"]
+        ]
+      ],
+      [106800, [["Camera Set Target", "B", ""]]],
+      [
+        108000,
+        [
+          ["Change Character", "BF", "moebetalation"],
+          ["Change Character", "DAD", "bf but flipped3"],
+          ["Red Flash Camera", "1", ""],
+          ["Replace stage layer", "moe", "mo"]
+        ]
+      ],
+      [
+        109200,
+        [
+          ["Change Character", "BF", "moisolation"],
+          ["Change Character", "DAD", "bf but flipped"],
+          ["Red Flash Camera", "1", ""],
+          ["Replace stage layer", "mo", "moe"]
+        ]
+      ],
+      [
+        110400,
+        [
+          ["Change Character", "BF", "moebetalation"],
+          ["Change Character", "DAD", "bf but flipped3"],
+          ["Red Flash Camera", "1", ""],
+          ["Replace stage layer", "moe", "mo"]
+        ]
+      ],
+      [
+        111000,
+        [
+          ["Change Character", "BF", "moisolation"],
+          ["Change Character", "DAD", "bf but flipped"],
+          ["Red Flash Camera", "1", ""],
+          ["Replace stage layer", "mo", "moe"]
+        ]
+      ],
+      [
+        111300,
+        [
+          ["Change Character", "BF", "moebetalation"],
+          ["Change Character", "DAD", "bf but flipped3"]
+        ]
+      ],
+      [
+        111600,
+        [
+          ["Change Character", "BF", "moisolation"],
+          ["Change Character", "DAD", "bf but flipped"],
+          ["Red Flash Camera", "1", ""]
+        ]
+      ],
+      [
+        112200,
+        [
+          ["Change Character", "BF", "moebetalation"],
+          ["Change Character", "DAD", "bf but flipped3"],
+          ["Red Flash Camera", "1", ""],
+          ["Replace stage layer", "moe", "mo"]
+        ]
+      ],
+      [
+        113400,
+        [
+          ["Change Character", "BF", "moisolation"],
+          ["Change Character", "DAD", "bf but flipped"],
+          ["Red Flash Camera", "1", ""],
+          ["Replace stage layer", "mo", "moe"]
+        ]
+      ],
+      [
+        113700,
+        [
+          ["Change Character", "BF", "moebetalation"],
+          ["Change Character", "DAD", "bf but flipped3"],
+          ["Red Flash Camera", "1", ""],
+          ["Replace stage layer", "moe", "mo"]
+        ]
+      ],
+      [
+        114000,
+        [
+          ["Change Character", "BF", "moisolation"],
+          ["Change Character", "DAD", "bf but flipped"],
+          ["Red Flash Camera", "1", ""],
+          ["Replace stage layer", "mo", "moe"]
+        ]
+      ],
+      [
+        114300,
+        [
+          ["Change Character", "BF", "moebetalation"],
+          ["Change Character", "DAD", "bf but flipped3"]
+        ]
+      ],
+      [
+        114600,
+        [
+          ["Change Character", "BF", "moisolation"],
+          ["Change Character", "DAD", "bf but flipped"],
+          ["Red Flash Camera", "1", ""],
+          ["Replace stage layer", "moe", "mo"]
+        ]
+      ],
+      [
+        114900,
+        [
+          ["Change Character", "BF", "moebetalation"],
+          ["Change Character", "DAD", "bf but flipped3"]
+        ]
+      ],
+      [
+        115800,
+        [
+          ["Change Character", "BF", "moisolation"],
+          ["Change Character", "DAD", "bf but flipped"],
+          ["Red Flash Camera", "1", ""],
+          ["Replace stage layer", "mo", "moe"]
+        ]
+      ],
+      [
+        117000,
+        [
+          ["Change Character", "BF", "moisolation"],
+          ["Change Character", "DAD", "bf but flipped"],
+          ["Red Flash Camera", "1", ""]
+        ]
+      ],
+      [
+        118200,
+        [
+          ["Change Character", "BF", "moisolation"],
+          ["Change Character", "DAD", "bf but flipped"],
+          ["Red Flash Camera", "1", ""]
+        ]
+      ],
+      [
+        118800,
+        [
+          ["Change Character", "BF", "moisolation"],
+          ["Change Character", "DAD", "bf but flipped"],
+          ["Red Flash Camera", "1", ""]
+        ]
+      ],
+      [
+        120000,
+        [
+          ["Change Character", "BF", "moisolation"],
+          ["Change Character", "DAD", "bf but flipped"],
+          ["Red Flash Camera", "1", ""]
+        ]
+      ],
+      [
+        120150,
+        [
+          ["Change Character", "BF", "moebetalation"],
+          ["Change Character", "DAD", "bf but flipped3"]
+        ]
+      ],
+      [
+        120300,
+        [
+          ["Change Character", "BF", "moisolation"],
+          ["Change Character", "DAD", "bf but flipped"],
+          ["Red Flash Camera", "1", ""]
+        ]
+      ],
+      [
+        120450,
+        [
+          ["Change Character", "BF", "moebetalation"],
+          ["Change Character", "DAD", "bf but flipped3"]
+        ]
+      ],
+      [
+        120600,
+        [
+          ["Change Character", "BF", "moisolation"],
+          ["Change Character", "DAD", "bf but flipped"],
+          ["Red Flash Camera", "1", ""]
+        ]
+      ],
+      [
+        120750,
+        [
+          ["Change Character", "BF", "moebetalation"],
+          ["Change Character", "DAD", "bf but flipped3"]
+        ]
+      ],
+      [
+        120900,
+        [
+          ["Change Character", "BF", "moisolation"],
+          ["Change Character", "DAD", "bf but flipped"],
+          ["Red Flash Camera", "1", ""]
+        ]
+      ],
+      [
+        121050,
+        [
+          ["Change Character", "BF", "moebetalation"],
+          ["Change Character", "DAD", "bf but flipped3"]
+        ]
+      ],
+      [
+        121200,
+        [
+          ["Change Character", "BF", "moisolation"],
+          ["Change Character", "DAD", "bf but flipped"],
+          ["Screen Shake", "2, 0.02", ""]
+        ]
+      ],
+      [
+        121350,
+        [
+          ["Change Character", "BF", "moebetalation"],
+          ["Change Character", "DAD", "bf but flipped3"]
+        ]
+      ],
+      [
+        121500,
+        [
+          ["Change Character", "BF", "moisolation"],
+          ["Change Character", "DAD", "bf but flipped"]
+        ]
+      ],
+      [
+        121650,
+        [
+          ["Change Character", "BF", "moebetalation"],
+          ["Change Character", "DAD", "bf but flipped3"]
+        ]
+      ],
+      [
+        121800,
+        [
+          ["Change Character", "BF", "moisolation"],
+          ["Change Character", "DAD", "bf but flipped"]
+        ]
+      ],
+      [
+        121950,
+        [
+          ["Change Character", "BF", "moebetalation"],
+          ["Change Character", "DAD", "bf but flipped3"]
+        ]
+      ],
+      [
+        122100,
+        [
+          ["Change Character", "BF", "moisolation"],
+          ["Change Character", "DAD", "bf but flipped"]
+        ]
+      ],
+      [
+        122250,
+        [
+          ["Change Character", "BF", "moebetalation"],
+          ["Change Character", "DAD", "bf but flipped3"]
+        ]
+      ],
+      [122400, [["Screen Shake", "3, 0.05", ""]]],
+      [123300, [["Set Cam ZoomBoom", "1.5", "1"]]],
+      [124050, [["BlackOut", "true", ""]]]
+    ]
+  }
+}

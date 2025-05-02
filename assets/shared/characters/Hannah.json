@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "Hannah Idle"
+		},
+		{
+			"offsets": [
+				10,
+				10
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Hannah Left"
+		},
+		{
+			"offsets": [
+				0,
+				10
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "Hannah Down"
+		},
+		{
+			"offsets": [
+				0,
+				10
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "Hannah Up"
+		},
+		{
+			"offsets": [
+				20,
+				10
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Hannah Right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Hannah",
+	"position": [
+		-320,
+		-40
+	],
+	"healthicon": "hannah",
+	"flip_x": false,
+	"healthbar_colors": [
+		168,
+		46,
+		33
+	],
+	"camera_position": [
+		250,
+		200
+	],
+	"sing_duration": 6.1,
+	"scale": 0.6
+}

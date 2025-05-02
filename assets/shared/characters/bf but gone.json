@@ -1,0 +1,21 @@
+{
+  "animations": [
+    {
+      "offsets": [0, 0],
+      "loop": false,
+      "fps": 24,
+      "anim": "idle",
+      "indices": [],
+      "name": "BF idle dance"
+    }
+  ],
+  "no_antialiasing": true,
+  "image": "characters/no one",
+  "position": [-110, 60],
+  "healthicon": "bf",
+  "flip_x": false,
+  "healthbar_colors": [49, 176, 209],
+  "camera_position": [20, 90],
+  "sing_duration": 4,
+  "scale": 0.9
+}

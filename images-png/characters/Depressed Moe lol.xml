@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="Depressed Moe lol.png">
+    <SubTexture name="Moe Idle0000" x="0" y="0" width="562" height="927" frameX="-200" frameY="-26" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Idle0001" x="562" y="0" width="561" height="926" frameX="-201" frameY="-27" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Idle0002" x="1123" y="0" width="556" height="928" frameX="-209" frameY="-25" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Idle0003" x="1679" y="0" width="562" height="926" frameX="-199" frameY="-27" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Idle0004" x="2241" y="0" width="607" height="913" frameX="-114" frameY="-47" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Idle0005" x="2848" y="0" width="584" height="924" frameX="-162" frameY="-34" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Idle0006" x="3432" y="0" width="573" height="925" frameX="-181" frameY="-30" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Idle0007" x="4005" y="0" width="567" height="926" frameX="-192" frameY="-28" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Idle0008" x="0" y="928" width="563" height="926" frameX="-198" frameY="-27" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Idle0009" x="563" y="928" width="562" height="926" frameX="-200" frameY="-27" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Idle0010" x="1125" y="928" width="562" height="953" frameX="-200" frameY="0" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Idle0011" x="1687" y="928" width="562" height="927" frameX="-200" frameY="-26" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Down0000" x="2249" y="928" width="584" height="910" frameX="-173" frameY="-45" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Down0001" x="2833" y="928" width="579" height="922" frameX="-179" frameY="-33" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Down0002" x="3412" y="928" width="578" height="924" frameX="-181" frameY="-31" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Down0003" x="3990" y="928" width="580" height="922" frameX="-179" frameY="-33" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Down0004" x="0" y="1881" width="581" height="921" frameX="-178" frameY="-34" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Down0005" x="581" y="1881" width="581" height="921" frameX="-178" frameY="-34" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Left0000" x="1162" y="1881" width="497" height="887" frameX="-244" frameY="-70" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Left0001" x="1659" y="1881" width="503" height="894" frameX="-245" frameY="-61" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Left0002" x="2162" y="1881" width="505" height="898" frameX="-246" frameY="-57" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Left0003" x="2667" y="1881" width="507" height="896" frameX="-245" frameY="-59" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Left0004" x="3174" y="1881" width="506" height="895" frameX="-245" frameY="-60" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Left0005" x="3680" y="1881" width="505" height="895" frameX="-245" frameY="-60" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Left0006" x="0" y="2802" width="505" height="895" frameX="-245" frameY="-60" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Right0000" x="505" y="2802" width="551" height="928" frameX="-219" frameY="-31" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Right0001" x="1056" y="2802" width="550" height="930" frameX="-216" frameY="-27" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Right0002" x="1606" y="2802" width="548" height="932" frameX="-215" frameY="-25" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Right0003" x="2154" y="2802" width="548" height="932" frameX="-215" frameY="-25" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Right0004" x="2702" y="2802" width="548" height="931" frameX="-215" frameY="-26" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Right0005" x="3250" y="2802" width="548" height="931" frameX="-216" frameY="-26" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Right0006" x="3798" y="2802" width="548" height="931" frameX="-216" frameY="-26" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Up0000" x="0" y="3734" width="485" height="903" frameX="-275" frameY="-48" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Up0001" x="485" y="3734" width="512" height="907" frameX="-249" frameY="-44" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Up0002" x="997" y="3734" width="524" height="908" frameX="-238" frameY="-43" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Up0003" x="1521" y="3734" width="524" height="908" frameX="-238" frameY="-43" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Up0004" x="2045" y="3734" width="520" height="908" frameX="-242" frameY="-43" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Up0005" x="2565" y="3734" width="519" height="908" frameX="-243" frameY="-43" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Up0006" x="3084" y="3734" width="519" height="908" frameX="-243" frameY="-43" frameWidth="960" frameHeight="960" />
+    <SubTexture name="Moe Up0007" x="3603" y="3734" width="519" height="908" frameX="-243" frameY="-43" frameWidth="960" frameHeight="960" />
+</TextureAtlas>

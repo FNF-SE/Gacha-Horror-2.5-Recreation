@@ -1,0 +1,34 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 15,
+			"anim": "idle",
+			"indices": [],
+			"name": "GachaShitGf Idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/GachaShitGf",
+	"position": [
+		0,
+		100
+	],
+	"healthicon": "gf",
+	"flip_x": false,
+	"healthbar_colors": [
+		167,
+		29,
+		19
+	],
+	"camera_position": [
+		-160,
+		130
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

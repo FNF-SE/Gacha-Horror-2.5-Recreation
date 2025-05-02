@@ -1,0 +1,123 @@
+name: Release
+on: workflow_dispatch
+
+permissions:
+  contents: write
+  discussions: write
+
+env:
+  PROJECT_NAME: HorrorPackage
+
+jobs:
+  build:
+    name: ${{ matrix.name }}
+    strategy:
+      matrix:
+        include:
+          - name: Windows
+            os: windows-2025
+            buildArgs: "windows -final -D officialBuild"
+            artifactName: windowsBuild-x86_64
+            artifactPath: export\release\windows\bin\*
+          - name: Linux
+            os: ubuntu-22.04
+            buildArgs: "linux -final -D officialBuild"
+            artifactName: linuxBuild-x86_64
+            artifactPath: export/release/linux/bin/*
+          - name: macOS x86_64
+            os: macos-15
+            buildArgs: "mac -final -64 -D HXCPP_M64 -D officialBuild"
+            artifactName: macOSBuild-x86_64
+            artifactPath: export/release/macos/bin/*
+          - name: macOS ARM64
+            os: macos-15
+            buildArgs: "mac -final -arm64 -D HXCPP_ARM64 -D officialBuild"
+            artifactName: macOSBuild-arm64
+            artifactPath: export/release/macos/bin/*
+          - name: Android
+            os: macos-15
+            buildArgs: "android -final -D officialBuild"
+            artifactName: androidBuild
+            artifactPath: "export/release/android/bin/app/build/outputs/apk/release/*.apk"
+          - name: iOS
+            os: macos-15
+            buildArgs: "ios -final -nosign -D officialBuild"
+            artifactName: iOSBuild
+            artifactPath: "export/release/ios/build/Release-iphoneos/*.ipa"
+    uses: ./.github/workflows/build.yml
+    with:
+        name: ${{ matrix.name }}
+        os: ${{ matrix.os }}
+        buildArgs: ${{ matrix.buildArgs }}
+        artifactName: ${{ matrix.artifactName }}
+        artifactPath: ${{ matrix.artifactPath }}
+
+  Releaser:
+    needs: [build]
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
+      - name: Download Android Build
+        uses: actions/download-artifact@main
+        with:
+           name: androidBuild
+           path: /home/runner
+
+      - name: Move Android File
+        run: mv "/home/runner/${{ env.PROJECT_NAME }}-release.apk" "/home/runner/${{ env.PROJECT_NAME }}-Android.apk"
+
+      - name: Download iOS Build
+        uses: actions/download-artifact@main
+        with:
+           name: iOSBuild
+           path: ${{ github.workspace }}
+
+      - name: Zip iOS Build For Release
+        run: zip -r "/home/runner/${{ env.PROJECT_NAME }}-iOS.zip" "${{ github.workspace }}/${{ env.PROJECT_NAME }}.ipa"
+
+      - name: Download Linux x86_64 Build
+        uses: actions/download-artifact@main
+        with:
+           name: linuxBuild-x86_64
+           path: /home/runner/linuxBuild-x86_64
+
+      - name: Tar Linux x86_64 Build For Release
+        run: tar czf "/home/runner/${{ env.PROJECT_NAME }}-linux-x86_64.tar" /home/runner/linuxBuild-x86_64/.
+
+      - name: Download macOS ARM64 Build
+        uses: actions/download-artifact@main
+        with:
+           name: macOSBuild-arm64
+           path: /home/runner/macOSBuild-arm64
+
+      - name: Tar macOS ARM64 Build For Release
+        run: tar czf "/home/runner/${{ env.PROJECT_NAME }}-macOS-arm64.tar" /home/runner/macOSBuild-arm64/.
+
+      - name: Download macOS x86_64 Build
+        uses: actions/download-artifact@main
+        with:
+           name: macOSBuild-x86_64
+           path: /home/runner/macOSBuild-x86_64
+
+      - name: Tar macOS x86_64 Build For Release
+        run: tar czf "/home/runner/${{ env.PROJECT_NAME }}-macOS-x86_64.tar" /home/runner/macOSBuild-x86_64/.
+
+      - name: Download Windows Build
+        uses: actions/download-artifact@main
+        with:
+           name: windowsBuild-x86_64
+           path: /home/runner/windowsBuild-x86_64
+
+      - name: Zip Windows Build For Release
+        run: zip -r "/home/runner/${{ env.PROJECT_NAME }}-windows-x86_64.zip" /home/runner/windowsBuild-x86_64/.
+
+      - name: Publish The Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "2.5.0"
+          tag_name: "2.5.0"
+          prerelease: false
+          files: |
+            /home/runner/*.apk
+            /home/runner/*.tar
+            /home/runner/*.zip

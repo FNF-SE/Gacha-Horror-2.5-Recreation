@@ -1,0 +1,20 @@
+{
+  "animations": [
+    {
+      "offsets": [0, 0],
+      "loop": false,
+      "anim": "idle",
+      "fps": 24,
+      "name": "nothing"
+    }
+  ],
+  "no_antialiasing": false,
+  "image": "characters/GF_assets",
+  "position": [0, 0],
+  "healthicon": "gf",
+  "flip_x": false,
+  "healthbar_colors": [0, 0, 0],
+  "camera_position": [0, 0],
+  "sing_duration": 6.1,
+  "scale": 1
+}

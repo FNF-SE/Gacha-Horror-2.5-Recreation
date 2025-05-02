@@ -1,0 +1,566 @@
+{
+  "song": {
+    "events": [
+      [
+        0,
+        [
+          ["Black Flash Camera", "50", ""],
+          ["Cam Boom Speed", "0", "0"]
+        ]
+      ],
+      [72.8155339805825, [["Replace stage layer", "black", "dablack"]]],
+      [
+        145.631067961165,
+        [["Replace stage layer", "black", "GF but with bigger boobas"]]
+      ],
+      [
+        18640.7766990291,
+        [
+          ["Flash Camera", "1.5", ""],
+          ["Add Camera Zoom", "", ""]
+        ]
+      ],
+      [18932.0388349515, [["Add Camera Zoom", "", ""]]],
+      [19223.3009708738, [["Add Camera Zoom", "", ""]]],
+      [20970.8737864078, [["Add Camera Zoom", "", ""]]],
+      [21262.1359223301, [["Add Camera Zoom", "", ""]]],
+      [21553.3980582524, [["Add Camera Zoom", "", ""]]],
+      [23300.9708737864, [["Add Camera Zoom", "", ""]]],
+      [23592.2330097087, [["Add Camera Zoom", "", ""]]],
+      [23883.4951456311, [["Add Camera Zoom", "", ""]]],
+      [25631.0679611651, [["Add Camera Zoom", "", ""]]],
+      [25922.3300970874, [["Add Camera Zoom", "", ""]]],
+      [26213.5922330097, [["Add Camera Zoom", "", ""]]],
+      [27961.1650485437, [["Add Camera Zoom", "", ""]]],
+      [28252.427184466, [["Add Camera Zoom", "", ""]]],
+      [28543.6893203884, [["Add Camera Zoom", "", ""]]],
+      [30291.2621359223, [["Add Camera Zoom", "", ""]]],
+      [30582.5242718447, [["Add Camera Zoom", "", ""]]],
+      [30873.786407767, [["Add Camera Zoom", "", ""]]],
+      [32621.359223301, [["Add Camera Zoom", "", ""]]],
+      [32912.6213592233, [["Add Camera Zoom", "", ""]]],
+      [33203.8834951456, [["Add Camera Zoom", "", ""]]],
+      [34951.4563106796, [["Add Camera Zoom", "", ""]]],
+      [35242.718446602, [["Add Camera Zoom", "", ""]]],
+      [35533.9805825243, [["Add Camera Zoom", "", ""]]],
+      [
+        36699.0291262136,
+        [
+          ["BlackOut", "true", ""],
+          ["Set Cam ZoomBoom", "1.5", "0.1"]
+        ]
+      ],
+      [
+        36917.4757281554,
+        [["Replace stage layer", "GF but with bigger boobas", "black"]]
+      ],
+      [37208.7378640777, [["Cam Boom Speed", "2", "2"]]],
+      [
+        37278.5194174757,
+        [
+          ["Red Flash Camera", "1", ""],
+          ["Change Character", "Dad", "Red but second person"],
+          ["Change Character", "BF", "bf back2"],
+          ["Set Cam ZoomBoom", "1", "0.2"]
+        ]
+      ],
+      [
+        37281.5533980583,
+        [
+          ["Flash Camera", "1.5", ""],
+          ["Add Camera Zoom", "1", ""],
+          ["BlackOut", "false", ""]
+        ]
+      ],
+      [53592.2330097088, [["Cam Boom Speed", "0", "0"]]],
+      [
+        53737.8640776699,
+        [
+          ["BlackOut", "true", ""],
+          ["Set Cam ZoomBoom", "1.5", "0.1"]
+        ]
+      ],
+      [
+        53883.4951456311,
+        [["Replace stage layer", "black", "GF but with bigger boobas"]]
+      ],
+      [54757.2815533981, [["Add Camera Zoom", "", ""]]],
+      [54902.9126213593, [["Add Camera Zoom", "", ""]]],
+      [55048.5436893204, [["Add Camera Zoom", "", ""]]],
+      [55194.1747572816, [["Add Camera Zoom", "", ""]]],
+      [55339.8058252428, [["Add Camera Zoom", "", ""]]],
+      [55412.6213592233, [["Add Camera Zoom", "", ""]]],
+      [55485.4368932039, [["Add Camera Zoom", "", ""]]],
+      [55558.2524271845, [["Add Camera Zoom", "", ""]]],
+      [55631.0679611651, [["Add Camera Zoom", "", ""]]],
+      [55703.8834951457, [["Add Camera Zoom", "", ""]]],
+      [55776.6990291263, [["Add Camera Zoom", "", ""]]],
+      [
+        55849.5145631068,
+        [
+          ["Add Camera Zoom", "", ""],
+          ["Change Character", "Dad", "Last game red person lol"]
+        ]
+      ],
+      [
+        55920.5097087379,
+        [
+          ["BlackOut", "false", ""],
+          ["Set Cam ZoomBoom", "1.1", "0.1"]
+        ]
+      ],
+      [
+        55922.3300970874,
+        [
+          ["Red Flash Camera", "2", ""],
+          ["Add Camera Zoom", "1.5", ""],
+          ["Change Character", "1", "Last game red person lol"],
+          ["Change Character", "BF", "bf but gone"]
+        ]
+      ],
+      [55922.3300970874, [["Cam Boom Speed", "1", "2"]]],
+      [55922.3300970874, [["Set Cam ZoomBoom", "1.1", "0.5"]]],
+      [65242.718446602, [["Red Flash Camera", "1", ""]]],
+      [74563.1067961166, [["Red Flash Camera", "1", ""]]],
+      [
+        82716.6262135923,
+        [
+          ["BlackOut", "true", ""],
+          ["Set Cam ZoomBoom", "1.5", "0.1"]
+        ]
+      ],
+      [82718.4466019418, [["Add Camera Zoom", "", ""]]],
+      [82791.2621359224, [["Add Camera Zoom", "", ""]]],
+      [82864.077669903, [["Add Camera Zoom", "", ""]]],
+      [82936.8932038835, [["Add Camera Zoom", "", ""]]],
+      [83009.7087378641, [["Add Camera Zoom", "", ""]]],
+      [83082.5242718447, [["Add Camera Zoom", "", ""]]],
+      [83155.3398058253, [["Add Camera Zoom", "", ""]]],
+      [83228.1553398059, [["Add Camera Zoom", "", ""]]],
+      [83300.9708737865, [["Add Camera Zoom", "", ""]]],
+      [83373.7864077671, [["Add Camera Zoom", "", ""]]],
+      [83446.6019417476, [["Add Camera Zoom", "", ""]]],
+      [83519.4174757282, [["Add Camera Zoom", "", ""]]],
+      [83592.2330097088, [["Add Camera Zoom", "", ""]]],
+      [83665.0485436894, [["Add Camera Zoom", "", ""]]],
+      [83737.86407767, [["Add Camera Zoom", "", ""]]],
+      [83810.6796116505, [["Add Camera Zoom", "", ""]]],
+      [
+        83879.8543689321,
+        [
+          ["BlackOut", "false", ""],
+          ["Set Cam ZoomBoom", "1.1", "0.1"]
+        ]
+      ],
+      [83883.4951456311, [["Red Flash Camera", "1", ""]]],
+      [83883.4951456311, [["Set Cam ZoomBoom", "1.1", "0.5"]]],
+      [92038.8349514564, [["Add Camera Zoom", "", ""]]],
+      [92111.6504854369, [["Add Camera Zoom", "", ""]]],
+      [92184.4660194175, [["Add Camera Zoom", "", ""]]],
+      [92257.2815533981, [["Add Camera Zoom", "", ""]]],
+      [92330.0970873787, [["Add Camera Zoom", "", ""]]],
+      [92402.9126213593, [["Add Camera Zoom", "", ""]]],
+      [92475.7281553398, [["Add Camera Zoom", "", ""]]],
+      [92548.5436893204, [["Add Camera Zoom", "", ""]]],
+      [92621.359223301, [["Add Camera Zoom", "", ""]]],
+      [92694.1747572816, [["Add Camera Zoom", "", ""]]],
+      [92766.9902912622, [["Add Camera Zoom", "", ""]]],
+      [92839.8058252428, [["Add Camera Zoom", "", ""]]],
+      [92912.6213592234, [["Add Camera Zoom", "", ""]]],
+      [92985.4368932039, [["Add Camera Zoom", "", ""]]],
+      [93058.2524271845, [["Add Camera Zoom", "", ""]]],
+      [93131.0679611651, [["Add Camera Zoom", "", ""]]],
+      [
+        93200.2427184467,
+        [
+          ["BlackOut", "true", ""],
+          ["Set Cam ZoomBoom", "1.5", "0.1"]
+        ]
+      ],
+      [
+        93203.8834951457,
+        [
+          ["Cam Boom Speed", "0", "0"],
+          ["Add Camera Zoom", "", "1"]
+        ]
+      ],
+      [94368.932038835, [["Add Camera Zoom", "", ""]]],
+      [94587.3786407768, [["Add Camera Zoom", "", ""]]],
+      [94805.8252427185, [["Add Camera Zoom", "", ""]]],
+      [94951.4563106797, [["Add Camera Zoom", "", ""]]],
+      [95169.9029126214, [["Add Camera Zoom", "", ""]]],
+      [95388.3495145632, [["Add Camera Zoom", "", ""]]],
+      [95528.5194174758, [["BlackOut", "false", ""]]],
+      [
+        95533.9805825243,
+        [
+          ["Add Camera Zoom", "1.5", ""],
+          ["Red Flash Camera", "1", ""],
+          ["Cam Boom Speed", "1", "2"]
+        ]
+      ],
+      [95533.9805825243, [["Set Cam ZoomBoom", "1.1", "0.5"]]],
+      [103689.32038835, [["Add Camera Zoom", "", ""]]],
+      [103762.13592233, [["Add Camera Zoom", "", ""]]],
+      [103834.95145631, [["Add Camera Zoom", "", ""]]],
+      [103907.766990291, [["Add Camera Zoom", "", ""]]],
+      [103980.582524271, [["Add Camera Zoom", "", ""]]],
+      [104053.398058252, [["Add Camera Zoom", "", ""]]],
+      [104126.213592233, [["Add Camera Zoom", "", ""]]],
+      [104199.029126213, [["Add Camera Zoom", "", ""]]],
+      [104271.844660194, [["Add Camera Zoom", "", ""]]],
+      [104344.660194174, [["Add Camera Zoom", "", ""]]],
+      [104417.475728155, [["Add Camera Zoom", "", ""]]],
+      [104490.291262136, [["Add Camera Zoom", "", ""]]],
+      [104563.106796116, [["Add Camera Zoom", "", ""]]],
+      [104635.922330097, [["Add Camera Zoom", "", ""]]],
+      [104708.737864077, [["Add Camera Zoom", "", ""]]],
+      [104781.553398058, [["Add Camera Zoom", "", ""]]],
+      [104854.368932039, [["Red Flash Camera", "1", ""]]],
+      [104927.184466019, [["Set Cam ZoomBoom", "1.1", "0.5"]]],
+      [113009.708737864, [["Add Camera Zoom", "", ""]]],
+      [113082.524271845, [["Add Camera Zoom", "", ""]]],
+      [113155.339805825, [["Add Camera Zoom", "", ""]]],
+      [113228.155339806, [["Add Camera Zoom", "", ""]]],
+      [113300.970873786, [["Add Camera Zoom", "", ""]]],
+      [113373.786407767, [["Add Camera Zoom", "", ""]]],
+      [113446.601941748, [["Add Camera Zoom", "", ""]]],
+      [113519.417475728, [["Add Camera Zoom", "", ""]]],
+      [113592.233009709, [["Add Camera Zoom", "", ""]]],
+      [113665.048543689, [["Add Camera Zoom", "", ""]]],
+      [113737.86407767, [["Add Camera Zoom", "", ""]]],
+      [113810.679611651, [["Add Camera Zoom", "", ""]]],
+      [113883.495145631, [["Add Camera Zoom", "", ""]]],
+      [113956.310679612, [["Add Camera Zoom", "", ""]]],
+      [114029.126213592, [["Add Camera Zoom", "", ""]]],
+      [114101.941747573, [["Add Camera Zoom", "", ""]]],
+      [
+        114172.936893204,
+        [["Replace stage layer", "black", "GF but with big boobas"]]
+      ],
+      [
+        114174.757281553,
+        [
+          ["Red Flash Camera", "1", ""],
+          ["Change Character", "1", "Red but second person"],
+          ["Set Cam ZoomBoom", "0.9", "1"],
+          ["Cam Boom Speed", "2", "1"],
+          ["Change Character", "BF", "bf back2"]
+        ]
+      ],
+      [117669.902912621, [["Set Cam ZoomBoom", "1.1", "0.5"]]],
+      [
+        123495.145631068,
+        [
+          ["Set Cam ZoomBoom", "1.1", "1"],
+          ["Flash Camera", "1", ""]
+        ]
+      ],
+      [131650.485436893, [["Set Cam ZoomBoom", "1.3", "1"]]],
+      [
+        132233.009708738,
+        [
+          ["BlackOut", "true", ""],
+          ["Set Cam ZoomBoom", "1.5", "0.1"]
+        ]
+      ],
+      [
+        132524.27184466,
+        [["Replace stage layer", "GF but with big boobas", "black"]]
+      ],
+      [
+        132811.893203884,
+        [
+          ["BlackOut", "false", ""],
+          ["Change Character", "Dad", "Last game red person lol"],
+          ["Change Character", "BF", "bf but gone"]
+        ]
+      ],
+      [
+        132815.533980583,
+        [
+          ["Change Character", "1", "Last game red person lol"],
+          ["Red Flash Camera", "1.5", ""],
+          ["Cam Boom Speed", "1", "2"],
+          ["Add Camera Zoom", "1.5", ""],
+          ["Set Cam ZoomBoom", "1.1", "0.5"]
+        ]
+      ],
+      [
+        141553.398058252,
+        [
+          ["BlackOut", "true", ""],
+          ["Set Cam ZoomBoom", "1.5", "0.1"]
+        ]
+      ],
+      [142063.106796116, [["Cam Boom Speed", "1", "3"]]],
+      [142130.461165049, [["BlackOut", "false", ""]]],
+      [
+        142135.922330097,
+        [
+          ["Add Camera Zoom", "", ""],
+          ["Red Flash Camera", "1", ""],
+          ["Set Cam ZoomBoom", "1", "0.1"]
+        ]
+      ],
+      [142135.922330097, [["Set Cam ZoomBoom", "1.1", "0.5"]]],
+      [142208.737864078, [["Add Camera Zoom", "", ""]]],
+      [142281.553398058, [["Add Camera Zoom", "", ""]]],
+      [142354.368932039, [["Add Camera Zoom", "", ""]]],
+      [142427.184466019, [["Add Camera Zoom", "", ""]]],
+      [142500, [["Add Camera Zoom", "", ""]]],
+      [142572.815533981, [["Add Camera Zoom", "", ""]]],
+      [142645.631067961, [["Add Camera Zoom", "", ""]]],
+      [142718.446601942, [["Add Camera Zoom", "", ""]]],
+      [142791.262135922, [["Add Camera Zoom", "", ""]]],
+      [142864.077669903, [["Add Camera Zoom", "", ""]]],
+      [142936.893203884, [["Add Camera Zoom", "", ""]]],
+      [143009.708737864, [["Add Camera Zoom", "", ""]]],
+      [143082.524271845, [["Add Camera Zoom", "", ""]]],
+      [143155.339805825, [["Add Camera Zoom", "", ""]]],
+      [143228.155339806, [["Add Camera Zoom", "", ""]]],
+      [143300.970873786, [["Add Camera Zoom", "", ""]]],
+      [143373.786407767, [["Add Camera Zoom", "", ""]]],
+      [143446.601941747, [["Add Camera Zoom", "", ""]]],
+      [143519.417475728, [["Add Camera Zoom", "", ""]]],
+      [143592.233009708, [["Add Camera Zoom", "", ""]]],
+      [143665.048543689, [["Add Camera Zoom", "", ""]]],
+      [143737.86407767, [["Add Camera Zoom", "", ""]]],
+      [143810.67961165, [["Add Camera Zoom", "", ""]]],
+      [143883.495145631, [["Add Camera Zoom", "", ""]]],
+      [143956.310679611, [["Add Camera Zoom", "", ""]]],
+      [144029.126213592, [["Add Camera Zoom", "", ""]]],
+      [144101.941747573, [["Add Camera Zoom", "", ""]]],
+      [144174.757281553, [["Add Camera Zoom", "", ""]]],
+      [144247.572815534, [["Add Camera Zoom", "", ""]]],
+      [144320.388349514, [["Add Camera Zoom", "", ""]]],
+      [144393.203883495, [["Add Camera Zoom", "", ""]]],
+      [144466.019417476, [["Add Camera Zoom", "", ""]]],
+      [144538.834951457, [["Add Camera Zoom", "", ""]]],
+      [144611.650485437, [["Add Camera Zoom", "", ""]]],
+      [144684.466019418, [["Add Camera Zoom", "", ""]]],
+      [144757.281553398, [["Add Camera Zoom", "", ""]]],
+      [144830.097087379, [["Add Camera Zoom", "", ""]]],
+      [144902.91262136, [["Add Camera Zoom", "", ""]]],
+      [144975.72815534, [["Add Camera Zoom", "", ""]]],
+      [145048.543689321, [["Add Camera Zoom", "", ""]]],
+      [145121.359223301, [["Add Camera Zoom", "", ""]]],
+      [145194.174757282, [["Add Camera Zoom", "", ""]]],
+      [145266.990291263, [["Add Camera Zoom", "", ""]]],
+      [145339.805825243, [["Add Camera Zoom", "", ""]]],
+      [145412.621359224, [["Add Camera Zoom", "", ""]]],
+      [145485.436893204, [["Add Camera Zoom", "", ""]]],
+      [145558.252427185, [["Add Camera Zoom", "", ""]]],
+      [145631.067961165, [["Add Camera Zoom", "", ""]]],
+      [145703.883495146, [["Add Camera Zoom", "", ""]]],
+      [145776.699029126, [["Add Camera Zoom", "", ""]]],
+      [145849.514563107, [["Add Camera Zoom", "", ""]]],
+      [145922.330097087, [["Add Camera Zoom", "", ""]]],
+      [145995.145631068, [["Add Camera Zoom", "", ""]]],
+      [146067.961165049, [["Add Camera Zoom", "", ""]]],
+      [146140.776699029, [["Add Camera Zoom", "", ""]]],
+      [146213.59223301, [["Add Camera Zoom", "", ""]]],
+      [146286.40776699, [["Add Camera Zoom", "", ""]]],
+      [146359.223300971, [["Add Camera Zoom", "", ""]]],
+      [146432.038834952, [["Add Camera Zoom", "", ""]]],
+      [146504.854368932, [["Add Camera Zoom", "", ""]]],
+      [146577.669902913, [["Add Camera Zoom", "", ""]]],
+      [146650.485436893, [["Add Camera Zoom", "", ""]]],
+      [146723.300970874, [["Add Camera Zoom", "", ""]]],
+      [146792.475728155, [["Cam Boom Speed", "0", "0"]]],
+      [146796.116504854, [["Set Cam ZoomBoom", "1.5", "1"]]],
+      [
+        147378.640776699,
+        [
+          ["BlackOut", "true", ""],
+          ["Set Cam ZoomBoom", "1.5", "0.1"]
+        ]
+      ],
+      [147888.349514563, [["Set Cam ZoomBoom", "1.3", "0.1"]]],
+      [147961.165048544, [["Add Camera Zoom", "", ""]]],
+      [148179.611650485, [["Add Camera Zoom", "", ""]]],
+      [148398.058252427, [["Add Camera Zoom", "", ""]]],
+      [148543.689320388, [["Add Camera Zoom", "", ""]]],
+      [148762.13592233, [["Add Camera Zoom", "", ""]]],
+      [148980.582524272, [["Add Camera Zoom", "", ""]]],
+      [149053.398058252, [["Cam Boom Speed", "1", "2"]]],
+      [149123.17961165, [["Set Cam ZoomBoom", "1.1", "0.5"]]],
+      [
+        149124.393203883,
+        [
+          ["BlackOut", "false", ""],
+          ["Set Cam ZoomBoom", "0.9", "0.1"]
+        ]
+      ],
+      [
+        149126.213592233,
+        [
+          ["Add Camera Zoom", "1.5", ""],
+          ["Red Flash Camera", "1", ""]
+        ]
+      ],
+      [158446.601941747, [["Red Flash Camera", "1", ""]]],
+      [158446.601941747, [["Red Flash Camera", "1", ""]]],
+      [167694.174757281, [["Cam Boom Speed", "1", "1.5"]]],
+      [167766.990291262, [["Red Flash Camera", "1", ""]]],
+      [177087.378640776, [["Red Flash Camera", "1", ""]]],
+      [184004.854368932, [["Cam Boom Speed", "0", "0"]]],
+      [
+        184077.669902912,
+        [
+          ["BlackOut", "true", ""],
+          ["Set Cam ZoomBoom", "1.5", "0.1"]
+        ]
+      ],
+      [186334.95145631, [["Cam Boom Speed", "1", "1"]]],
+      [
+        186405.946601941,
+        [
+          ["BlackOut", "false", ""],
+          ["Set Cam ZoomBoom", "0.9", "0.3"]
+        ]
+      ],
+      [
+        186407.766990291,
+        [
+          ["Change Character", "1", "goofy little boi"],
+          ["Flash Camera", "1", ""],
+          ["Add Camera Zoom", "1.5", ""]
+        ]
+      ],
+      [
+        186410.800970873,
+        [
+          ["Set Cam ZoomBoom", "1.1", "0.5"],
+          ["Danceboi", "3", "3"]
+        ]
+      ],
+      [195728.155339805, [["Flash Camera", "1", ""]]],
+      [195728.155339805, [["Danceboi", "2", "2"]]],
+      [203810.67961165, [["Cam Boom Speed", "0", "0"]]],
+      [
+        203883.49514563,
+        [
+          ["BlackOut", "true", ""],
+          ["Set Cam ZoomBoom", "1.5", "0.1"]
+        ]
+      ],
+      [204975.728155339, [["Cam Boom Speed", "1", "2"]]],
+      [
+        205046.72330097,
+        [
+          ["BlackOut", "false", ""],
+          ["Set Cam ZoomBoom", "0.8", "0.1"]
+        ]
+      ],
+      [
+        205048.54368932,
+        [
+          ["Change Character", "1", "last game goofy little boi"],
+          ["Red Flash Camera", "2", ""],
+          ["Add Camera Zoom", "1.5", ""],
+          ["Danceboi", "1", "1"]
+        ]
+      ],
+      [
+        205121.3592233,
+        [["Replace stage layer", "black", "GF but with big boobas"]]
+      ],
+      [214368.932038834, [["Red Flash Camera", "1.5", ""]]],
+      [222451.456310679, [["Cam Boom Speed", "0", "0"]]],
+      [
+        223106.796116504,
+        [
+          ["BlackOut", "true", ""],
+          ["Set Cam ZoomBoom", "1.5", "0.1"]
+        ]
+      ],
+      [223616.504854368, [["Cam Boom Speed", "1", "2"]]],
+      [
+        223685.67961165,
+        [
+          ["Red Flash Camera", "1", ""],
+          ["Add Camera Zoom", "1.5", ""],
+          ["Set Cam ZoomBoom", "0.9", "1"]
+        ]
+      ],
+      [223689.320388349, [["BlackOut", "false", ""]]],
+      [233009.708737863, [["Red Flash Camera", "1.5", ""]]],
+      [239927.184466018, [["Cam Boom Speed", "0", "0"]]],
+      [
+        239998.179611649,
+        [
+          ["Add Camera Zoom", "", ""],
+          ["Danceboi", "0", "0"]
+        ]
+      ],
+      [
+        239999.999999999,
+        [
+          ["BlackOut", "true", ""],
+          ["Set Cam ZoomBoom", "1.5", "0.1"]
+        ]
+      ],
+      [240145.63106796, [["Add Camera Zoom", "", ""]]],
+      [240291.262135921, [["Add Camera Zoom", "", ""]]],
+      [240582.524271843, [["Add Camera Zoom", "", ""]]],
+      [240728.155339805, [["Add Camera Zoom", "", ""]]],
+      [240873.786407766, [["Add Camera Zoom", "", ""]]],
+      [241165.048543688, [["Add Camera Zoom", "", ""]]],
+      [241456.31067961, [["Add Camera Zoom", "", ""]]],
+      [241747.572815533, [["Add Camera Zoom", "", ""]]],
+      [242038.834951455, [["Add Camera Zoom", "", ""]]],
+      [242257.281553397, [["Cam Boom Speed", "1", "2"]]],
+      [
+        242328.276699028,
+        [
+          ["Change Character", "1", "Last game red person lol"],
+          ["Red Flash Camera", "2", ""],
+          ["Add Camera Zoom", "1.5", ""]
+        ]
+      ],
+      [
+        242330.097087377,
+        [
+          ["BlackOut", "false", ""],
+          ["Set Cam ZoomBoom", "0.9", "1"]
+        ]
+      ],
+      [242330.097087377, [["Set Cam ZoomBoom", "1.1", "0.5"]]],
+      [
+        242402.912621358,
+        [["Replace stage layer", "GF but with big boobas", "black"]]
+      ],
+      [251650.485436892, [["Red Flash Camera", "1.5", ""]]],
+      [260898.058252426, [["Cam Boom Speed", "0", "0"]]],
+      [
+        260970.873786406,
+        [
+          ["BlackOut", "true", ""],
+          ["Set Cam ZoomBoom", "1.5", "0.1"]
+        ]
+      ],
+      [
+        262134.101941746,
+        [
+          ["Red Flash Camera", "5", ""],
+          ["Set Cam ZoomBoom", "1.5", "1"]
+        ]
+      ],
+      [
+        262135.922330096,
+        [
+          ["BlackOut", "false", ""],
+          ["Set Cam ZoomBoom", "0.7", "45"]
+        ]
+      ],
+      [
+        280776.699029125,
+        [
+          ["BlackOut", "true", ""],
+          ["Set Cam ZoomBoom", "1.5", "0.1"]
+        ]
+      ]
+    ]
+  }
+}
