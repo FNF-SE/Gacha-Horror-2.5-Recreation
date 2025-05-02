@@ -12,6 +12,9 @@ on:
       buildArgs:
         required: true
         type: string
+      assetType:
+        required: true
+        type: string
       artifactName:
         required: true
         type: string
@@ -62,7 +65,7 @@ jobs:
           haxelib run lime config ANDROID_SETUP true
 
       - name: Compile
-        run: haxelib run lime build ${{ inputs.buildArgs }}
+        run: haxelib run lime build ${{ inputs.buildArgs }} -D ${{ inputs.assetType }}
 
       - name: Make IPA
         if: inputs.name == 'iOS'
@@ -78,6 +81,6 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@main
         with:
-          name: ${{ inputs.artifactName }}
+          name: ${{ inputs.artifactName }}-${{ inputs.assetType }}
           path: ${{ inputs.artifactPath }}
           if-no-files-found: error

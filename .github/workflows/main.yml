@@ -11,31 +11,37 @@ jobs:
           - name: Windows
             os: windows-2022
             buildArgs: windows
+            assetType: PNG
             artifactName: windowsBuild-x86_64
             artifactPath: export\release\windows\bin\*
           - name: Linux
             os: ubuntu-22.04
             buildArgs: linux
+            assetType: PNG
             artifactName: linuxBuild-x86_64
             artifactPath: export/release/linux/bin/*
           - name: macOS x86_64
             os: macos-15
             buildArgs: "mac -64 -D HXCPP_M64"
+            assetType: PNG
             artifactName: macOSBuild-x86_64
             artifactPath: export/release/macos/bin/*
           - name: macOS ARM64
             os: macos-15
             buildArgs: "mac -arm64 -D HXCPP_ARM64"
+            assetType: PNG
             artifactName: macOSBuild-arm64
             artifactPath: export/release/macos/bin/*
           - name: Android
             os: macos-15
             buildArgs: "android -ONLY_ARM64"
+            assetType: ASTC
             artifactName: androidBuild
             artifactPath: "export/release/android/bin/app/build/outputs/apk/release/*.apk"
           - name: iOS
             os: macos-15
             buildArgs: "ios -nosign"
+            assetType: ASTC
             artifactName: iOSBuild
             artifactPath: "export/release/ios/build/Release-iphoneos/*.ipa"
     uses: ./.github/workflows/build.yml
@@ -43,5 +49,6 @@ jobs:
         name: ${{ matrix.name }}
         os: ${{ matrix.os }}
         buildArgs: ${{ matrix.buildArgs }}
+        assetType: ${{ matrix.assetType }}
         artifactName: ${{ matrix.artifactName }}
         artifactPath: ${{ matrix.artifactPath }}
