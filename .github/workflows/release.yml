@@ -71,7 +71,7 @@ jobs:
            path: /home/runner
 
       - name: Move Android File
-        run: mv /home/runner/${{ env.PROJECT_NAME }}-ASTC-release.apk /home/runner/${{ env.PROJECT_NAME }}-Android.apk
+        run: mv /home/runner/${{ env.PROJECT_NAME }}-release.apk /home/runner/${{ env.PROJECT_NAME }}-ASTC-Android.apk
 
       - name: Download iOS Build
         uses: actions/download-artifact@main
