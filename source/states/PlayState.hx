@@ -287,6 +287,8 @@ class PlayState extends MusicBeatState
 	// gacha horror related
 	public var characterPlayingAsDad:Bool = false;
 	public var inSilhouette:Bool = false;
+	public var oppoNoteAlpha:Float = 0;
+	var charSwitched:Bool = false;
 
 	// Betrayal thing
 	public var sarah:Character = null;
@@ -341,7 +343,7 @@ class PlayState extends MusicBeatState
 		if (SONG == null)
 			SONG = Song.loadFromJson('tutorial');
 
-		if (SONG.song == 'Enraged' || SONG.song == 'Isolation' || SONG.song == 'Betalation' || SONG.song == 'Far Lost' || SONG.song == 'Old Far Lost')
+		if (SONG.song == 'Enraged' || SONG.song == 'Isolation' || SONG.song == 'Betalation' || SONG.song == 'Far Lost' || SONG.song == 'Old Far Lost' || SONG.song == 'Old Isolation')
 			characterPlayingAsDad = true;
 		else
 			characterPlayingAsDad = false;
@@ -1641,6 +1643,7 @@ class PlayState extends MusicBeatState
 						babyArrow.x += FlxG.width / 2 + 25;
 					}
 				}
+				oppoNoteAlpha = targetAlpha;
 				opponentStrums.add(babyArrow);
 			}
 
@@ -1759,9 +1762,13 @@ class PlayState extends MusicBeatState
 	var canPause:Bool = true;
 	var freezeCamera:Bool = false;
 	var allowDebugKeys:Bool = true;
+	var shitTimer:Float = 0.0;
 
 	override public function update(elapsed:Float)
 	{
+		if (characterPlayingAsDad)
+			shitTimer += elapsed;
+
 		if (!inCutscene && !paused && !freezeCamera)
 			FlxG.camera.followLerp = 2.4 * cameraSpeed * playbackRate;
 		else
@@ -2288,6 +2295,7 @@ class PlayState extends MusicBeatState
 
 			case 'Change Character':
 				var charType:Int = 0;
+				charSwitched = true;
 				switch (value1.toLowerCase().trim())
 				{
 					case 'gf' | 'girlfriend':
@@ -2436,7 +2444,6 @@ class PlayState extends MusicBeatState
 			camFollow.setPosition(gf.getMidpoint().x, gf.getMidpoint().y);
 			camFollow.x += gf.cameraPosition[0] + girlfriendCameraOffset[0];
 			camFollow.y += gf.cameraPosition[1] + girlfriendCameraOffset[1];
-			tweenCamIn();
 			callOnScripts('onMoveCamera', ['gf']);
 			return;
 		}
@@ -2455,38 +2462,12 @@ class PlayState extends MusicBeatState
 			camFollow.setPosition(dad.getMidpoint().x + 150, dad.getMidpoint().y - 100);
 			camFollow.x += dad.cameraPosition[0] + opponentCameraOffset[0];
 			camFollow.y += dad.cameraPosition[1] + opponentCameraOffset[1];
-			tweenCamIn();
 		}
 		else
 		{
 			camFollow.setPosition(boyfriend.getMidpoint().x - 100, boyfriend.getMidpoint().y - 100);
 			camFollow.x -= boyfriend.cameraPosition[0] - boyfriendCameraOffset[0];
 			camFollow.y += boyfriend.cameraPosition[1] + boyfriendCameraOffset[1];
-
-			if (songName == 'tutorial' && cameraTwn == null && FlxG.camera.zoom != 1)
-			{
-				cameraTwn = FlxTween.tween(FlxG.camera, {zoom: 1}, (Conductor.stepCrochet * 4 / 1000), {
-					ease: FlxEase.elasticInOut,
-					onComplete: function(twn:FlxTween)
-					{
-						cameraTwn = null;
-					}
-				});
-			}
-		}
-	}
-
-	public function tweenCamIn()
-	{
-		if (songName == 'tutorial' && cameraTwn == null && FlxG.camera.zoom != 1.3)
-		{
-			cameraTwn = FlxTween.tween(FlxG.camera, {zoom: 1.3}, (Conductor.stepCrochet * 4 / 1000), {
-				ease: FlxEase.elasticInOut,
-				onComplete: function(twn:FlxTween)
-				{
-					cameraTwn = null;
-				}
-			});
 		}
 	}
 
@@ -3209,9 +3190,6 @@ class PlayState extends MusicBeatState
 		if (result != LuaUtils.Function_Stop && result != LuaUtils.Function_StopHScript && result != LuaUtils.Function_StopAll)
 			callOnHScript('opponentNoteHitPre', [note]);
 
-		if (songName != 'tutorial')
-			camZooming = true;
-
 		if (note.noteType == 'Hey!' && dad.animOffsets.exists('hey'))
 		{
 			dad.playAnim('hey', true);
@@ -3491,6 +3469,13 @@ class PlayState extends MusicBeatState
 			boyfriend.dance();
 		if (dad != null && beat % charDad.danceEveryNumBeats == 0 && !dad.getAnimationName().startsWith('sing') && !charDad.stunned)
 			dad.dance();
+		if (characterPlayingAsDad && charSwitched)
+			if (shitTimer >= 1.5)
+			{
+				shitTimer = 0;
+				if (boyfriend.getAnimationName().startsWith('sing') && !charBf.stunned)
+					boyfriend.dance();
+			}
 	}
 
 	public function playerDance():Void

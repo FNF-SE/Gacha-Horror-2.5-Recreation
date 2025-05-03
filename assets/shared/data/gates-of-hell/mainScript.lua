@@ -157,10 +157,10 @@ function onBeatHit()
     doTweenColor('dad.ColorTween', 'dad', '0xFFA14C4C', 0.05, 'quadInOut')
     setProperty('iconP2.flipX', false)
 
-    noteTweenAlpha("NoteMove52", 0, 1, 0.01, 'cubeOut')
-    noteTweenAlpha("NoteMove62", 1, 1, 0.01, 'cubeOut')
-    noteTweenAlpha("NoteMove72", 2, 1, 0.01, 'cubeOut')
-    noteTweenAlpha("NoteMove82", 3, 1, 0.01, 'cubeOut')
+    noteTweenAlpha("NoteMove52", 0, getProperty(oppoNoteAlpha), 0.01, 'cubeOut')
+    noteTweenAlpha("NoteMove62", 1, getProperty(oppoNoteAlpha), 0.01, 'cubeOut')
+    noteTweenAlpha("NoteMove72", 2, getProperty(oppoNoteAlpha), 0.01, 'cubeOut')
+    noteTweenAlpha("NoteMove82", 3, getProperty(oppoNoteAlpha), 0.01, 'cubeOut')
 
     if not middlescroll then
       noteTweenX(defaultPlayerStrumX0.."2", 4, defaultPlayerStrumX0 - 650, 0.5, "cubeOut")

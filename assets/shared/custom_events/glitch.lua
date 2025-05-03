@@ -26,6 +26,7 @@ function onEvent(name, value1, value2)
       function onUpdate(elapsed)
         setShaderFloat("rgbeffect3", "iTime", os.clock())
       end
+    end
     if value1 == '0' then
       runHaxeCode([[
             game.camGame.setFilters(null);
