@@ -620,7 +620,8 @@ class EditorPlayState extends MusicBeatSubstate
 
 		var comboStr:String = Std.string(combo);
 
-		for (i in 0...comboStr.length) {
+		for (i in 0...comboStr.length)
+		{
 			var num = Std.parseInt(comboStr.charAt(i));
 			if (num != null)
 				seperatedScore.push(num);
@@ -650,7 +651,7 @@ class EditorPlayState extends MusicBeatSubstate
 		{
 			var numScore:FlxSprite = new FlxSprite().loadGraphic(Paths.image(pixelShitPart1 + 'num' + Std.int(i) + pixelShitPart2));
 			numScore.screenCenter();
-			
+
 			var totalNums:Int = seperatedScore.length;
 			var numWidth:Int = 43;
 			var totalWidth:Int = totalNums * numWidth;
@@ -817,7 +818,7 @@ class EditorPlayState extends MusicBeatSubstate
 		var buttonCode:Int = (button.IDs[0].toString().startsWith('NOTE')) ? button.IDs[0] : button.IDs[1];
 		if (buttonCode > -1)
 			keyReleased(buttonCode);
-	}	
+	}
 
 	// Hold notes
 	private function keysCheck():Void

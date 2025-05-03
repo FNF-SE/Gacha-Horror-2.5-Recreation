@@ -2762,7 +2762,8 @@ class PlayState extends MusicBeatState
 
 			var comboStr:String = Std.string(combo);
 
-			for (i in 0...comboStr.length) {
+			for (i in 0...comboStr.length)
+			{
 				var num = Std.parseInt(comboStr.charAt(i));
 				if (num != null)
 					seperatedScore.push(num);
@@ -2977,7 +2978,8 @@ class PlayState extends MusicBeatState
 	{
 		var buttonCode:Int = (button.IDs[0].toString().startsWith('NOTE')) ? button.IDs[0] : button.IDs[1];
 		callOnScripts('onButtonPressPre', [buttonCode]);
-		if (button.justPressed) keyPressed(buttonCode);
+		if (button.justPressed)
+			keyPressed(buttonCode);
 		callOnScripts('onButtonPress', [buttonCode]);
 	}
 
@@ -2985,7 +2987,8 @@ class PlayState extends MusicBeatState
 	{
 		var buttonCode:Int = (button.IDs[0].toString().startsWith('NOTE')) ? button.IDs[0] : button.IDs[1];
 		callOnScripts('onButtonReleasePre', [buttonCode]);
-		if(buttonCode > -1) keyReleased(buttonCode);
+		if (buttonCode > -1)
+			keyReleased(buttonCode);
 		callOnScripts('onButtonRelease', [buttonCode]);
 	}
 
@@ -3479,9 +3482,7 @@ class PlayState extends MusicBeatState
 			&& !gf.getAnimationName().startsWith('sing')
 			&& !gf.stunned)
 			gf.dance();
-		if (sarah != null
-			&& beat % sarah.danceEveryNumBeats == 0
-			&& !sarah.getAnimationName().startsWith('sing'))
+		if (sarah != null && beat % sarah.danceEveryNumBeats == 0 && !sarah.getAnimationName().startsWith('sing'))
 			sarah.dance();
 		if (boyfriend != null
 			&& beat % charBf.danceEveryNumBeats == 0

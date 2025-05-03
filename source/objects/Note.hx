@@ -343,7 +343,8 @@ class Note extends FlxSprite
 		var lastScaleY:Float = scale.y;
 		var customSkin:String = skin;
 		var path:String = PlayState.isPixelStage ? 'pixelUI/' : '';
-		if (customSkin == _lastValidChecked || Paths.fileExists('images/' + path + customSkin + '.${Paths.IMAGE_EXT}', Paths.IMAGE_ASSETTYPE))
+		if (customSkin == _lastValidChecked
+			|| Paths.fileExists('images/' + path + customSkin + '.${Paths.IMAGE_EXT}', Paths.IMAGE_ASSETTYPE))
 		{
 			skin = customSkin;
 			_lastValidChecked = customSkin;

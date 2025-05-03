@@ -300,7 +300,7 @@ class LoadingState extends MusicBeatState
 	public static function clearInvalids()
 	{
 		clearInvalidFrom(imagesToPrepare, 'images', '.png', IMAGE); // leaving this as is
-		//clearInvalidFrom(imagesToPrepare, 'images', '.${Paths.IMAGE_EXT}', Paths.IMAGE_ASSETTYPE);
+		// clearInvalidFrom(imagesToPrepare, 'images', '.${Paths.IMAGE_EXT}', Paths.IMAGE_ASSETTYPE);
 		clearInvalidFrom(soundsToPrepare, 'sounds', '.ogg', SOUND);
 		clearInvalidFrom(musicToPrepare, 'music', ' .ogg', SOUND);
 		clearInvalidFrom(songsToPrepare, 'songs', '.ogg', SOUND, 'songs');

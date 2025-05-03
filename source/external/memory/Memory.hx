@@ -2,6 +2,7 @@ package external.memory;
 
 #if cpp
 import cpp.SizeT;
+
 /**
  * Memory class to properly get accurate memory counts
  * for the program.
@@ -13,7 +14,8 @@ import cpp.SizeT;
 @:buildXml('<include name="../../../../source/external/memory/build.xml" />')
 #end
 @:include("memory.h")
-extern class Memory {
+extern class Memory
+{
 	/**
 	 * Returns the peak (maximum so far) resident set size (physical
 	 * memory use) measured in bytes, or zero if the value cannot be
@@ -23,28 +25,32 @@ extern class Memory {
 	public static function getPeakUsage():SizeT;
 
 	/**
- 	 * Returns the current resident set size (physical memory use) measured
- 	 * in bytes, or zero if the value cannot be determined on this OS.
+	 * Returns the current resident set size (physical memory use) measured
+	 * in bytes, or zero if the value cannot be determined on this OS.
 	 */
 	@:native("getCurrentRSS")
 	public static function getCurrentUsage():SizeT;
 }
 #else
+
 /**
  * If you are not running on a CPP Platform, the code just will not work properly, sorry!
  * @author Leather128
  */
-class Memory {
+class Memory
+{
 	/**
 	 * (Non cpp platform)
 	 * Returns 0.
 	 */
-	public static function getPeakUsage():Float return 0.0;
+	public static function getPeakUsage():Float
+		return 0.0;
 
 	/**
 	 * (Non cpp platform)
 	 * Returns 0.
 	 */
-	public static function getCurrentUsage():Float return 0.0;
+	public static function getCurrentUsage():Float
+		return 0.0;
 }
 #end

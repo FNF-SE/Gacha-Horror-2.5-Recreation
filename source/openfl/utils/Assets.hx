@@ -413,17 +413,20 @@ class Assets
 		{
 			if (type == AssetType.IMAGE || type == null)
 			{
-				if (cache.hasBitmapData(id)) return true;
+				if (cache.hasBitmapData(id))
+					return true;
 			}
 
 			if (type == AssetType.FONT || type == null)
 			{
-				if (cache.hasFont(id)) return true;
+				if (cache.hasFont(id))
+					return true;
 			}
 
 			if (type == AssetType.SOUND || type == AssetType.MUSIC || type == null)
 			{
-				if (cache.hasSound(id)) return true;
+				if (cache.hasSound(id))
+					return true;
 			}
 		}
 
@@ -494,7 +497,8 @@ class Assets
 	**/
 	public static function loadBitmapData(id:String, useCache:Null<Bool> = true):Future<BitmapData>
 	{
-		if (useCache == null) useCache = true;
+		if (useCache == null)
+			useCache = true;
 
 		#if (lime && tools && !display)
 		var promise = new Promise<BitmapData>();
@@ -570,7 +574,8 @@ class Assets
 	**/
 	public static function loadFont(id:String, useCache:Null<Bool> = true):Future<Font>
 	{
-		if (useCache == null) useCache = true;
+		if (useCache == null)
+			useCache = true;
 
 		#if (lime && tools && !display && !macro)
 		var promise = new Promise<Font>();
@@ -653,7 +658,8 @@ class Assets
 	**/
 	public static function loadMusic(id:String, useCache:Null<Bool> = true):Future<Sound>
 	{
-		if (useCache == null) useCache = true;
+		if (useCache == null)
+			useCache = true;
 
 		#if lime
 		#if !html5
@@ -745,7 +751,8 @@ class Assets
 	**/
 	public static function loadSound(id:String, useCache:Null<Bool> = true):Future<Sound>
 	{
-		if (useCache == null) useCache = true;
+		if (useCache == null)
+			useCache = true;
 
 		#if lime
 		var promise = new Promise<Sound>();

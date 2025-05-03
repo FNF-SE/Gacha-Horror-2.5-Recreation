@@ -135,7 +135,7 @@ class Character extends FlxSprite
 
 		if (camera == null)
 			camera = FlxG.camera;
-		
+
 		return camera.containsRect(getScreenBounds(_rect, camera));
 	}
 
@@ -150,7 +150,8 @@ class Character extends FlxSprite
 			frames = Paths.getAtlas(json.image[0]);
 			final split:Array<String> = json.image;
 			if (frames != null)
-				for (imgFile in split) {
+				for (imgFile in split)
+				{
 					final daAtlas = Paths.getAtlas(imgFile);
 					if (daAtlas != null)
 						cast(frames, flixel.graphics.frames.FlxAtlasFrames).addAtlas(daAtlas);

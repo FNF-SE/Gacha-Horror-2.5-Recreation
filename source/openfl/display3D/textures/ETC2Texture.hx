@@ -23,15 +23,15 @@ import openfl.Lib;
 {
 	@:noCompletion private static var __lowMemoryMode:Bool = false;
 	private static inline final GL_COMPRESSED_RGB8_ETC2 = 0x8D64;
-    private static inline final GL_COMPRESSED_SRGB8_ETC2 = 0x8D65;
-    private static inline final GL_COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2 = 0x8D66;
-    private static inline final GL_COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2 = 0x8D67;
-    private static inline final GL_COMPRESSED_RGBA8_ETC2_EAC = 0x9278;
-    private static inline final GL_COMPRESSED_SRGB8_ALPHA8_ETC2_EAC = 0x9279;
-    private static inline final GL_COMPRESSED_R11_EAC = 0x9270;
-    private static inline final GL_COMPRESSED_SIGNED_R11_EAC = 0x9271;
-    private static inline final GL_COMPRESSED_RG11_EAC = 0x9272;
-    private static inline final GL_COMPRESSED_SIGNED_RG11_EAC = 0x9273;
+	private static inline final GL_COMPRESSED_SRGB8_ETC2 = 0x8D65;
+	private static inline final GL_COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2 = 0x8D66;
+	private static inline final GL_COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2 = 0x8D67;
+	private static inline final GL_COMPRESSED_RGBA8_ETC2_EAC = 0x9278;
+	private static inline final GL_COMPRESSED_SRGB8_ALPHA8_ETC2_EAC = 0x9279;
+	private static inline final GL_COMPRESSED_R11_EAC = 0x9270;
+	private static inline final GL_COMPRESSED_SIGNED_R11_EAC = 0x9271;
+	private static inline final GL_COMPRESSED_RG11_EAC = 0x9272;
+	private static inline final GL_COMPRESSED_SIGNED_RG11_EAC = 0x9273;
 
 	@:noCompletion private function new(context:Context3D, data:ByteArray)
 	{
@@ -78,34 +78,35 @@ import openfl.Lib;
 	}
 
 	private function detectETC2Format(data:ByteArray):Int
-    {
-        var format = 0;
+	{
+		var format = 0;
 
-        final header = data.readUnsignedByte();
-        switch(header) {
-            case 0x64:
-                format = GL_COMPRESSED_RGB8_ETC2;
-            case 0x65:
-                format = GL_COMPRESSED_SRGB8_ETC2;
-            case 0x66:
-                format = GL_COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2;
-            case 0x67:
-                format = GL_COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2;
-            case 0x78:
-                format = GL_COMPRESSED_RGBA8_ETC2_EAC;
-            case 0x79:
-                format = GL_COMPRESSED_SRGB8_ALPHA8_ETC2_EAC;
-            case 0x70:
-                format = GL_COMPRESSED_R11_EAC;
-            case 0x71:
-                format = GL_COMPRESSED_SIGNED_R11_EAC;
-            case 0x72:
-                format = GL_COMPRESSED_RG11_EAC;
-            case 0x73:
-                format = GL_COMPRESSED_SIGNED_RG11_EAC;
-        }
+		final header = data.readUnsignedByte();
+		switch (header)
+		{
+			case 0x64:
+				format = GL_COMPRESSED_RGB8_ETC2;
+			case 0x65:
+				format = GL_COMPRESSED_SRGB8_ETC2;
+			case 0x66:
+				format = GL_COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2;
+			case 0x67:
+				format = GL_COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2;
+			case 0x78:
+				format = GL_COMPRESSED_RGBA8_ETC2_EAC;
+			case 0x79:
+				format = GL_COMPRESSED_SRGB8_ALPHA8_ETC2_EAC;
+			case 0x70:
+				format = GL_COMPRESSED_R11_EAC;
+			case 0x71:
+				format = GL_COMPRESSED_SIGNED_R11_EAC;
+			case 0x72:
+				format = GL_COMPRESSED_RG11_EAC;
+			case 0x73:
+				format = GL_COMPRESSED_SIGNED_RG11_EAC;
+		}
 
-        return format;
-    }
+		return format;
+	}
 }
 #end

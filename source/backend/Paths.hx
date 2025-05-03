@@ -24,7 +24,10 @@ class Paths
 			dumpExclusions.push(key);
 	}
 
-	public static var dumpExclusions:Array<String> = ['assets/shared/mobile/images/bg.$IMAGE_EXT', 'assets/shared/music/freakyMenu.ogg'];
+	public static var dumpExclusions:Array<String> = [
+		'assets/shared/mobile/images/bg.$IMAGE_EXT',
+		'assets/shared/music/freakyMenu.ogg'
+	];
 
 	/// haya I love you for the base cache dump I took to the max
 	public static function clearUnusedMemory()

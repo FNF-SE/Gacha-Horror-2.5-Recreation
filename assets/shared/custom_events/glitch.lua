@@ -26,27 +26,6 @@ function onEvent(name, value1, value2)
       function onUpdate(elapsed)
         setShaderFloat("rgbeffect3", "iTime", os.clock())
       end
-
-      function shaderCoordFix()
-        runHaxeCode([[
-            resetCamCache = function(?spr) {
-                if (spr == null || spr.filters == null) return;
-                spr.__cacheBitmap = null;
-                spr.__cacheBitmapData = null;
-            }
-        
-            fixShaderCoordFix = function(?_) {
-                resetCamCache(game.camGame.flashSprite);
-                resetCamCache(game.camHUD.flashSprite);
-                resetCamCache(game.camOther.flashSprite);
-            }
-    
-            FlxG.signals.gameResized.add(fixShaderCoordFix);
-            fixShaderCoordFix();
-            return;
-        ]])
-      end
-    end
     if value1 == '0' then
       runHaxeCode([[
             game.camGame.setFilters(null);
