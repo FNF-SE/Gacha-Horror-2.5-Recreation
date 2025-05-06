@@ -288,7 +288,6 @@ class PlayState extends MusicBeatState
 	public var characterPlayingAsDad:Bool = false;
 	public var inSilhouette:Bool = false;
 	public var oppoNoteAlpha:Float = 0;
-	var charSwitched:Bool = false;
 
 	// Betrayal thing
 	public var sarah:Character = null;
@@ -799,7 +798,9 @@ class PlayState extends MusicBeatState
 			case 0:
 				if (!boyfriendMap.exists(newCharacter))
 				{
-					var newBoyfriend:Character = new Character(0, 0, newCharacter, true);
+					var newBoyfriend:Character = new Character(0, 0, newCharacter, !characterPlayingAsDad);
+					if (characterPlayingAsDad)
+						newBoyfriend.flipX = !newBoyfriend.flipX;
 					boyfriendMap.set(newCharacter, newBoyfriend);
 					boyfriendGroup.add(newBoyfriend);
 					startCharacterPos(newBoyfriend);
@@ -810,7 +811,9 @@ class PlayState extends MusicBeatState
 			case 1:
 				if (!dadMap.exists(newCharacter))
 				{
-					var newDad:Character = new Character(0, 0, newCharacter);
+					var newDad:Character = new Character(0, 0, newCharacter, characterPlayingAsDad);
+					if (characterPlayingAsDad)
+						newDad.flipX = !newDad.flipX;
 					dadMap.set(newCharacter, newDad);
 					dadGroup.add(newDad);
 					startCharacterPos(newDad, true);
@@ -1762,13 +1765,9 @@ class PlayState extends MusicBeatState
 	var canPause:Bool = true;
 	var freezeCamera:Bool = false;
 	var allowDebugKeys:Bool = true;
-	var shitTimer:Float = 0.0;
 
 	override public function update(elapsed:Float)
 	{
-		if (characterPlayingAsDad)
-			shitTimer += elapsed;
-
 		if (!inCutscene && !paused && !freezeCamera)
 			FlxG.camera.followLerp = 2.4 * cameraSpeed * playbackRate;
 		else
@@ -2295,7 +2294,7 @@ class PlayState extends MusicBeatState
 
 			case 'Change Character':
 				var charType:Int = 0;
-				charSwitched = true;
+
 				switch (value1.toLowerCase().trim())
 				{
 					case 'gf' | 'girlfriend':
@@ -3158,7 +3157,7 @@ class PlayState extends MusicBeatState
 		if ((note != null && note.gfNote) || (SONG.notes[curSection] != null && SONG.notes[curSection].gfSection))
 			char = gf;
 
-		if ((note != null && note.sarahNote))
+		if (note != null && note.sarahNote)
 			char = sarah;
 
 		if (char != null && (note == null || !note.noMissAnimation) && char.hasMissAnimations)
@@ -3469,13 +3468,6 @@ class PlayState extends MusicBeatState
 			boyfriend.dance();
 		if (dad != null && beat % charDad.danceEveryNumBeats == 0 && !dad.getAnimationName().startsWith('sing') && !charDad.stunned)
 			dad.dance();
-		if (characterPlayingAsDad && charSwitched)
-			if (shitTimer >= 1.5)
-			{
-				shitTimer = 0;
-				if (boyfriend.getAnimationName().startsWith('sing') && !charBf.stunned)
-					boyfriend.dance();
-			}
 	}
 
 	public function playerDance():Void
