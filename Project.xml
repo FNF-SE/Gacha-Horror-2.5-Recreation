@@ -84,17 +84,8 @@
 	<haxedef name="HXCPP_STACK_TRACE" />
 	<haxedef name="HXCPP_CATCH_SEGV" />
 	
-	<section if="android">
-		<!-- Do whatever you want I'm tired uninstall and install everytime -->
-		<certificate path="key.keystore" password="nullfunni" alias="null" alias-password="nullfunni" if="android" unless="debug" />
-
-		<section if="officialBuild">
-			<config:android permission="android.permission.WAKE_LOCK" />
-			<config:android permission="android.permission.INTERNET" />
-			<config:android permission="android.permission.VIBRATE" />
-			<config:android permission="android.permission.ACCESS_NETWORK_STATE" />
-		</section>
-	</section>
+	<!-- Do whatever you want I'm tired uninstall and install everytime -->
+	<certificate path="key.keystore" password="nullfunni" alias="null" alias-password="nullfunni" if="android" unless="debug" />
 
 	<!-- Category Type for Apple Systems -->
 	<config:ios category_type="public.app-category.music-games" />
