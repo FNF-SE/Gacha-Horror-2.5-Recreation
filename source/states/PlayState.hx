@@ -21,7 +21,6 @@ import cutscenes.CutsceneHandler;
 import cutscenes.DialogueBoxPsych;
 import states.editors.ChartingState;
 import states.FreeplayState.FreeplaySelectState;
-import states.FreeplayStateOld;
 import substates.PauseSubState;
 import substates.GameOverSubstate;
 #if !flash
@@ -288,6 +287,7 @@ class PlayState extends MusicBeatState
 	public var characterPlayingAsDad:Bool = false;
 	public var inSilhouette:Bool = false;
 	public var oppoNoteAlpha:Float = 0;
+	public var loadedOldSong:Bool = Paths.LOADOLD;
 
 	// Betrayal thing
 	public var sarah:Character = null;
@@ -890,7 +890,7 @@ class PlayState extends MusicBeatState
 		#end
 		{
 			scriptFile = Paths.getSharedPath(scriptFile);
-			if (#if sys FileSystem.exists(scriptFile) #else Assets.exists(scriptFile) #end)
+			if (#if MODS_ALLOWED FileSystem.exists(scriptFile) #else Assets.exists(scriptFile) #end)
 				doPush = true;
 		}
 
@@ -2565,8 +2565,6 @@ class PlayState extends MusicBeatState
 			{
 				case 'Tutorial':
 					MusicBeatState.switchState(new FreeplaySelectState());
-				case 'Old Despair' | 'Old Isolation' | 'Old Red Slot' | 'Mike':
-					MusicBeatState.switchState(new FreeplayStateOld());
 				default:
 					MusicBeatState.switchState(new FreeplayState());
 			}
@@ -3547,7 +3545,7 @@ class PlayState extends MusicBeatState
 		var scriptToLoad:String = Paths.getSharedPath(scriptFile);
 		#end
 
-		if (#if sys FileSystem.exists(scriptToLoad) #else Assets.exists(scriptToLoad) #end)
+		if (#if MODS_ALLOWED FileSystem.exists(scriptToLoad) #else Assets.exists(scriptToLoad) #end)
 		{
 			if (SScript.global.exists(scriptToLoad))
 				return false;

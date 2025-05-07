@@ -159,7 +159,7 @@ class Mods
 		{
 			try
 			{
-				#if sys
+				#if MODS_ALLOWED
 				var rawJson:String = File.getContent(path);
 				#else
 				var rawJson:String = Assets.getText(path);

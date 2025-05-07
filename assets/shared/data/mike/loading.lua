@@ -1,12 +1,12 @@
 --by sloow
 
 local scale = 0.8
-local ldim = 'loadv2' --put here your image name (the image must have a size of 1675 x 1083)
+local ldim = 'loadjoke' --put here your image name (the image must have a size of 1675 x 1083)
 local loading = false
 
 function onCreate()
 
-  makeLuaSprite('ld', 'loadingscreen/loadv2', -50, -100) -- creating the image
+  makeLuaSprite('ld', 'loadingscreen/loadjoke', -50, -100) -- creating the image
   setObjectCamera('ld', 'other')
   scaleObject('ld', scale, scale)
   addLuaSprite('ld')

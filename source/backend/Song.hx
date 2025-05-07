@@ -108,9 +108,9 @@ class Song
 
 		if (rawJson == null)
 		{
-			var path:String = Paths.json('$formattedFolder/$formattedSong');
+			var path:String = Paths.json('$formattedFolder/$formattedSong${Paths.LOADOLD ? "-old" : ""}');
 
-			#if sys
+			#if MODS_ALLOWED
 			if (FileSystem.exists(path))
 				rawJson = File.getContent(path);
 			else

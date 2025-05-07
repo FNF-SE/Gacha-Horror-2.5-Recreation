@@ -298,8 +298,7 @@ class FreeplayState extends MusicBeatState
 			{
 				FlxFlicker.flicker(spr, 1, 0.06, false, false, function(flick:FlxFlicker)
 				{
-					CoolUtil.loadSong(songs[curSelected],
-						(songs[curSelected] == "Sentient" && (FlxG.keys.pressed.SHIFT || touchPad.buttonC.pressed) ? true : false));
+					CoolUtil.loadSong(songs[curSelected], ((FlxG.keys.pressed.SHIFT || touchPad.buttonC.pressed) ? true : false));
 				});
 			}
 		});
@@ -349,7 +348,7 @@ class FreeplaySelectState extends MusicBeatState
 
 		changeItem();
 
-		addTouchPad("UP_DOWN", "B");
+		addTouchPad("DOWN", "B");
 
 		super.create();
 	}
@@ -360,7 +359,7 @@ class FreeplaySelectState extends MusicBeatState
 		persistentUpdate = true;
 		super.closeSubState();
 		removeTouchPad();
-		addTouchPad("UP_DOWN", "B");
+		addTouchPad("DOWN", "B");
 	}
 
 	var selectedSomethin:Bool = false;
@@ -380,12 +379,6 @@ class FreeplaySelectState extends MusicBeatState
 			{
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 				changeItem(1);
-			}
-
-			if (controls.UI_UP_P)
-			{
-				selectedSomethin = true;
-				MusicBeatState.switchState(new FreeplayStateOld());
 			}
 
 			if (controls.BACK || FlxG.mouse.justReleasedRight)

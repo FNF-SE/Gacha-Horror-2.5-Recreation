@@ -7,7 +7,6 @@ import flixel.FlxObject;
 import flixel.FlxSubState;
 import states.FreeplayState;
 import states.FreeplayState.FreeplaySelectState;
-import states.FreeplayStateOld;
 
 class GameOverSubstate extends MusicBeatSubstate
 {
@@ -111,8 +110,6 @@ class GameOverSubstate extends MusicBeatSubstate
 			{
 				case 'Tutorial':
 					MusicBeatState.switchState(new FreeplaySelectState());
-				case 'Old Despair' | 'Old Isolation' | 'Old Red Slot' | 'Mike':
-					MusicBeatState.switchState(new FreeplayStateOld());
 				default:
 					MusicBeatState.switchState(new FreeplayState());
 			}

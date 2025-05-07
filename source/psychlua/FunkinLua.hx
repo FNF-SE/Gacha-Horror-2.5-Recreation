@@ -18,7 +18,6 @@ import objects.Note;
 import objects.NoteSplash;
 import objects.Character;
 import states.MainMenuState;
-import states.FreeplayStateOld;
 import substates.PauseSubState;
 import substates.GameOverSubstate;
 import psychlua.LuaUtils;
@@ -931,7 +930,7 @@ class FunkinLua
 				FlxTransitionableState.skipNextTransOut = true;
 			}
 
-			MusicBeatState.switchState(new FreeplayStateOld());
+			MusicBeatState.switchState(new FreeplaySelectState());
 
 			#if DISCORD_ALLOWED DiscordClient.resetClientID(); #end
 

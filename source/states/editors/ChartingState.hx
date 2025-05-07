@@ -26,7 +26,6 @@ import backend.Section;
 import backend.StageData;
 import states.FreeplayState;
 import states.FreeplayState.FreeplaySelectState;
-import states.FreeplayStateOld;
 import objects.Note;
 import objects.StrumNote;
 import objects.NoteSplash;
@@ -1959,8 +1958,6 @@ class ChartingState extends MusicBeatState
 				{
 					case 'Tutorial':
 						MusicBeatState.switchState(new FreeplaySelectState());
-					case 'Old Despair' | 'Old Isolation' | 'Old Red Slot' | 'Mike':
-						MusicBeatState.switchState(new FreeplayStateOld());
 					default:
 						MusicBeatState.switchState(new FreeplayState());
 				}

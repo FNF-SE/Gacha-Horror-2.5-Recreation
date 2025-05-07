@@ -1867,7 +1867,7 @@
     "disableNoteRGB": true,
     "playerArrowSkin": "noteSkins/M-O-Arrows",
     "opponentArrowSkin": "noteSkins/BFArrows",
-    "song": "Old Isolation",
+    "song": "Isolation",
     "needsVoices": true,
     "stage": "mo background",
     "validScore": true,

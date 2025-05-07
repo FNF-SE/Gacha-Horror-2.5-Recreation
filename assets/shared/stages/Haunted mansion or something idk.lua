@@ -31,13 +31,13 @@ function onCreate()
 end
 
 function onBeatHit()
-  if curBeat == 192 and songName == "Despair" then
+  if curBeat == 192 and not getProperty('loadedOldSong') then
     setProperty('bg.visible', false)
     if not lowQuality then
       setProperty('tre.visible', false)
       setProperty('tre2.visible', false)
     end
-  elseif curBeat == 256 and songName == "Despair" then
+  elseif curBeat == 256 and not getProperty('loadedOldSong') then
     setProperty('bg.visible', true)
     if not lowQuality then
       setProperty('tre.visible', true)

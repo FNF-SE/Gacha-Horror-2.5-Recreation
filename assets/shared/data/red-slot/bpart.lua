@@ -1,5 +1,5 @@
 function onStepHit()
-  if not lowQuality then
+  if not lowQuality and not getProperty('loadedOldSong') then
     Particle()
   end
 end

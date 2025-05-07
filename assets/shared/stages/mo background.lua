@@ -15,7 +15,7 @@ function onCreate()
   setScrollFactor('black', 0.9, 0.9)
   scaleObject('black', 3.6, 3.2)
 
-  if not lowQuality then
+  if not lowQuality and not getProperty('loadedOldSong') then
     makeAnimatedLuaSprite('JGGHD','stages/mo/JGGHD',400,100)
     addAnimationByPrefix('JGGHD','idle','idle',24,true)
     objectPlayAnimation('JGGHD','idle',false)
@@ -25,7 +25,7 @@ function onCreate()
 
   addLuaSprite('moe', false)
   addLuaSprite('mo', false)
-  if not lowQuality then
+  if not lowQuality and not getProperty('loadedOldSong') then
     addLuaSprite('JGGHD', false)
   end
   addLuaSprite('dablack', true)

@@ -258,7 +258,6 @@ class ExtraFunctions
 		funk.set("directoryFileList", function(folder:String)
 		{
 			var list:Array<String> = [];
-			#if sys
 			if (FileSystem.exists(folder))
 			{
 				for (folder in Paths.readDirectory(folder))
@@ -269,7 +268,6 @@ class ExtraFunctions
 					}
 				}
 			}
-			#end
 			return list;
 		});
 

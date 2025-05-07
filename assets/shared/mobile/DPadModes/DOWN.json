@@ -1,0 +1,11 @@
+{
+  "buttons": [
+    {
+      "button": "buttonDown",
+      "graphic": "down",
+      "x": 0,
+      "y": 596,
+      "color": "0xFF00FFFF"
+    }
+  ]
+}

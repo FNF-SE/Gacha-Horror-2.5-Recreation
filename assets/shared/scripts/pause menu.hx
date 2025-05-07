@@ -11,7 +11,6 @@ import options.OptionsState;
 import backend.DiscordClient;
 import backend.Mods;
 import states.FreeplayState;
-import states.FreeplayStateOld;
 import states.FreeplaySelectState;
 import states.editors.ChartingState;
 import flixel.sound.FlxSound;
@@ -363,7 +362,6 @@ function fadeOut()
 						switch (PlayState.SONG.song)
 						{
 							case 'Tutorial': MusicBeatState.switchState(new FreeplaySelectState());
-							case 'Old Despair' | 'Old Isolation' | 'Old Red Slot' | 'Old Far Lost' | 'Mike': MusicBeatState.switchState(new FreeplayStateOld());
 							default: MusicBeatState.switchState(new FreeplayState());
 						}
 						FlxG.sound.playMusic(Paths.music('freakyMenu'));

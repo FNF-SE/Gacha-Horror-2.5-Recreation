@@ -30,16 +30,69 @@ function onBeatHit()
   end
 end
 function onStepHit()
-  if curStep == 1088 then
-    runHaxeCode([[PlayState.instance.changeNoteSkin(false, "noteSkins/MoeArrows");]])
-    runHaxeCode([[PlayState.instance.changeNoteSkin(true, "noteSkins/NOTE_assets");]])
-    moepart = true
-    setProperty('iconP2.flipX', true)
-  end
-  if curStep == 1344 then
-    runHaxeCode([[PlayState.instance.changeNoteSkin(false, "noteSkins/M-O-Arrows");]])
-    runHaxeCode([[PlayState.instance.changeNoteSkin(true, "noteSkins/BFArrows");]])
-    moepart = false
-    setProperty('iconP2.flipX', false)
+  if not getProperty('loadedOldSong') then
+    if curStep == 1088 then
+      runHaxeCode([[PlayState.instance.changeNoteSkin(false, "noteSkins/MoeArrows");]])
+      runHaxeCode([[PlayState.instance.changeNoteSkin(true, "noteSkins/NOTE_assets");]])
+      moepart = true
+      setProperty('iconP2.flipX', true)
+    end
+    if curStep == 1344 then
+      runHaxeCode([[PlayState.instance.changeNoteSkin(false, "noteSkins/M-O-Arrows");]])
+      runHaxeCode([[PlayState.instance.changeNoteSkin(true, "noteSkins/BFArrows");]])
+      moepart = false
+      setProperty('iconP2.flipX', false)
+    end
+  else
+    if curStep == 352 then
+      runHaxeCode([[PlayState.instance.changeNoteSkin(false, "noteSkins/MoeArrows");]])
+      moepart = true
+      setProperty('iconP2.flipX', true)
+    end
+    if curStep == 464 then
+      runHaxeCode([[PlayState.instance.changeNoteSkin(false, "noteSkins/M-O-Arrows");]])
+      moepart = false
+      setProperty('iconP2.flipX', false)
+    end
+    if curStep == 508 then
+      runHaxeCode([[PlayState.instance.changeNoteSkin(false, "noteSkins/MoeArrows");]])
+      moepart = true
+      setProperty('iconP2.flipX', true)
+    end
+    if curStep == 572 then
+      runHaxeCode([[PlayState.instance.changeNoteSkin(false, "noteSkins/M-O-Arrows");]])
+      moepart = false
+      setProperty('iconP2.flipX', false)
+    end
+    if curStep == 596 then
+      runHaxeCode([[PlayState.instance.changeNoteSkin(false, "noteSkins/MoeArrows");]])
+      moepart = true
+      setProperty('iconP2.flipX', true)
+    end
+    if curStep == 628 then
+      runHaxeCode([[PlayState.instance.changeNoteSkin(false, "noteSkins/M-O-Arrows");]])
+      moepart = false
+      setProperty('iconP2.flipX', false)
+    end
+    if curStep == 660 then
+      runHaxeCode([[PlayState.instance.changeNoteSkin(false, "noteSkins/MoeArrows");]])
+      moepart = true
+      setProperty('iconP2.flipX', true)
+    end
+    if curStep == 832 then
+      runHaxeCode([[PlayState.instance.changeNoteSkin(false, "noteSkins/M-O-Arrows");]])
+      moepart = false
+      setProperty('iconP2.flipX', false)
+    end
+    if curStep == 864 then
+      runHaxeCode([[PlayState.instance.changeNoteSkin(false, "noteSkins/MoeArrows");]])
+      moepart = true
+      setProperty('iconP2.flipX', true)
+    end
+    if curStep == 912 then
+      runHaxeCode([[PlayState.instance.changeNoteSkin(false, "noteSkins/M-O-Arrows");]])
+      moepart = false
+      setProperty('iconP2.flipX', false)
+    end
   end
 end

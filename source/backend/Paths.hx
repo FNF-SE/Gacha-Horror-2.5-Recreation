@@ -207,7 +207,7 @@ class Paths
 
 	inline static public function voices(song:String):Sound
 	{
-		var songKey:String = 'songs/${formatToSongPath(song)}/Voices';
+		var songKey:String = 'songs/${formatToSongPath(song)}/Voices${LOADOLD ? "-Old" : ""}';
 		var voices = returnSound(null, songKey);
 		return voices;
 	}

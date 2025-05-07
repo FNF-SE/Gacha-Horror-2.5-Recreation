@@ -8,7 +8,9 @@ function onStepHit()
     singleDad = true
   elseif curStep == 1024 then
     singleDad = false
-  elseif curStep == 1536 then
+  elseif curStep == 1536 and not getProperty('loadedOldSong') then
+    singleDad = true
+  elseif curStep == 1408 and getProperty('loadedOldSong') then
     singleDad = true
   end
 end

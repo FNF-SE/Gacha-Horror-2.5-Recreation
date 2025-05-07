@@ -171,6 +171,13 @@ class CoolUtil
 
 		Paths.LOADOLD = loadOldSong;
 
+		// just a check
+		if (name == "Scrub" && loadOldSong)
+			name = "Mike";
+		
+		if (name != "Despair" && name != "Isolation" && name != "Sentient" && name != "Red-Slot")
+			Paths.LOADOLD = false;
+
 		var poop:String = Highscore.formatSong(name, difficultyNum);
 		PlayState.SONG = Song.loadFromJson(poop, name);
 		PlayState.storyDifficulty = difficultyNum;

@@ -7,7 +7,6 @@ import flixel.addons.transition.FlxTransitionableState;
 import flixel.util.FlxStringUtil;
 import states.FreeplayState;
 import states.FreeplayState.FreeplaySelectState;
-import states.FreeplayStateOld;
 import options.OptionsState;
 
 class PauseSubState extends MusicBeatSubstate
@@ -344,7 +343,6 @@ class PauseSubState extends MusicBeatSubstate
 					switch (PlayState.SONG.song)
 					{
 						case 'Tutorial': MusicBeatState.switchState(new FreeplaySelectState());
-						case 'Old Despair' | 'Old Isolation' | 'Old Red Slot' | 'Mike': MusicBeatState.switchState(new FreeplayStateOld());
 						default: MusicBeatState.switchState(new FreeplayState());
 					}
 					FlxG.sound.playMusic(Paths.music('freakyMenu'));
