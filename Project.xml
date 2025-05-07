@@ -35,11 +35,12 @@
 	<classpath name="source" />
 
 	<!-- Assets -->
-	<assets path="assets" />
 	<assets path="images-astc" rename="assets/shared/images" if="ASTC" />
 	<assets path="images-ktx" rename="assets/shared/images" if="ETC2" />
 	<assets path="images-ktx2" rename="assets/shared/images" embed="true" if="S3TC" />
 	<assets path="images-png" rename="assets/shared/images" embed="true" if="PNG" />
+	<assets path="assets" embed="true" if="S3TC || PNG" />
+	<assets path="assets" unless="S3TC || PNG" />
 	
 	<define name="PNG" if="display" /> <!-- vscode shit -->
 	<define name="NO_TEXTURE_FORMAT" unless="ASTC || ETC2 || S3TC || PNG" />
