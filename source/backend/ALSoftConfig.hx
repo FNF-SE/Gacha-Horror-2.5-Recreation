@@ -26,10 +26,7 @@ class ALSoftConfig
 
 	public static function init():Void
 	{
-		final configPath:String = Path.join([
-			Path.directory(Path.withoutExtension(System.applicationStorageDirectory)),
-			'alsoft.conf'
-		]);
+		final configPath:String = Path.join([#if mobile Path.directory(Path.withoutExtension(System.applicationStorageDirectory)) #else Sys.getCwd() #end, 'alsoft.conf']);
 		if (!FileSystem.exists(Path.directory(configPath)))
 			FileSystem.createDirectory(Path.directory(configPath));
 		File.saveContent(configPath, OPENAL_CONFIG);
