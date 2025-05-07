@@ -3189,6 +3189,8 @@ class PlayState extends MusicBeatState
 		if (result != LuaUtils.Function_Stop && result != LuaUtils.Function_StopHScript && result != LuaUtils.Function_StopAll)
 			callOnHScript('opponentNoteHitPre', [note]);
 
+		camZooming = true;
+
 		if (note.noteType == 'Hey!' && dad.animOffsets.exists('hey'))
 		{
 			dad.playAnim('hey', true);
