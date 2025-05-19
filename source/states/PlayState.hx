@@ -342,7 +342,7 @@ class PlayState extends MusicBeatState
 		if (SONG == null)
 			SONG = Song.loadFromJson('tutorial');
 
-		if (SONG.song == 'Enraged' || SONG.song == 'Isolation' || SONG.song == 'Betalation' || SONG.song == 'Far Lost' || SONG.song == 'Old Far Lost' || SONG.song == 'Old Isolation')
+		if (SONG.song == 'Enraged' || SONG.song == 'Isolation' || SONG.song == 'Betalation' || SONG.song == 'Far Lost')
 			characterPlayingAsDad = true;
 		else
 			characterPlayingAsDad = false;

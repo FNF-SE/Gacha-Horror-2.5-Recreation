@@ -1,3 +1,6 @@
+local width = math.floor(math.abs(getPropertyFromClass('openfl.system.Capabilities', 'screenResolutionX')))
+local height = math.floor(math.abs(getPropertyFromClass('openfl.system.Capabilities', 'screenResolutionY')))
+
 function onCreatePost()
   setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', true)
   makeLuaSprite('BlackScreenHUD', 'empty', -550,-150)
@@ -21,12 +24,24 @@ function onBeatHit()
   end
   if curBeat == 256 then
     setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', true)
+    if buildTarget == 'android' or buildTarget == 'ios' then
+      setPropertyFromClass('openfl.Lib', 'application.window.width', width)
+      setPropertyFromClass('openfl.Lib', 'application.window.height', height)
+    end
   end
   if curBeat == 384 then
     setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', true)
+    if buildTarget == 'android' or buildTarget == 'ios' then
+      setPropertyFromClass('openfl.Lib', 'application.window.width', width)
+      setPropertyFromClass('openfl.Lib', 'application.window.height', height)
+    end
   end
   if curBeat == 576 then
     setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', true)
+    if buildTarget == 'android' or buildTarget == 'ios' then
+      setPropertyFromClass('openfl.Lib', 'application.window.width', width)
+      setPropertyFromClass('openfl.Lib', 'application.window.height', height)
+    end
   end
 end
 

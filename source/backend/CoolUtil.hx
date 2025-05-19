@@ -175,7 +175,7 @@ class CoolUtil
 		if (name == "Scrub" && loadOldSong)
 			name = "Mike";
 		
-		if (name != "Despair" && name != "Isolation" && name != "Sentient" && name != "Red-Slot")
+		if (name != "Despair" && name != "Isolation" && name != "Far-Lost" && name != "Sentient" && name != "Red-Slot")
 			Paths.LOADOLD = false;
 
 		var poop:String = Highscore.formatSong(name, difficultyNum);
