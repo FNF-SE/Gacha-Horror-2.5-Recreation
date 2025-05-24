@@ -57,10 +57,6 @@ class TitleState extends MusicBeatState
 	{
 		Paths.clearStoredMemory();
 
-		#if android
-		FlxG.android.preventDefaultKeys = [BACK];
-		#end
-
 		#if LUA_ALLOWED
 		Mods.pushGlobalMods();
 		#end
@@ -93,6 +89,7 @@ class TitleState extends MusicBeatState
 			}
 			persistentUpdate = true;
 			persistentDraw = true;
+			MobileData.init();
 		}
 
 		FlxG.mouse.visible = false;

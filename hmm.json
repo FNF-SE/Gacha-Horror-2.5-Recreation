@@ -5,19 +5,21 @@
       "type": "git",
       "dir": null,
       "ref": null,
-      "url": "https://github.com/MobilePorting/lime"
+      "url": "https://github.com/th2l-devs/lime"
     },
     {
       "name": "openfl",
-      "type": "haxelib",
-      "version": "9.3.2"
+      "type": "git",
+      "dir": null,
+      "ref": null,
+      "url": "https://github.com/th2l-devs/openfl"
     },
     {
       "name": "flixel",
       "type": "git",
       "dir": null,
-      "ref": "5.5.0",
-      "url": "https://github.com/MobilePorting/flixel"
+      "ref": null,
+      "url": "https://github.com/th2l-devs/flixel"
     },
     {
       "name": "flixel-addons",
@@ -39,14 +41,14 @@
       "type": "git",
       "dir": null,
       "ref": null,
-      "url": "https://github.com/MobilePorting/hxcpp"
+      "url": "https://github.com/th2l-devs/hxcpp"
     },
     {
       "name": "SScript",
       "type": "git",
       "dir": null,
       "ref": null,
-      "url": "https://github.com/MobilePorting/SScript-7.7.0"
+      "url": "https://github.com/th2l-devs/SScript"
     },
     {
       "name": "hxdiscord_rpc",
@@ -58,7 +60,7 @@
       "type": "git",
       "dir": null,
       "ref": null,
-      "url": "https://github.com/MobilePorting/linc_luajit"
+      "url": "https://github.com/th2l-devs/linc_luajit"
     }
   ]
 }

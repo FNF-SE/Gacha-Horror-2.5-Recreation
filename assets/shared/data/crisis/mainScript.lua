@@ -23,25 +23,25 @@ function onBeatHit()
     cameraFlash('hud', '000000', 3, true)
   end
   if curBeat == 256 then
-    setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', true)
     if buildTarget == 'android' or buildTarget == 'ios' then
       setPropertyFromClass('openfl.Lib', 'application.window.width', width)
       setPropertyFromClass('openfl.Lib', 'application.window.height', height)
     end
+    setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', true)
   end
   if curBeat == 384 then
-    setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', true)
     if buildTarget == 'android' or buildTarget == 'ios' then
       setPropertyFromClass('openfl.Lib', 'application.window.width', width)
       setPropertyFromClass('openfl.Lib', 'application.window.height', height)
     end
+    setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', true)
   end
   if curBeat == 576 then
-    setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', true)
     if buildTarget == 'android' or buildTarget == 'ios' then
       setPropertyFromClass('openfl.Lib', 'application.window.width', width)
       setPropertyFromClass('openfl.Lib', 'application.window.height', height)
     end
+    setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', true)
   end
 end
 

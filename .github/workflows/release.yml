@@ -14,17 +14,29 @@ jobs:
     strategy:
       matrix:
         include:
-          - name: Windows
+          - name: Windows x86_64
             os: windows-2025
             buildArgs: "windows -final -D officialBuild"
             assetType: PNG
             artifactName: windowsBuild-x86_64
             artifactPath: export\release\windows\bin\*
-          - name: Linux
+          - name: Windows ARM64
+            os: windows-2025
+            buildArgs: "windows -arm64 -final -D HXCPP_ARM64 -D officialBuild"
+            assetType: PNG
+            artifactName: windowsBuild-arm64
+            artifactPath: export\release\windows\bin\*
+          - name: Linux x86_64
             os: ubuntu-22.04
             buildArgs: "linux -final -D officialBuild"
             assetType: PNG
             artifactName: linuxBuild-x86_64
+            artifactPath: export/release/linux/bin/*
+          - name: Linux ARM64
+            os: ubuntu-22.04-arm
+            buildArgs: "linux -final -D officialBuild"
+            assetType: PNG
+            artifactName: linuxBuild-arm64
             artifactPath: export/release/linux/bin/*
           - name: macOS x86_64
             os: macos-15
@@ -79,8 +91,8 @@ jobs:
            name: iOSBuild-ASTC
            path: ${{ github.workspace }}
 
-      - name: Zip iOS Build For Release
-        run: zip -r "/home/runner/${{ env.PROJECT_NAME }}-ASTC-iOS.zip" ${{ github.workspace }}/${{ env.PROJECT_NAME }}.ipa
+      - name: Move iOS File
+        run: mv ${{ github.workspace }}/${{ env.PROJECT_NAME }}.ipa /home/runner/${{ env.PROJECT_NAME }}.ipa
 
       - name: Download Linux x86_64 Build
         uses: actions/download-artifact@main
@@ -90,6 +102,15 @@ jobs:
 
       - name: Tar Linux x86_64 Build For Release
         run: tar czf "/home/runner/${{ env.PROJECT_NAME }}-linux-x86_64.tar" /home/runner/linuxBuild-x86_64/.
+
+      - name: Download Linux ARM64 Build
+        uses: actions/download-artifact@main
+        with:
+           name: linuxBuild-arm64-PNG
+           path: /home/runner/linuxBuild-arm64
+
+      - name: Tar Linux ARM64 Build For Release
+        run: tar czf "/home/runner/${{ env.PROJECT_NAME }}-linux-arm64.tar" /home/runner/linuxBuild-arm64/.
 
       - name: Download macOS ARM64 Build
         uses: actions/download-artifact@main
@@ -109,14 +130,23 @@ jobs:
       - name: Tar macOS x86_64 Build For Release
         run: tar czf "/home/runner/${{ env.PROJECT_NAME }}-macOS-x86_64.tar" /home/runner/macOSBuild-x86_64/.
 
-      - name: Download Windows Build
+      - name: Download Windows x86_64 Build
         uses: actions/download-artifact@main
         with:
            name: windowsBuild-x86_64-PNG
            path: /home/runner/windowsBuild-x86_64
 
-      - name: Zip Windows Build For Release
+      - name: Zip Windows x86_64 Build For Release
         run: zip -r "/home/runner/${{ env.PROJECT_NAME }}-windows-x86_64.zip" /home/runner/windowsBuild-x86_64/.
+
+      - name: Download Windows ARM64 Build
+        uses: actions/download-artifact@main
+        with:
+           name: windowsBuild-arm64-PNG
+           path: /home/runner/windowsBuild-arm64
+
+      - name: Zip Windows ARM64 Build For Release
+        run: zip -r "/home/runner/${{ env.PROJECT_NAME }}-windows-arm64.zip" /home/runner/windowsBuild-arm64/.
 
       - name: Publish The Release
         uses: softprops/action-gh-release@v2
@@ -126,5 +156,6 @@ jobs:
           prerelease: false
           files: |
             /home/runner/*.apk
+            /home/runner/*.ipa
             /home/runner/*.tar
             /home/runner/*.zip
