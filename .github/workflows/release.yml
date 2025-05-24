@@ -92,7 +92,7 @@ jobs:
            path: ${{ github.workspace }}
 
       - name: Move iOS File
-        run: mv ${{ github.workspace }}/${{ env.PROJECT_NAME }}.ipa /home/runner/${{ env.PROJECT_NAME }}.ipa
+        run: mv ${{ github.workspace }}/${{ env.PROJECT_NAME }}.ipa /home/runner/${{ env.PROJECT_NAME }}-ASTC-iOS.ipa
 
       - name: Download Linux x86_64 Build
         uses: actions/download-artifact@main
