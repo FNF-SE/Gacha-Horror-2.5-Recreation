@@ -36,8 +36,8 @@
 
 	<!-- Assets -->
 	<assets path="assets" embed="true" />
-	<assets path="images-astc" rename="assets/shared/images" embed="true" if="ASTC" />
-	<assets path="images-ktx" rename="assets/shared/images" embed="true" if="ETC2" />
+	<assets path="images-astc" rename="assets/shared/images" if="ASTC" />
+	<assets path="images-ktx" rename="assets/shared/images" if="ETC2" />
 	<assets path="images-ktx2" rename="assets/shared/images" embed="true" if="S3TC" />
 	<assets path="images-png" rename="assets/shared/images" embed="true" if="PNG" />
 	
