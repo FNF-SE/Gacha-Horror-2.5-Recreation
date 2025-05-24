@@ -34,7 +34,7 @@ jobs:
             artifactPath: export/release/linux/bin/*
           - name: Linux ARM64
             os: ubuntu-22.04-arm
-            buildArgs: "linux -final -D officialBuild"
+            buildArgs: "linux -arm64 -final -D HXCPP_ARM64 -D officialBuild"
             assetType: PNG
             artifactName: linuxBuild-arm64
             artifactPath: export/release/linux/bin/*
