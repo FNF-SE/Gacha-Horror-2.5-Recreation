@@ -35,9 +35,17 @@ jobs:
         uses: actions/checkout@main
 
       - name: Setup Haxe
+        if: startsWith(inputs.os, 'linux') && endsWith(inputs.os, '-arm') != true
         uses: krdlab/setup-haxe@master
         with:
           haxe-version: ${{ env.HAXE_VERSION }}
+
+      - name: Setup Haxe (Linux ARM)
+        if: startsWith(inputs.os, 'linux') && endsWith(inputs.os, '-arm') == true
+        run: |
+          sudo add-apt-repository ppa:haxe/releases -y
+          sudo apt update
+          sudo apt-get install -y haxe neko
 
       - name: Install libVLC
         if: contains(inputs.name, 'Linux')
