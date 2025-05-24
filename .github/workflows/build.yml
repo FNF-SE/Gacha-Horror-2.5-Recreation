@@ -35,13 +35,13 @@ jobs:
         uses: actions/checkout@main
 
       - name: Setup Haxe
-        if: startsWith(inputs.os, 'linux') && endsWith(inputs.os, '-arm') != true
+        if: startsWith(inputs.os, 'ubuntu') && endsWith(inputs.os, '-arm') != true
         uses: krdlab/setup-haxe@master
         with:
           haxe-version: ${{ env.HAXE_VERSION }}
 
       - name: Setup Haxe (Linux ARM)
-        if: startsWith(inputs.os, 'linux') && endsWith(inputs.os, '-arm') == true
+        if: startsWith(inputs.os, 'ubuntu') && endsWith(inputs.os, '-arm') == true
         run: |
           sudo add-apt-repository ppa:haxe/releases -y
           sudo apt update
