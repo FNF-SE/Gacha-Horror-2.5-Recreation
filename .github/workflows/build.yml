@@ -35,13 +35,13 @@ jobs:
         uses: actions/checkout@main
 
       - name: Setup Haxe
-        if: inputs.name != "Linux ARM64"
+        if: inputs.name != 'Linux ARM64'
         uses: krdlab/setup-haxe@master
         with:
           haxe-version: ${{ env.HAXE_VERSION }}
 
       - name: Setup Haxe (Linux ARM)
-        if: inputs.name == "Linux ARM64"
+        if: inputs.name == 'Linux ARM64'
         run: |
           sudo add-apt-repository ppa:haxe/releases -y
           sudo apt update
