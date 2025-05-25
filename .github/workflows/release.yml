@@ -79,8 +79,8 @@ jobs:
       - name: Download Android Build
         uses: actions/download-artifact@main
         with:
-           name: androidBuild-ASTC
-           path: /home/runner
+          name: androidBuild-ASTC
+          path: /home/runner
 
       - name: Move Android File
         run: mv /home/runner/${{ env.PROJECT_NAME }}-release.apk /home/runner/${{ env.PROJECT_NAME }}-ASTC-Android.apk
@@ -88,8 +88,8 @@ jobs:
       - name: Download iOS Build
         uses: actions/download-artifact@main
         with:
-           name: iOSBuild-ASTC
-           path: ${{ github.workspace }}
+          name: iOSBuild-ASTC
+          path: ${{ github.workspace }}
 
       - name: Move iOS File
         run: mv ${{ github.workspace }}/${{ env.PROJECT_NAME }}.ipa /home/runner/${{ env.PROJECT_NAME }}-ASTC-iOS.ipa
@@ -97,56 +97,68 @@ jobs:
       - name: Download Linux x86_64 Build
         uses: actions/download-artifact@main
         with:
-           name: linuxBuild-x86_64-PNG
-           path: /home/runner/linuxBuild-x86_64
+          name: linuxBuild-x86_64-PNG
+          path: /home/runner/linuxBuild-x86_64
 
       - name: Tar Linux x86_64 Build For Release
-        run: tar czf "/home/runner/${{ env.PROJECT_NAME }}-linux-x86_64.tar" /home/runner/linuxBuild-x86_64/.
+        run: |
+          cd /home/runner/linuxBuild-x86_64
+          tar czf "/home/runner/${{ env.PROJECT_NAME }}-linux-x86_64.tar" .
 
       - name: Download Linux ARM64 Build
         uses: actions/download-artifact@main
         with:
-           name: linuxBuild-arm64-PNG
-           path: /home/runner/linuxBuild-arm64
+          name: linuxBuild-arm64-PNG
+          path: /home/runner/linuxBuild-arm64
 
       - name: Tar Linux ARM64 Build For Release
-        run: tar czf "/home/runner/${{ env.PROJECT_NAME }}-linux-arm64.tar" /home/runner/linuxBuild-arm64/.
+        run: |
+          cd /home/runner/linuxBuild-arm64
+          tar czf "/home/runner/${{ env.PROJECT_NAME }}-linux-arm64.tar" .
 
       - name: Download macOS ARM64 Build
         uses: actions/download-artifact@main
         with:
-           name: macOSBuild-arm64-PNG
-           path: /home/runner/macOSBuild-arm64
+          name: macOSBuild-arm64-PNG
+          path: /home/runner/macOSBuild-arm64
 
       - name: Tar macOS ARM64 Build For Release
-        run: tar czf "/home/runner/${{ env.PROJECT_NAME }}-macOS-arm64.tar" /home/runner/macOSBuild-arm64/.
+        run: |
+          cd /home/runner/macOSBuild-arm64
+          tar czf "/home/runner/${{ env.PROJECT_NAME }}-macOS-arm64.tar" .
 
       - name: Download macOS x86_64 Build
         uses: actions/download-artifact@main
         with:
-           name: macOSBuild-x86_64-PNG
-           path: /home/runner/macOSBuild-x86_64
+          name: macOSBuild-x86_64-PNG
+          path: /home/runner/macOSBuild-x86_64
 
       - name: Tar macOS x86_64 Build For Release
-        run: tar czf "/home/runner/${{ env.PROJECT_NAME }}-macOS-x86_64.tar" /home/runner/macOSBuild-x86_64/.
+        run: |
+          cd /home/runner/macOSBuild-x86_64
+          tar czf "/home/runner/${{ env.PROJECT_NAME }}-macOS-x86_64.tar" .
 
       - name: Download Windows x86_64 Build
         uses: actions/download-artifact@main
         with:
-           name: windowsBuild-x86_64-PNG
-           path: /home/runner/windowsBuild-x86_64
+          name: windowsBuild-x86_64-PNG
+          path: /home/runner/windowsBuild-x86_64
 
       - name: Zip Windows x86_64 Build For Release
-        run: zip -r "/home/runner/${{ env.PROJECT_NAME }}-windows-x86_64.zip" /home/runner/windowsBuild-x86_64/.
+        run: |
+          cd /home/runner/windowsBuild-x86_64
+          zip -r "/home/runner/${{ env.PROJECT_NAME }}-windows-x86_64.zip" .
 
       - name: Download Windows ARM64 Build
         uses: actions/download-artifact@main
         with:
-           name: windowsBuild-arm64-PNG
-           path: /home/runner/windowsBuild-arm64
+          name: windowsBuild-arm64-PNG
+          path: /home/runner/windowsBuild-arm64
 
       - name: Zip Windows ARM64 Build For Release
-        run: zip -r "/home/runner/${{ env.PROJECT_NAME }}-windows-arm64.zip" /home/runner/windowsBuild-arm64/.
+        run: |
+          cd /home/runner/windowsBuild-arm64
+          zip -r "/home/runner/${{ env.PROJECT_NAME }}-windows-arm64.zip" .
 
       - name: Publish The Release
         uses: softprops/action-gh-release@v2
