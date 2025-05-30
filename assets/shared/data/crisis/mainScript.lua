@@ -11,7 +11,7 @@ function onCreatePost()
 end
 
 function onDestroy()
-  setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', true)
+  resetWindow()
 end
 
 function onBeatHit()
@@ -23,32 +23,28 @@ function onBeatHit()
     cameraFlash('hud', '000000', 3, true)
   end
   if curBeat == 256 then
-    if buildTarget == 'android' or buildTarget == 'ios' then
-      setPropertyFromClass('openfl.Lib', 'application.window.width', width)
-      setPropertyFromClass('openfl.Lib', 'application.window.height', height)
-    end
-    setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', true)
+    resetWindow()
   end
   if curBeat == 384 then
-    if buildTarget == 'android' or buildTarget == 'ios' then
-      setPropertyFromClass('openfl.Lib', 'application.window.width', width)
-      setPropertyFromClass('openfl.Lib', 'application.window.height', height)
-    end
-    setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', true)
+    resetWindow()
   end
   if curBeat == 576 then
-    if buildTarget == 'android' or buildTarget == 'ios' then
-      setPropertyFromClass('openfl.Lib', 'application.window.width', width)
-      setPropertyFromClass('openfl.Lib', 'application.window.height', height)
-    end
-    setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', true)
+    resetWindow()
   end
 end
 
 function onEndSong()
-  setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', true)
+  resetWindow()
 end
 
 function onGameOver()
+  resetWindow()
+end
+
+function resetWindow()
+  if buildTarget == 'android' or buildTarget == 'ios' then
+    setPropertyFromClass('openfl.Lib', 'application.window.width', width)
+    setPropertyFromClass('openfl.Lib', 'application.window.height', height)
+  end
   setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', true)
 end
