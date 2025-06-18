@@ -38,12 +38,6 @@ function onPause()
 		return Function_Continue;
 }
 
-function onFocusLost()
-{
-	if (game.canPause)
-		onPause();
-}
-
 var settings = {
 	bgColour: 'crimson',
 	music: ClientPrefs.data.pauseMusic, // if you want to edit it you have to put it in a string

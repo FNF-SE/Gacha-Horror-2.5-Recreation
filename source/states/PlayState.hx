@@ -268,8 +268,7 @@ class PlayState extends MusicBeatState
 		'Alt Animation',
 		'No Animation',
 		'GF Sing',
-		'3rd Player',
-		'3rd Player ALT',
+		'Sarah Sing',
 		''
 	];
 
@@ -1964,6 +1963,7 @@ class PlayState extends MusicBeatState
 			checkEventNote();
 		}
 
+		#if debug
 		if (!endingSong && !startingSong)
 		{
 			if (FlxG.keys.justPressed.ONE)
@@ -1977,6 +1977,7 @@ class PlayState extends MusicBeatState
 				clearNotesBefore(Conductor.songPosition);
 			}
 		}
+		#end
 
 		setOnScripts('cameraX', camFollow.x);
 		setOnScripts('cameraY', camFollow.y);
@@ -3207,8 +3208,7 @@ class PlayState extends MusicBeatState
 			var animToPlay:String = singAnimations[Std.int(Math.abs(Math.min(singAnimations.length - 1, note.noteData)))] + altAnim;
 			if (note.gfNote)
 				char = gf;
-
-			if (note.sarahNote)
+			else if (note.sarahNote)
 				char = sarah;
 
 			if (char != null)
@@ -3277,8 +3277,7 @@ class PlayState extends MusicBeatState
 				char = gf;
 				animCheck = 'cheer';
 			}
-
-			if (note.sarahNote)
+			else if (note.sarahNote)
 				char = sarah;
 
 			if (char != null)

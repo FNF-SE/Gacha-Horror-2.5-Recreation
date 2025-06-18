@@ -40,7 +40,7 @@ import openfl.media.Sound;
 class ChartingState extends MusicBeatState
 {
 	public static var noteTypeList:Array<String> = // Used for backwards compatibility with 0.1 - 0.3.2 charts, though, you should add your hardcoded custom note types here too.
-		['', 'Alt Animation', 'Hey!', 'Hurt Note', 'GF Sing', 'No Animation'];
+		['', 'Alt Animation', 'Hey!', 'Hurt Note', 'GF Sing', 'Sarah Sing', 'No Animation'];
 
 	public var ignoreWarnings = false;
 

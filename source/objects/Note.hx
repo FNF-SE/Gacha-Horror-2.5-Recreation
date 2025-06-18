@@ -184,7 +184,7 @@ class Note extends FlxSprite
 					noMissAnimation = true;
 				case 'GF Sing':
 					gfNote = true;
-				case '3rd Player' | '3rd Player ALT':
+				case 'Sarah Sing':
 					sarahNote = true;
 			}
 			if (value != null && value.length > 1)

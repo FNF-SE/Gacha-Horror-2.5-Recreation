@@ -1,40 +1,58 @@
 function goodNoteHit(id, direction, noteType, isSustainNote)
-  if _G['boyfriendGhostData.strumTime'] == getPropertyFromGroup('notes', id, 'strumTime') and not isSustainNote and not getPropertyFromGroup('notes',id,'gfNote') then
+  if _G['boyfriendGhostData.strumTime'] == getPropertyFromGroup('notes', id, 'strumTime') and not isSustainNote and not getPropertyFromGroup('notes',id,'gfNote') and not getPropertyFromGroup('notes',id,'sarahNote') then
     if getProperty('characterPlayingAsDad') == false then createGhost('boyfriend') else createGhost('dad') end
   end
 
-  if not isSustainNote and not getPropertyFromGroup('notes',id,'gfNote') then
+  if not isSustainNote and not getPropertyFromGroup('notes',id,'gfNote') and not getPropertyFromGroup('notes',id,'sarahNote') then
     _G['boyfriendGhostData.strumTime'] = getPropertyFromGroup('notes', id, 'strumTime')
     if getProperty('characterPlayingAsDad') == false then updateGData('boyfriend') else updateGData('dad') end
   end
 
-  if _G['gfGhostData.strumTime'] == getPropertyFromGroup('notes',id,'strumTime') and not isSustainNote and getPropertyFromGroup('notes',id,'gfNote') then
+  if _G['gfGhostData.strumTime'] == getPropertyFromGroup('notes',id,'strumTime') and not isSustainNote and getPropertyFromGroup('notes',id,'gfNote') and not getPropertyFromGroup('notes',id,'sarahNote') then
     createGhost('gf')
   end
 
-  if not isSustainNote and getPropertyFromGroup('notes',id,'gfNote') then
+  if not isSustainNote and getPropertyFromGroup('notes',id,'gfNote') and not getPropertyFromGroup('notes',id,'sarahNote') then
     _G['gfGhostData.strumTime'] = getPropertyFromGroup('notes',i,'strumTime')
     updateGData('gf')
+  end
+
+  if _G['sarahGhostData.strumTime'] == getPropertyFromGroup('notes',id,'strumTime') and not isSustainNote and getPropertyFromGroup('notes',id,'sarahNote') then
+    createGhost('sarah')
+  end
+
+  if not isSustainNote and getPropertyFromGroup('notes',id,'sarahNote') then
+    _G['sarahGhostData.strumTime'] = getPropertyFromGroup('notes',i,'strumTime')
+    updateGData('sarah')
   end
 end
 
 function opponentNoteHit(id, direction, noteType, isSustainNote)
-  if _G['dadGhostData.strumTime'] == getPropertyFromGroup('notes', id, 'strumTime') and not isSustainNote and not getPropertyFromGroup('notes',i,'gfNote') then
+  if _G['dadGhostData.strumTime'] == getPropertyFromGroup('notes', id, 'strumTime') and not isSustainNote and not getPropertyFromGroup('notes',id,'gfNote') and not getPropertyFromGroup('notes',id,'sarahNote') then
     if getProperty('characterPlayingAsDad') == false then createGhost('dad') else createGhost('boyfriend') end
   end
 
-  if not isSustainNote and not getPropertyFromGroup('notes',i,'gfNote') then
+  if not isSustainNote and not getPropertyFromGroup('notes',id,'gfNote') and not getPropertyFromGroup('notes',id,'sarahNote') then
     _G['dadGhostData.strumTime'] = getPropertyFromGroup('notes', id, 'strumTime')
     if getProperty('characterPlayingAsDad') == false then updateGData('dad') else updateGData('boyfriend') end
   end
 
-  if _G['gfGhostData.strumTime'] == getPropertyFromGroup('notes',id,'strumTime') and not isSustainNote and getPropertyFromGroup('notes',id,'gfNote') then
+  if _G['gfGhostData.strumTime'] == getPropertyFromGroup('notes',id,'strumTime') and not isSustainNote and getPropertyFromGroup('notes',id,'gfNote') and not getPropertyFromGroup('notes',id,'sarahNote') then
     createGhost('gf')
   end
 
-  if not isSustainNote and getPropertyFromGroup('notes',id,'gfNote') then
+  if not isSustainNote and getPropertyFromGroup('notes',id,'gfNote') and not getPropertyFromGroup('notes',id,'sarahNote') then
     _G['gfGhostData.strumTime'] = getPropertyFromGroup('notes',i,'strumTime')
     updateGData('gf')
+  end
+
+  if _G['sarahGhostData.strumTime'] == getPropertyFromGroup('notes',id,'strumTime') and not isSustainNote and getPropertyFromGroup('notes',id,'sarahNote') then
+    createGhost('sarah')
+  end
+
+  if not isSustainNote and getPropertyFromGroup('notes',id,'sarahNote') then
+    _G['sarahGhostData.strumTime'] = getPropertyFromGroup('notes',i,'strumTime')
+    updateGData('sarah')
   end
 end
 
