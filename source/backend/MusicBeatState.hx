@@ -131,6 +131,9 @@ class MusicBeatState extends FlxUIState
 
 	override function create()
 	{
+		if (FlxG.mouse.cursor != null && !(FlxG.mouse.cursor.bitmapData is FunkinCursor))
+			FlxG.mouse.load(new FunkinCursor(0, 0));
+
 		var skip:Bool = FlxTransitionableState.skipNextTransOut;
 		#if MODS_ALLOWED Mods.updatedOnState = false; #end
 
@@ -340,3 +343,6 @@ class MusicBeatState extends FlxUIState
 		return val == null ? 4 : val;
 	}
 }
+
+@:bitmap("assets/embed/cursor.png")
+private class FunkinCursor extends openfl.display.BitmapData {}

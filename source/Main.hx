@@ -101,8 +101,16 @@ class Main extends Sprite
 		Controls.instance = new Controls();
 		ClientPrefs.loadDefaultKeys();
 
-		addChild(new FlxGame(game.width, game.height, game.initialState, #if (flixel < "5.0.0") game.zoom, #end game.framerate, game.framerate,
-			game.skipSplash, game.startFullscreen));
+		final funkinGame:FlxGame = new FlxGame(game.width, game.height, game.initialState, #if (flixel < "5.0.0") game.zoom, #end game.framerate, game.framerate, game.skipSplash, game.startFullscreen);
+
+		@:privateAccess
+		{
+			final soundFrontEnd:flixel.system.frontEnds.SoundFrontEnd = new objects.CustomSoundTray.CustomSoundFrontEnd();
+			FlxG.sound = soundFrontEnd;
+			funkinGame._customSoundTray = objects.CustomSoundTray.CustomSoundTray;
+		}
+
+		addChild(funkinGame);
 
 		fpsVar = new FPSCounter(10, 3, 0xFFFFFF);
 		addChild(fpsVar);
@@ -142,6 +150,7 @@ class Main extends Sprite
 		{
 			if (fpsVar != null)
 				fpsVar.positionFPS(10, 3, Math.min(Lib.current.stage.stageWidth / FlxG.width, Lib.current.stage.stageHeight / FlxG.height));
+
 			if (FlxG.cameras != null)
 			{
 				for (cam in FlxG.cameras.list)
