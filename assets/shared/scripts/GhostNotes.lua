@@ -3,10 +3,6 @@ local dadGhostData = {}
 local gfGhostData = {}
 local sarahGhostData = {}
 
-function onCreate()
-    luaDebugMode = true
-end
-
 function goodNoteHit(id, direction, noteType, isSustainNote)
     local strumTime = getPropertyFromGroup('notes', id, 'strumTime')
     local noteType = getPropertyFromGroup('notes', id, 'noteType')
