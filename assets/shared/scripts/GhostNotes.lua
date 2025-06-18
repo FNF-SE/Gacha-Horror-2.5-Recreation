@@ -1,91 +1,132 @@
+local boyfriendGhostData = {}
+local dadGhostData = {}
+local gfGhostData = {}
+local sarahGhostData = {}
+
+function onCreate()
+    luaDebugMode = true
+end
+
 function goodNoteHit(id, direction, noteType, isSustainNote)
-  if _G['boyfriendGhostData.strumTime'] == getPropertyFromGroup('notes', id, 'strumTime') and not isSustainNote and not getPropertyFromGroup('notes',id,'gfNote') and not getPropertyFromGroup('notes',id,'sarahNote') then
-    if getProperty('characterPlayingAsDad') == false then createGhost('boyfriend') else createGhost('dad') end
-  end
+    local strumTime = getPropertyFromGroup('notes', id, 'strumTime')
+    local noteType = getPropertyFromGroup('notes', id, 'noteType')
 
-  if not isSustainNote and not getPropertyFromGroup('notes',id,'gfNote') and not getPropertyFromGroup('notes',id,'sarahNote') then
-    _G['boyfriendGhostData.strumTime'] = getPropertyFromGroup('notes', id, 'strumTime')
-    if getProperty('characterPlayingAsDad') == false then updateGData('boyfriend') else updateGData('dad') end
-  end
+    local isGF = getPropertyFromGroup('notes', id, 'gfNote') or noteType == 'Gf Sing'
+    local isSarah = getPropertyFromGroup('notes', id, 'sarahNote') or noteType == 'Sarah Sing'
 
-  if _G['gfGhostData.strumTime'] == getPropertyFromGroup('notes',id,'strumTime') and not isSustainNote and getPropertyFromGroup('notes',id,'gfNote') and not getPropertyFromGroup('notes',id,'sarahNote') then
-    createGhost('gf')
-  end
+    -- BOYFRIEND or DAD
+    if not isSustainNote and not isGF and not isSarah then
+        if strumTime == boyfriendGhostData.strumTime then
+            createGhost(getProperty('characterPlayingAsDad') and 'dad' or 'boyfriend')
+        end
 
-  if not isSustainNote and getPropertyFromGroup('notes',id,'gfNote') and not getPropertyFromGroup('notes',id,'sarahNote') then
-    _G['gfGhostData.strumTime'] = getPropertyFromGroup('notes',i,'strumTime')
-    updateGData('gf')
-  end
+        boyfriendGhostData.strumTime = strumTime
+        updateGData(getProperty('characterPlayingAsDad') and 'dad' or 'boyfriend')
+    end
 
-  if _G['sarahGhostData.strumTime'] == getPropertyFromGroup('notes',id,'strumTime') and not isSustainNote and getPropertyFromGroup('notes',id,'sarahNote') then
-    createGhost('sarah')
-  end
+    -- GF
+    if not isSustainNote and isGF and not isSarah then
+        if strumTime == gfGhostData.strumTime then
+            createGhost('gf')
+        end
 
-  if not isSustainNote and getPropertyFromGroup('notes',id,'sarahNote') then
-    _G['sarahGhostData.strumTime'] = getPropertyFromGroup('notes',i,'strumTime')
-    updateGData('sarah')
-  end
+        gfGhostData.strumTime = strumTime
+        updateGData('gf')
+    end
+
+    -- SARAH
+    if not isSustainNote and isSarah then
+        if strumTime == sarahGhostData.strumTime then
+            createGhost('sarah')
+        end
+
+        sarahGhostData.strumTime = strumTime
+        updateGData('sarah')
+    end
 end
 
 function opponentNoteHit(id, direction, noteType, isSustainNote)
-  if _G['dadGhostData.strumTime'] == getPropertyFromGroup('notes', id, 'strumTime') and not isSustainNote and not getPropertyFromGroup('notes',id,'gfNote') and not getPropertyFromGroup('notes',id,'sarahNote') then
-    if getProperty('characterPlayingAsDad') == false then createGhost('dad') else createGhost('boyfriend') end
-  end
+    local strumTime = getPropertyFromGroup('notes', id, 'strumTime')
+    local noteType = getPropertyFromGroup('notes', id, 'noteType')
 
-  if not isSustainNote and not getPropertyFromGroup('notes',id,'gfNote') and not getPropertyFromGroup('notes',id,'sarahNote') then
-    _G['dadGhostData.strumTime'] = getPropertyFromGroup('notes', id, 'strumTime')
-    if getProperty('characterPlayingAsDad') == false then updateGData('dad') else updateGData('boyfriend') end
-  end
+    local isGF = getPropertyFromGroup('notes', id, 'gfNote') or noteType == 'Gf Sing'
+    local isSarah = getPropertyFromGroup('notes', id, 'sarahNote') or noteType == 'Sarah Sing'
 
-  if _G['gfGhostData.strumTime'] == getPropertyFromGroup('notes',id,'strumTime') and not isSustainNote and getPropertyFromGroup('notes',id,'gfNote') and not getPropertyFromGroup('notes',id,'sarahNote') then
-    createGhost('gf')
-  end
+    -- DAD or BOYFRIEND
+    if not isSustainNote and not isGF and not isSarah then
+        if strumTime == dadGhostData.strumTime then
+            createGhost(getProperty('characterPlayingAsDad') and 'boyfriend' or 'dad')
+        end
 
-  if not isSustainNote and getPropertyFromGroup('notes',id,'gfNote') and not getPropertyFromGroup('notes',id,'sarahNote') then
-    _G['gfGhostData.strumTime'] = getPropertyFromGroup('notes',i,'strumTime')
-    updateGData('gf')
-  end
+        dadGhostData.strumTime = strumTime
+        updateGData(getProperty('characterPlayingAsDad') and 'boyfriend' or 'dad')
+    end
 
-  if _G['sarahGhostData.strumTime'] == getPropertyFromGroup('notes',id,'strumTime') and not isSustainNote and getPropertyFromGroup('notes',id,'sarahNote') then
-    createGhost('sarah')
-  end
+    -- GF
+    if not isSustainNote and isGF and not isSarah then
+        if strumTime == gfGhostData.strumTime then
+            createGhost('gf')
+        end
 
-  if not isSustainNote and getPropertyFromGroup('notes',id,'sarahNote') then
-    _G['sarahGhostData.strumTime'] = getPropertyFromGroup('notes',i,'strumTime')
-    updateGData('sarah')
-  end
+        gfGhostData.strumTime = strumTime
+        updateGData('gf')
+    end
+
+    -- SARAH
+    if not isSustainNote and isSarah then
+        if strumTime == sarahGhostData.strumTime then
+            createGhost('sarah')
+        end
+
+        sarahGhostData.strumTime = strumTime
+        updateGData('sarah')
+    end
 end
 
 function createGhost(char)
-  songPos = math.floor(math.abs(getSongPosition()))
-  local imageFile = getProperty(char..'.imageFile')
-  local animName = getProperty(char..'.animation.curAnim.name')
-  local isMultiAtlas = getProperty(char..'.isMultiAtlas')
-  local newPath = isMultiAtlas and (imageFile:match("(.+)/[^/]+$") or imageFile)..'/'..animName or imageFile
-  makeAnimatedLuaSprite(char..'Ghost'..songPos, newPath, getProperty(char..'.x'), getProperty(char..'.y'))
-  addLuaSprite(char..'Ghost'..songPos, false)
-  setProperty(char..'Ghost'..songPos..'.scale.x',getProperty(char..'.scale.x'))
-  setProperty(char..'Ghost'..songPos..'.scale.y',getProperty(char..'.scale.y'))
-  setProperty(char..'Ghost'..songPos..'.flipX', getProperty(char..'.flipX'))
-  if getProperty('inSilhouette') == true then
-    setProperty(char..'Ghost'..songPos..'.color',000000)
-  else end
-  setProperty(char..'Ghost'..songPos..'.alpha', 1)
-  doTweenAlpha(char..'Ghost'..songPos..'delete', char..'Ghost'..songPos, 0, 0.4)
-  setProperty(char..'Ghost'..songPos..'.animation.frameName', _G[char..'GhostData.frameName'])
-  setProperty(char..'Ghost'..songPos..'.offset.x', _G[char..'GhostData.offsetX'])
-  setProperty(char..'Ghost'..songPos..'.offset.y', _G[char..'GhostData.offsetY'])
-  setObjectOrder(char..'Ghost'..songPos, getObjectOrder(char..'Group')-1)
+    local songPos = math.floor(math.abs(getSongPosition()))
+    local imageFile = getProperty(char..'.imageFile')
+    local animName = getProperty(char..'.animation.curAnim.name')
+    local isMultiAtlas = getProperty(char..'.isMultiAtlas')
+    local newPath = isMultiAtlas and (imageFile:match("(.+)/[^/]+$") or imageFile)..'/'..animName or imageFile
+
+    local ghostTag = char..'Ghost'..songPos
+    makeAnimatedLuaSprite(ghostTag, newPath, getProperty(char..'.x'), getProperty(char..'.y'))
+    addLuaSprite(ghostTag, false)
+
+    setProperty(ghostTag..'.scale.x', getProperty(char..'.scale.x'))
+    setProperty(ghostTag..'.scale.y', getProperty(char..'.scale.y'))
+    setProperty(ghostTag..'.flipX', getProperty(char..'.flipX'))
+    if getProperty('inSilhouette') then
+        setProperty(ghostTag..'.color', 0x000000)
+    end
+    setProperty(ghostTag..'.alpha', 1)
+    doTweenAlpha(ghostTag..'delete', ghostTag, 0, 0.4)
+
+    local data = getGhostData(char)
+    setProperty(ghostTag..'.animation.frameName', data.frameName)
+    setProperty(ghostTag..'.offset.x', data.offsetX)
+    setProperty(ghostTag..'.offset.y', data.offsetY)
+    setObjectOrder(ghostTag, getObjectOrder(char..'Group') - 1)
 end
 
 function onTweenCompleted(tag)
-  if (tag:sub(#tag- 5, #tag)) == 'delete' then
-    removeLuaSprite(tag:sub(1, #tag - 6), true)
-  end
+    if tag:sub(-6) == 'delete' then
+        removeLuaSprite(tag:sub(1, -7), true)
+    end
 end
 
 function updateGData(char)
-  _G[char..'GhostData.frameName'] = getProperty(char..'.animation.frameName')
-  _G[char..'GhostData.offsetX'] = getProperty(char..'.offset.x')
-  _G[char..'GhostData.offsetY'] = getProperty(char..'.offset.y')
+    local data = getGhostData(char)
+    data.frameName = getProperty(char..'.animation.frameName')
+    data.offsetX = getProperty(char..'.offset.x')
+    data.offsetY = getProperty(char..'.offset.y')
+end
+
+function getGhostData(char)
+    if char == 'boyfriend' then return boyfriendGhostData
+    elseif char == 'dad' then return dadGhostData
+    elseif char == 'gf' then return gfGhostData
+    elseif char == 'sarah' then return sarahGhostData
+    end
 end
