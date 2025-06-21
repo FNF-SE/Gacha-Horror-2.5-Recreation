@@ -23,7 +23,7 @@ on:
         type: string
 
 env:
-  HAXE_VERSION: 4.3.6
+  HAXE_VERSION: 4.3.7
   PROJECT_NAME: HorrorPackage
 
 jobs:
@@ -52,14 +52,6 @@ jobs:
         if: contains(inputs.name, 'Linux')
         run: sudo apt install libvlc-dev libvlccore-dev
 
-      - name: Setup Android NDK
-        if: inputs.name == 'Android'
-        id: setup-ndk
-        uses: nttld/setup-ndk@main
-        with:
-          ndk-version: r27c
-          add-to-path: false
-
       - name: Install Libraries
         run: |
           haxelib install hmm --quiet
@@ -69,8 +61,8 @@ jobs:
         if: inputs.name == 'Android'
         run: |
           haxelib run lime config ANDROID_SDK $ANDROID_HOME
-          haxelib run lime config ANDROID_NDK_ROOT ${{ steps.setup-ndk.outputs.ndk-path }}
-          haxelib run lime config JAVA_HOME $JAVA_HOME_17_arm64
+          haxelib run lime config ANDROID_NDK_ROOT $ANDROID_NDK_LATEST_HOME
+          haxelib run lime config JAVA_HOME $JAVA_HOME_21_arm64
           haxelib run lime config ANDROID_SETUP true
 
       - name: Compile
