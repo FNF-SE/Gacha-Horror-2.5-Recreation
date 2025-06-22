@@ -8,7 +8,8 @@ import options.OptionsState;
 
 class MainMenuState extends MusicBeatState
 {
-	public static var psychEngineVersion:String = '0.7.3-dev';
+	public static var shadowEngineVersion:String = '0.1.1';
+	public static var psychEngineVersion:String = '0.7.3';
 	public static var gachaHorrorVersion:String = '2.5'; // This is also used for Discord RPC
 	public static var curSelected:Int = 0;
 
@@ -59,7 +60,7 @@ class MainMenuState extends MusicBeatState
 
 		var modinfoText = new FlxText(0, 0, modinfo.width + 230, '', 1, true);
 		modinfoText.setFormat(Paths.font("Comfortaa-Bold.ttf"), 50, 0xFFB9B2E5, FlxTextAlign.CENTER /*, FlxTextBorderStyle.OUTLINE, 0xFF4F0A5F*/);
-		modinfoText.text = 'This mod is to\nFunk-Up the old\nGacha Life\nGlitches you would\nSee on YouTube!\nThis mod is on the\nVersion $gachaHorrorVersion Aspect.\n\nThis mod was built\nWith Friday Night\nFunkin\' Psych\nEngine V$psychEngineVersion\nMade by Shadow\nMario and the\nPsych Engine Team';
+		modinfoText.text = 'This mod is to\nFunk-Up the old\nGacha Life\nGlitches you would\nSee on YouTube!\nThis mod is on the\nVersion $gachaHorrorVersion Aspect.\n\nThis mod was built\nWith Friday Night\nFunkin\' Shadow\nEngine V$shadowEngineVersion\nMade by Shadow\nMario and the\nPsych Engine Team';
 		modinfoText.scale.set(0.56, 0.56);
 		modinfoText.updateHitbox();
 		modinfoText.x = ((modinfo.width - modinfoText.width) / 2) + modinfo.x;

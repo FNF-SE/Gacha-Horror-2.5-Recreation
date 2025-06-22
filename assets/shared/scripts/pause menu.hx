@@ -24,7 +24,7 @@ function onPause()
 		try {
 			backend.Discord.DiscordClient.changePresence(detailsPausedText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
 		}
-		catch(e:Dynamic){}
+		catch(e:Dynamic) {}
 		
 		if (game.mobileControls.instance.visible)
 			game.mobileControls.instance.visible = false;
