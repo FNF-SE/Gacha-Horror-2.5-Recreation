@@ -9,9 +9,9 @@ import cpp.SizeT;
  * @author Leather128 (Haxe) - David Robert Nadeau (Original C Header)
  */
 #if ios
-@:buildXml('<include name="../../../../../../../source/external/memory/build.xml" />')
+@:buildXml('<include name="../../../../../../../source/engine/external/memory/build.xml" />')
 #else
-@:buildXml('<include name="../../../../source/external/memory/build.xml" />')
+@:buildXml('<include name="../../../../source/engine/external/memory/build.xml" />')
 #end
 @:include("memory.h")
 extern class Memory
