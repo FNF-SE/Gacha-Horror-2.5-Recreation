@@ -45,3 +45,9 @@ function onCreate()
 
   close(true)
 end
+
+function onStepHit()
+  if curStep == 1720 then
+    doTweenColor('noobTween', 'noob', '0xFF0F0F0F', 0.75, 'easeInCirc')
+  end
+end
