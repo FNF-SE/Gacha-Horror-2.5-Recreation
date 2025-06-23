@@ -3401,7 +3401,7 @@ class PlayState extends MusicBeatState
 
 	public function spawnHoldSplash(note:Note)
 	{
-		var end:Note = note.isSustainNote ? note.parent.tail[note.parent.tail.length - 1] : note.tail[note.tail.length - 1];
+		final end:Note = note.isSustainNote ? note.parent.tail[note.parent.tail.length - 1] : note.tail[note.tail.length - 1];
 		var splash:SustainSplash = null;
 		try
 		{
