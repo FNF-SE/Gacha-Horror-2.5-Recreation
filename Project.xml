@@ -13,7 +13,7 @@
 	<!-- ______________________ PSYCH ENGINE CUSTOMIZATION ______________________ -->
 
 	<define name="HSCRIPT_ALLOWED" />
-	<define name="LUA_ALLOWED" if="desktop || mobile" unless="hl" />
+	<define name="LUA_ALLOWED" if="desktop || mobile || emscripten" unless="hl" />
 	<define name="DISCORD_ALLOWED" if="desktop" unless="hl" />
 
 	<!-- ____________________________ Window Settings ___________________________ -->
@@ -26,6 +26,9 @@
 
 	<!--Mobile-specific-->
 	<window if="mobile" orientation="landscape" fullscreen="true" resizable="false" allow-shaders="true" require-shaders="true" allow-high-dpi="true" />
+
+	<!--Web-specific-->
+	<window if="web" resizable="true" />
 
 	<!-- _____________________________ Path Settings ____________________________ -->
 
@@ -57,7 +60,8 @@
 	<haxelib name="flixel-addons" />
 
 	<!--Psych stuff needed-->
-	<haxelib name="linc_luajit" if="LUA_ALLOWED" />
+	<haxelib name="hxlua" if="LUA_ALLOWED" />
+	<!--<haxelib name="linc_luajit" if="LUA_ALLOWED" />-->
 	<haxelib name="SScript" if="HSCRIPT_ALLOWED" />
 	<haxelib name="hxdiscord_rpc" if="DISCORD_ALLOWED" />
 
