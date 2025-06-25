@@ -4,14 +4,14 @@
       "name": "lime",
       "type": "git",
       "dir": null,
-      "ref": "better-update-loop",
+      "ref": null,
       "url": "https://github.com/th2l-devs/lime"
     },
     {
       "name": "openfl",
       "type": "git",
       "dir": null,
-      "ref": "better-update-loop",
+      "ref": null,
       "url": "https://github.com/th2l-devs/openfl"
     },
     {
