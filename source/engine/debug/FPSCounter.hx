@@ -24,7 +24,7 @@ class FPSCounter extends TextField
 	/**
 		The current frame rate, expressed using frames-per-second
 	**/
-	public var currentFPS(default, null):Float;
+	public var currentFPS(default, null):Int;
 
 	#if !cpp
 	/**
@@ -73,13 +73,12 @@ class FPSCounter extends TextField
 			return;
 		}
 
-		// final now:Float = haxe.Timer.stamp() * 1000;
-		// times.push(now);
-		// while (times[0] < now - 1000)
-			// times.shift();
+		final now:Float = haxe.Timer.stamp() * 1000;
+		times.push(now);
+		while (times[0] < now - 1000)
+			times.shift();
 
-		final fps:Float = CoolUtil.floorDecimal(1.0 / deltaTime, 2);
-		currentFPS = fps < FlxG.updateFramerate ? fps : FlxG.updateFramerate;
+		currentFPS = times.length < FlxG.updateFramerate ? times.length : FlxG.updateFramerate;
 		updateText();
 		deltaTimeout += deltaTime;
 	}
