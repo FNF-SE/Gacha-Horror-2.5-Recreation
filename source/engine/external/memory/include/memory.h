@@ -5,8 +5,8 @@
  *          http://creativecommons.org/licenses/by/3.0/deed.en_US
  */
 
-#ifndef MEMCOUNTER_H
-#define MEMCOUNTER_H
+#ifndef MEMORY_H
+#define MEMORY_H
 
 #if defined(_WIN32)
 #include <windows.h>
