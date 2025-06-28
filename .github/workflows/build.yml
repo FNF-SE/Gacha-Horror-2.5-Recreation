@@ -53,6 +53,7 @@ jobs:
         run: sudo apt install libvlc-dev libvlccore-dev
 
       - name: Setup Emscripten SDK
+        if: inputs.name == 'Emscripten'
         uses: agriyakhetarpal/setup-emsdk@update-to-cache-v4
         with:
           no-cache: true
