@@ -16,7 +16,7 @@ jobs:
             artifactPath: export\release\windows\bin\*
           - name: Windows ARM64
             os: windows-2025
-            buildArgs: "windows -arm64 -D HXCPP_ARM64 -D PNG"
+            buildArgs: "windows -arm64 -D HXCPP_ARM64"
             assetType: PNG
             artifactName: windowsBuild-arm64
             artifactPath: export\release\windows\bin\*
@@ -28,37 +28,37 @@ jobs:
             artifactPath: export/release/linux/bin/*
           - name: Linux ARM64
             os: ubuntu-22.04-arm
-            buildArgs: "linux -arm64 -D HXCPP_ARM64 -D PNG"
+            buildArgs: "linux -arm64 -D HXCPP_ARM64"
             assetType: PNG
             artifactName: linuxBuild-arm64
             artifactPath: export/release/linux/bin/*
           - name: macOS x86_64
             os: macos-15
-            buildArgs: "mac -64 -D HXCPP_M64 -D PNG"
+            buildArgs: "mac -64 -D HXCPP_M64"
             assetType: PNG
             artifactName: macOSBuild-x86_64
             artifactPath: export/release/macos/bin/*
           - name: macOS ARM64
             os: macos-15
-            buildArgs: "mac -arm64 -D HXCPP_ARM64 -D PNG"
+            buildArgs: "mac -arm64 -D HXCPP_ARM64"
             assetType: PNG
             artifactName: macOSBuild-arm64
             artifactPath: export/release/macos/bin/*
           - name: Android
             os: macos-15
-            buildArgs: "android -ONLY_ARM64 -D ASTC"
+            buildArgs: "android -ONLY_ARM64"
             assetType: ASTC
             artifactName: androidBuild
             artifactPath: "export/release/android/bin/app/build/outputs/apk/release/*.apk"
           - name: iOS
             os: macos-15
-            buildArgs: "ios -nosign -D ASTC"
+            buildArgs: "ios -nosign"
             assetType: ASTC
             artifactName: iOSBuild
             artifactPath: "export/release/ios/build/Release-iphoneos/*.ipa"
           - name: Emscripten
             os: macos-15
-            buildArgs: "webassembly -D PNG"
+            buildArgs: "webassembly"
             assetType: PNG
             artifactName: emscriptenBuild
             artifactPath: export/release/webassembly/bin/*
