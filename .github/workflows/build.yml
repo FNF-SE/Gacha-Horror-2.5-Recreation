@@ -52,6 +52,12 @@ jobs:
         if: contains(inputs.name, 'Linux')
         run: sudo apt install libvlc-dev libvlccore-dev
 
+      - name: Setup Emscripten SDK
+        uses: agriyakhetarpal/setup-emsdk@update-to-cache-v4
+        with:
+          no-cache: true
+          version: "4.0.10"
+
       - name: Install Libraries
         run: |
           haxelib install hmm --quiet
