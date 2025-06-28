@@ -48,10 +48,6 @@ jobs:
           sudo apt-get install -y haxe neko
           haxelib setup ~/haxelib
 
-      - name: Install libVLC
-        if: contains(inputs.name, 'Linux')
-        run: sudo apt install libvlc-dev libvlccore-dev
-
       - name: Setup Emscripten SDK
         shell: bash
         run: |
