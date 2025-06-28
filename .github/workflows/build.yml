@@ -60,6 +60,7 @@ jobs:
           cd emsdk
           ./emsdk install 4.0.10
           echo "EMSCRIPTEN_SDK=${{ github.temp }}/emsdk" >> $GITHUB_ENV
+          echo "EMSDK=${{ github.temp }}/emsdk" >> $GITHUB_ENV
 
       - name: Install Libraries
         run: |
