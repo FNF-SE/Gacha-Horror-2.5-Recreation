@@ -53,11 +53,13 @@ jobs:
         run: sudo apt install libvlc-dev libvlccore-dev
 
       - name: Setup Emscripten SDK
-        if: inputs.name == 'Emscripten'
-        uses: agriyakhetarpal/setup-emsdk@update-to-cache-v4
-        with:
-          no-cache: true
-          version: "4.0.10"
+        shell: bash
+        run: |
+          cd ${{ github.temp }}
+          git clone -q https://github.com/emscripten-core/emsdk
+          cd emsdk
+          ./emsdk install 4.0.10
+          echo "EMSCRIPTEN_SDK=${{ github.temp }}/emsdk" >> $GITHUB_ENV
 
       - name: Install Libraries
         run: |
