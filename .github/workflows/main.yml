@@ -57,7 +57,7 @@ jobs:
             artifactName: iOSBuild
             artifactPath: "export/release/ios/build/Release-iphoneos/*.ipa"
           - name: Emscripten
-            os: ubuntu-24.04
+            os: macos-15
             buildArgs: "webassembly"
             assetType: PNG
             artifactName: emscriptenBuild
