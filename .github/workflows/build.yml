@@ -51,12 +51,12 @@ jobs:
       - name: Setup Emscripten SDK
         shell: bash
         run: |
-          cd ${{ github.temp }}
+          cd ${{ runner.temp }}
           git clone -q https://github.com/emscripten-core/emsdk
           cd emsdk
           ./emsdk install 4.0.10
-          echo "EMSCRIPTEN_SDK=${{ github.temp }}/emsdk" >> $GITHUB_ENV
-          echo "EMSDK=${{ github.temp }}/emsdk" >> $GITHUB_ENV
+          echo "EMSCRIPTEN_SDK=${{ runner.temp }}/emsdk" >> $GITHUB_ENV
+          echo "EMSDK=${{ runner.temp }}/emsdk" >> $GITHUB_ENV
 
       - name: Install Libraries
         run: |
