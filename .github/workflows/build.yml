@@ -24,6 +24,7 @@ on:
 
 env:
   HAXE_VERSION: 4.3.7
+  EMSDK_VERSION: 4.0.10
   PROJECT_NAME: HorrorPackage
 
 jobs:
@@ -55,7 +56,8 @@ jobs:
           cd ${{ runner.temp }}
           git clone -q https://github.com/emscripten-core/emsdk
           cd emsdk
-          ./emsdk install 4.0.10
+          ./emsdk install ${{ env.EMSDK_VERSION }}
+          ./emsdk activate ${{ env.EMSDK_VERSION }}
           echo "EMSCRIPTEN_SDK=${{ runner.temp }}/emsdk" >> $GITHUB_ENV
           echo "EMSDK=${{ runner.temp }}/emsdk" >> $GITHUB_ENV
 
