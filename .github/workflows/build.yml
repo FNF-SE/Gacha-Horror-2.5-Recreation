@@ -49,6 +49,7 @@ jobs:
           haxelib setup ~/haxelib
 
       - name: Setup Emscripten SDK
+        if: inputs.name == 'Emscripten'
         shell: bash
         run: |
           cd ${{ runner.temp }}
