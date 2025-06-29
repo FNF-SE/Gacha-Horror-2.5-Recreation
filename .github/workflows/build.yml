@@ -49,18 +49,6 @@ jobs:
           sudo apt-get install -y haxe neko
           haxelib setup ~/haxelib
 
-      - name: Setup Emscripten SDK
-        if: inputs.name == 'Emscripten'
-        shell: bash
-        run: |
-          cd ${{ runner.temp }}
-          git clone -q https://github.com/emscripten-core/emsdk
-          cd emsdk
-          ./emsdk install ${{ env.EMSDK_VERSION }}
-          ./emsdk activate ${{ env.EMSDK_VERSION }}
-          echo "EMSCRIPTEN_SDK=${{ runner.temp }}/emsdk" >> $GITHUB_ENV
-          echo "EMSDK=${{ runner.temp }}/emsdk" >> $GITHUB_ENV
-
       - name: Install Libraries
         run: |
           haxelib install hmm --quiet

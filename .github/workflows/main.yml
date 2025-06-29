@@ -56,12 +56,6 @@ jobs:
             assetType: ASTC
             artifactName: iOSBuild
             artifactPath: "export/release/ios/build/Release-iphoneos/*.ipa"
-          - name: Emscripten
-            os: macos-15
-            buildArgs: "webassembly"
-            assetType: PNG
-            artifactName: emscriptenBuild
-            artifactPath: export/release/webassembly/bin/*
     uses: ./.github/workflows/build.yml
     with:
         name: ${{ matrix.name }}
