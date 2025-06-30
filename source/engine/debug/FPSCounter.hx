@@ -33,6 +33,9 @@ class FPSCounter extends TextField
 	public var memoryMegas(get, never):Float;
 	#end
 
+	@:noCompletion private var cacheCount:Int;
+	@:noCompletion private var fpsToDisplay:Int;
+	@:noCompletion private var currentTime:Float;
 	@:noCompletion private var times:Array<Float>;
 
 	public var os:String = '';
@@ -58,34 +61,31 @@ class FPSCounter extends TextField
 		multiline = true;
 		text = "FPS: ";
 
+		cacheCount = 0;
 		times = [];
 	}
-
-	var deltaTimeout:Float = 0.0;
 
 	// Event Handlers
 	private override function __enterFrame(deltaTime:Float):Void
 	{
-		// prevents the overlay from updating every frame, why would you need to anyways
-		if (deltaTimeout > 1000)
+		currentTime += deltaTime;
+		times.push(currentTime);
+		while (times[0] < currentTime - 1000)
 		{
-			deltaTimeout = 0.0;
-			return;
+			times.shift();
 		}
 
-		final now:Float = haxe.Timer.stamp() * 1000;
-		times.push(now);
-		while (times[0] < now - 1000)
-			times.shift();
-
-		currentFPS = times.length < FlxG.updateFramerate ? times.length : FlxG.updateFramerate;
+		var currentCount = times.length;
+		currentFPS = Std.int((currentCount + cacheCount) / 2);
+		if (currentCount != cacheCount)
+			fpsToDisplay = currentFPS;
 		updateText();
-		deltaTimeout += deltaTime;
+		cacheCount = currentCount;
 	}
 
 	public dynamic function updateText():Void // so people can override it in hscript
 	{
-		text = 'FPS: $currentFPS'
+		text = 'FPS: $fpsToDisplay'
 			+ '\nMemory: ${flixel.util.FlxStringUtil.formatBytes(#if cpp external.memory.Memory.getCurrentUsage() #else memoryMegas #end)}'
 			+ os;
 
