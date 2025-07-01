@@ -1,6 +1,7 @@
 // shadowing this class because we're unable to apply the config files to mobile during __init__
 package lime.media;
 
+import backend.ALSoftConfig;
 import lime.system.CFFI;
 import lime.app.Application;
 import haxe.Timer;
