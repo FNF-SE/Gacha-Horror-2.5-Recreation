@@ -21,7 +21,7 @@ import sys.FileSystem;
 #end
 class ALSoftConfig
 {
-	#if (desktop || android)
+	#if (desktop || mobile)
 	private static final OPENAL_CONFIG:String = '';
 
 	public static function init():Void
