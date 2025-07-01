@@ -24,7 +24,7 @@ class FPSCounter extends TextField
 	/**
 		The current frame rate, expressed using frames-per-second
 	**/
-	public var currentFPS(default, null):Int;
+	public var currentFPS(default, null):Float;
 
 	#if !cpp
 	/**
@@ -34,7 +34,6 @@ class FPSCounter extends TextField
 	#end
 
 	@:noCompletion private var cacheCount:Int;
-	@:noCompletion private var fpsToDisplay:Int;
 	@:noCompletion private var currentTime:Float;
 	@:noCompletion private var times:Array<Float>;
 
@@ -53,7 +52,7 @@ class FPSCounter extends TextField
 
 		positionFPS(x, y);
 
-		currentFPS = 0;
+		currentFPS = 0.0;
 		selectable = false;
 		mouseEnabled = false;
 		defaultTextFormat = new TextFormat("_sans", 14, color);
@@ -76,16 +75,14 @@ class FPSCounter extends TextField
 		}
 
 		var currentCount = times.length;
-		currentFPS = Std.int((currentCount + cacheCount) / 2);
-		if (currentCount != cacheCount)
-			fpsToDisplay = currentFPS;
+		currentFPS = (currentCount + cacheCount) / 2;
 		updateText();
 		cacheCount = currentCount;
 	}
 
 	public dynamic function updateText():Void // so people can override it in hscript
 	{
-		text = 'FPS: $fpsToDisplay'
+		text = 'FPS: $currentFPS'
 			+ '\nMemory: ${flixel.util.FlxStringUtil.formatBytes(#if cpp external.memory.Memory.getCurrentUsage() #else memoryMegas #end)}'
 			+ os;
 
