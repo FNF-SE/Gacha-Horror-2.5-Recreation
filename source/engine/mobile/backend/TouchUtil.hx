@@ -54,10 +54,10 @@ class TouchUtil
 					@:privateAccess
 					if (object.overlapsPoint(touch.getWorldPosition(camera, object._point), true, camera))
 						return true;
-		else
-			@:privateAccess
-			if (object.overlapsPoint(touch.getWorldPosition(camera, object._point), true, camera))
-				return true;
+					else
+						@:privateAccess
+						if (object.overlapsPoint(touch.getWorldPosition(camera, object._point), true, camera))
+							return true;
 
 		return false;
 	}

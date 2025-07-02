@@ -21,11 +21,14 @@ function onPause()
 {
 	if (game.canPause && !game.isDead)
 	{
-		try {
+		try
+		{
 			backend.Discord.DiscordClient.changePresence(detailsPausedText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
 		}
-		catch(e:Dynamic) {}
-		
+		catch (e:Dynamic)
+		{
+		}
+
 		if (game.mobileControls.instance.visible)
 			game.mobileControls.instance.visible = false;
 		if (game.touchPad != null && game.touchPad.visible)
@@ -329,9 +332,6 @@ function fadeOut()
 				switch (state)
 				{
 					case 'charting':
-						if (PlayState.SONG.song == "Sentient" || PlayState.SONG.song == "Crisis")
-							CoolUtil.showPopUp('CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER CHEATER',
-								'GINA');
 						PlayState.instance.openChartEditor();
 					case 'restart':
 						game.persistentUpdate = false;

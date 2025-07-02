@@ -60,7 +60,7 @@ class CustomSoundTray extends FlxSoundTray
 		volumeDownSound = 'assets/embed/soundtray/sounds/Voldown.ogg';
 		volumeMaxSound = 'assets/embed/soundtray/sounds/VolMAX.ogg';
 
-        _lastVolume = Math.round(MathTools.logToLinear(FlxG.sound.volume) * 10);
+		_lastVolume = Math.round(MathTools.logToLinear(FlxG.sound.volume) * 10);
 	}
 
 	function coolLerp(base:Float, target:Float, ratio:Float):Float

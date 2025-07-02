@@ -264,14 +264,7 @@ class PlayState extends MusicBeatState
 
 	public var noteSkin:String;
 	public var noteSkin1:String; // for opponent bleh
-	public var allowedNotes:Array<String> = [
-		null,
-		'Alt Animation',
-		'No Animation',
-		'GF Sing',
-		'Sarah Sing',
-		''
-	];
+	public var allowedNotes:Array<String> = [null, 'Alt Animation', 'No Animation', 'GF Sing', 'Sarah Sing', ''];
 
 	// for results screen
 	public var totalSick:Int = 0;
@@ -3388,7 +3381,7 @@ class PlayState extends MusicBeatState
 					else if (!leSplash?.visible)
 					{
 						leSplash.visible = true;
-						// leSplash.alpha = note.alpha;
+						//leSplash.alpha = note.alpha;
 					}
 				}
 			}

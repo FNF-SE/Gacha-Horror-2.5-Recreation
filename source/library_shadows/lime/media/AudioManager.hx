@@ -52,7 +52,8 @@ class AudioManager
 					{
 						alc.disable(AL.STOP_SOURCES_ON_DISCONNECT_SOFT);
 
-						Application.current.onUpdate.add((_) -> {
+						Application.current.onUpdate.add((_) ->
+						{
 							AudioManager.update();
 						});
 
@@ -168,6 +169,7 @@ class AudioManager
 	}
 
 	@:noCompletion static var __audioDeviceChanged:Bool = false;
+
 	@:noCompletion static function __deviceEventCallback(eventType:Int, deviceType:Int, device:Dynamic,#if hl message:hl.Bytes #else message:String #end, userParam:Dynamic):Void
 	{
 		#if !lime_doc_gen

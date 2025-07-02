@@ -1,3 +1,3 @@
 function onCreatePost()
-  setPropertyFromClass('substates.GameOverSubstate', 'characterName', 'Arhullex');
+    setPropertyFromClass('substates.GameOverSubstate', 'characterName', 'Arhullex');
 end

@@ -174,7 +174,7 @@ class CoolUtil
 		// just a check
 		if (name == "Scrub" && loadOldSong)
 			name = "Mike";
-		
+
 		if (name != "Despair" && name != "Isolation" && name != "Far-Lost" && name != "Sentient" && name != "Red-Slot")
 			Paths.LOADOLD = false;
 

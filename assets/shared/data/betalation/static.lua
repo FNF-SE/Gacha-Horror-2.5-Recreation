@@ -1,9 +1,10 @@
 local shaderName = "static"
+
 function onCreate()
-  makeLuaSprite("static")
-  makeGraphic("shaderImage", screenWidth, screenHeight)
-  setSpriteShader("shaderImage", "static")
-  runHaxeCode([[
+    makeLuaSprite("static")
+    makeGraphic("shaderImage", screenWidth, screenHeight)
+    setSpriteShader("shaderImage", "static")
+    runHaxeCode([[
         var shaderName = "]] .. shaderName .. [[";
         
         game.initLuaShader(shaderName);
@@ -17,5 +18,5 @@ function onCreate()
 end
 
 function onUpdate(elapsed)
-  setShaderFloat("static", "iTime", os.clock())
+    setShaderFloat("static", "iTime", os.clock())
 end
