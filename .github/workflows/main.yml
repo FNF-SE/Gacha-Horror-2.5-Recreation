@@ -17,7 +17,7 @@ jobs:
           - name: Windows ARM64
             os: windows-2025
             buildArgs: "windows -arm64 -D HXCPP_ARM64"
-            assetType: S3TC
+            assetType: ASTC
             artifactName: windowsBuild-arm64
             artifactPath: export\release\windows\bin\*
           - name: Linux x86_64
