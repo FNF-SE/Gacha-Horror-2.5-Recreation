@@ -118,6 +118,7 @@ class Assets
 					case 'astc': openfl.Lib.current.stage.context3D.createASTCTexture(Assets.getBytes(textureName));
 					case 'ktx': openfl.Lib.current.stage.context3D.createETC2Texture(Assets.getBytes(textureName));
 					case 'dds': openfl.Lib.current.stage.context3D.createS3TCTexture(Assets.getBytes(textureName));
+					default: null
 				}
 
 				final bitmapData:BitmapData = BitmapData.fromTexture(texture);
