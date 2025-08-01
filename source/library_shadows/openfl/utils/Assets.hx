@@ -79,7 +79,7 @@ class Assets
 		{
 			if (LimeAssets.exists(id.substr(0, id.length - 3) + 'astc', BINARY)) return true;
 			if (LimeAssets.exists(id.substr(0, id.length - 3) + 'ktx', BINARY)) return true;
-			if (LimeAssets.exists(id.substr(0, id.length - 3) + 'ktx2', BINARY)) return true;
+			if (LimeAssets.exists(id.substr(0, id.length - 3) + 'dds', BINARY)) return true;
 		}*/
 		return LimeAssets.exists(id, cast type);
 		#else
@@ -107,29 +107,28 @@ class Assets
 			}
 		}
 
-		for (ext in ['astc', 'ktx', 'ktx2'])
+		for (ext in ['astc', 'ktx', 'dds'])
 		{
 			final textureName:String = haxe.io.Path.withoutExtension(id) + '.$ext';
 
-			if (!Assets.exists('$textureName'))
-				continue;
-
-			final texture = switch (ext)
+			if (Assets.exists('$textureName'))
 			{
-				case 'astc': openfl.Lib.current.stage.context3D.createASTCTexture(Assets.getBytes(textureName));
-				// case 's3tc', 'ktx2': openfl.Lib.current.stage.context3D.createS3TCTexture(Assets.getBytes(textureName));
-				case 'ktx': openfl.Lib.current.stage.context3D.createETC2Texture(Assets.getBytes(textureName));
-				default: throw 'Unsupported texture format: $ext';
+				final texture = switch (ext)
+				{
+					case 'astc': openfl.Lib.current.stage.context3D.createASTCTexture(Assets.getBytes(textureName));
+					case 'ktx': openfl.Lib.current.stage.context3D.createETC2Texture(Assets.getBytes(textureName));
+					case 'dds': openfl.Lib.current.stage.context3D.createS3TCTexture(Assets.getBytes(textureName));
+				}
+
+				final bitmapData:BitmapData = BitmapData.fromTexture(texture);
+
+				if (useCache && cache.enabled)
+				{
+					cache.setBitmapData(id, bitmapData);
+				}
+
+				return bitmapData;
 			}
-
-			final bitmapData:BitmapData = BitmapData.fromTexture(texture);
-
-			if (useCache && cache.enabled)
-			{
-				cache.setBitmapData(id, bitmapData);
-			}
-
-			return bitmapData;
 		}
 
 		var image = LimeAssets.getImage(id, false);
