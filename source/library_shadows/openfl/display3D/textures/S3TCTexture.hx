@@ -8,7 +8,7 @@ import openfl.utils.ByteArray;
 import openfl.Lib;
 
 /**
-	The S3TCTexture class represents a 2-dimensional compressed ASTC texture uploaded to a rendering context.
+	The S3TCTexture class represents a 2-dimensional compressed S3TC/DXTn texture uploaded to a rendering context.
 
 	Defines a 2D texture for use during rendering.
 
