@@ -103,7 +103,7 @@ jobs:
       - name: Tar Linux x86_64 Build For Release
         run: |
           cd /home/runner/linuxBuild-x86_64
-          tar czf "/home/runner/${{ env.PROJECT_NAME }}-linux-S3TC-x86_64.tar" .
+          tar czf "/home/runner/${{ env.PROJECT_NAME }}-S3TC-linux-x86_64.tar" .
 
       - name: Download Linux ARM64 Build
         uses: actions/download-artifact@main
@@ -114,7 +114,7 @@ jobs:
       - name: Tar Linux ARM64 Build For Release
         run: |
           cd /home/runner/linuxBuild-arm64
-          tar czf "/home/runner/${{ env.PROJECT_NAME }}-linux-ASTC-arm64.tar" .
+          tar czf "/home/runner/${{ env.PROJECT_NAME }}-ASTC-linux-arm64.tar" .
 
       - name: Download macOS ARM64 Build
         uses: actions/download-artifact@main
@@ -125,7 +125,7 @@ jobs:
       - name: Tar macOS ARM64 Build For Release
         run: |
           cd /home/runner/macOSBuild-arm64
-          tar czf "/home/runner/${{ env.PROJECT_NAME }}-macOS-PNG-arm64.tar" .
+          tar czf "/home/runner/${{ env.PROJECT_NAME }}-macOS-arm64.tar" .
 
       - name: Download macOS x86_64 Build
         uses: actions/download-artifact@main
@@ -136,7 +136,7 @@ jobs:
       - name: Tar macOS x86_64 Build For Release
         run: |
           cd /home/runner/macOSBuild-x86_64
-          tar czf "/home/runner/${{ env.PROJECT_NAME }}-macOS-PNG-x86_64.tar" .
+          tar czf "/home/runner/${{ env.PROJECT_NAME }}-macOS-x86_64.tar" .
 
       - name: Download Windows x86_64 Build
         uses: actions/download-artifact@main
@@ -147,7 +147,7 @@ jobs:
       - name: Zip Windows x86_64 Build For Release
         run: |
           cd /home/runner/windowsBuild-x86_64
-          zip -r "/home/runner/${{ env.PROJECT_NAME }}-windows-S3TC-x86_64.zip" .
+          zip -r "/home/runner/${{ env.PROJECT_NAME }}-S3TC-windows-x86_64.zip" .
 
       - name: Download Windows ARM64 Build
         uses: actions/download-artifact@main
@@ -158,7 +158,7 @@ jobs:
       - name: Zip Windows ARM64 Build For Release
         run: |
           cd /home/runner/windowsBuild-arm64
-          zip -r "/home/runner/${{ env.PROJECT_NAME }}-windows-ASTC-arm64.zip" .
+          zip -r "/home/runner/${{ env.PROJECT_NAME }}-ASTC-windows-arm64.zip" .
 
       - name: Publish The Release
         uses: softprops/action-gh-release@v2
