@@ -94,8 +94,22 @@ class Main extends Sprite
 
 	private function setupGame():Void
 	{
+		#if mobile
+		var stageWidth:Int = Lib.current.stage.stageWidth;
+		var stageHeight:Int = Lib.current.stage.stageHeight;
+
+		if (game.zoom == -1.0)
+		{
+			var ratioX:Float = stageWidth / game.width;
+			var ratioY:Float = stageHeight / game.height;
+			game.zoom = Math.min(ratioX, ratioY);
+			game.width = Math.ceil(stageWidth / game.zoom);
+			game.height = Math.ceil(stageHeight / game.zoom);
+		}
+		#else
 		if (game.zoom == -1.0)
 			game.zoom = 1.0;
+		#end
 
 		#if LUA_ALLOWED Lua.set_callbacks_function(cpp.Callable.fromStaticFunction(psychlua.CallbackHandler.call)); #end
 		Controls.instance = new Controls();

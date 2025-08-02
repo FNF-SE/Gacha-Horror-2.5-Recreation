@@ -99,7 +99,7 @@ class FPSCounter extends TextField
 	public inline function positionFPS(X:Float, Y:Float, ?scale:Float = 1)
 	{
 		scaleX = scaleY = #if android (scale > 1 ? scale : 1) #else (scale < 1 ? scale : 1) #end;
-		x = FlxG.game.x + X;
+		x = FlxG.game.x + #if mobile + 50 #end X;
 		y = FlxG.game.y + Y;
 	}
 
