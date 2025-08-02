@@ -17,25 +17,25 @@ jobs:
           - name: Windows x86_64
             os: windows-2025
             buildArgs: "windows -final -D officialBuild"
-            assetType: PNG
+            assetType: S3TC
             artifactName: windowsBuild-x86_64
             artifactPath: export\release\windows\bin\*
           - name: Windows ARM64
             os: windows-2025
             buildArgs: "windows -arm64 -final -D HXCPP_ARM64 -D officialBuild"
-            assetType: PNG
+            assetType: ASTC
             artifactName: windowsBuild-arm64
             artifactPath: export\release\windows\bin\*
           - name: Linux x86_64
             os: ubuntu-22.04
             buildArgs: "linux -final -D officialBuild"
-            assetType: PNG
+            assetType: S3TC
             artifactName: linuxBuild-x86_64
             artifactPath: export/release/linux/bin/*
           - name: Linux ARM64
             os: ubuntu-22.04-arm
             buildArgs: "linux -arm64 -final -D HXCPP_ARM64 -D officialBuild"
-            assetType: PNG
+            assetType: ASTC
             artifactName: linuxBuild-arm64
             artifactPath: export/release/linux/bin/*
           - name: macOS x86_64
@@ -97,7 +97,7 @@ jobs:
       - name: Download Linux x86_64 Build
         uses: actions/download-artifact@main
         with:
-          name: linuxBuild-x86_64-PNG
+          name: linuxBuild-x86_64-S3TC
           path: /home/runner/linuxBuild-x86_64
 
       - name: Tar Linux x86_64 Build For Release
@@ -108,7 +108,7 @@ jobs:
       - name: Download Linux ARM64 Build
         uses: actions/download-artifact@main
         with:
-          name: linuxBuild-arm64-PNG
+          name: linuxBuild-arm64-ASTC
           path: /home/runner/linuxBuild-arm64
 
       - name: Tar Linux ARM64 Build For Release
@@ -141,7 +141,7 @@ jobs:
       - name: Download Windows x86_64 Build
         uses: actions/download-artifact@main
         with:
-          name: windowsBuild-x86_64-PNG
+          name: windowsBuild-x86_64-S3TC
           path: /home/runner/windowsBuild-x86_64
 
       - name: Zip Windows x86_64 Build For Release
@@ -152,7 +152,7 @@ jobs:
       - name: Download Windows ARM64 Build
         uses: actions/download-artifact@main
         with:
-          name: windowsBuild-arm64-PNG
+          name: windowsBuild-arm64-ASTC
           path: /home/runner/windowsBuild-arm64
 
       - name: Zip Windows ARM64 Build For Release
