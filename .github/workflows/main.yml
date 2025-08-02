@@ -35,13 +35,13 @@ jobs:
           - name: macOS x86_64
             os: macos-15
             buildArgs: "mac -64 -D HXCPP_M64"
-            assetType: PNG
+            assetType: S3TC
             artifactName: macOSBuild-x86_64
             artifactPath: export/release/macos/bin/*
           - name: macOS ARM64
             os: macos-15
             buildArgs: "mac -arm64 -D HXCPP_ARM64"
-            assetType: PNG
+            assetType: S3TC
             artifactName: macOSBuild-arm64
             artifactPath: export/release/macos/bin/*
           - name: Android
