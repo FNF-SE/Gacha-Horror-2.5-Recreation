@@ -46,7 +46,7 @@
 	<assets path="assets/shared" if="ASTC || ETC2"  />
 	<assets path="images-astc" rename="assets/shared/images" if="ASTC" />
 	<assets path="images-ktx" rename="assets/shared/images" if="ETC2" />
-	<assets path="images-dds" rename="assets/shared/images" embed="true" if="S3TC" />
+	<assets path="images-dds" rename="assets/shared/images" if="S3TC" />
 	<assets path="images-png" rename="assets/shared/images" embed="true" if="PNG" />
 	
 	<define name="PNG" if="display" /> <!-- vscode shit -->
