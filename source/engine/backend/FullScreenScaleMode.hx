@@ -129,6 +129,22 @@ class FullScreenScaleMode extends flixel.system.scaleModes.BaseScaleMode
     adjustGameSize();
   }
 
+  private function updateDeviceCutout(Width:Int, Height:Int):Void
+  {
+    if (enabled)
+    {
+      cutoutSize.x = ratioAxis == X ? Math.ceil(Width - logicalSize.x) : 0;
+      cutoutSize.y = ratioAxis == Y ? Math.ceil(Height - logicalSize.y) : 0;
+      gameCutoutSize.copyFrom(cutoutSize);
+      gameCutoutSize /= logicalSize.x / FlxG.initialWidth;
+    }
+    else
+    {
+      cutoutSize.set(0, 0);
+      gameCutoutSize.set(0, 0);
+    }
+  }
+
   override public function updateGameSize(Width:Int, Height:Int):Void
   {
     gameRatio = FlxG.width / FlxG.height;
@@ -245,7 +261,7 @@ class FullScreenScaleMode extends flixel.system.scaleModes.BaseScaleMode
         var gameWidth:Float = gameSize.x / scale.x;
 
         #if desktop
-        if (MathUtil.gcd(Math.ceil(gameWidth), FlxG.height) == 1)
+        if (gcd(Math.ceil(gameWidth), FlxG.height) == 1)
         {
           gameSize.x -= cutoutSize.x;
           offset.x = Math.ceil((deviceSize.x - gameSize.x) * 0.5);
