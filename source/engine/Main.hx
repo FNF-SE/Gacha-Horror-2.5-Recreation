@@ -10,7 +10,7 @@ import openfl.system.System;
 import openfl.Lib;
 import openfl.display.Sprite;
 import openfl.events.Event;
-import openfl.display.StageScaleMode;
+//import openfl.display.StageScaleMode;
 import lime.system.System as LimeSystem;
 import lime.app.Application;
 import states.TitleState;
@@ -132,7 +132,7 @@ class Main extends Sprite
 		fpsVar = new FPSCounter(10, 3, 0xFFFFFF);
 		addChild(fpsVar);
 		Lib.current.stage.align = "tl";
-		Lib.current.stage.scaleMode = StageScaleMode.NO_SCALE;
+		//Lib.current.stage.scaleMode = StageScaleMode.NO_SCALE;
 		#if mobile
 		//FlxG.game.stage.quality = openfl.display.StageQuality.LOW;
 		#end
