@@ -127,7 +127,7 @@ class Main extends Sprite
 
 		addChild(funkinGame);
 
-		FlxG.scaleMode = new backend.FullScreenScaleMode();
+		FlxG.scaleMode = new backend.scalemodes.FullScreenScaleMode();
 
 		fpsVar = new FPSCounter(10, 3, 0xFFFFFF);
 		addChild(fpsVar);
