@@ -127,6 +127,8 @@ class Main extends Sprite
 
 		addChild(funkinGame);
 
+		FlxG.scaleMode = new backend.FullScreenScaleMode();
+
 		fpsVar = new FPSCounter(10, 3, 0xFFFFFF);
 		addChild(fpsVar);
 		Lib.current.stage.align = "tl";
