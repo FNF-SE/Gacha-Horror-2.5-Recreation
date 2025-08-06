@@ -35,6 +35,7 @@ import sys.io.*;
 #elseif js
 import js.html.*;
 #end
+import backend.scalemodes.FullScreenScaleMode;
 import backend.Paths;
 import backend.Controls;
 import backend.CoolUtil;

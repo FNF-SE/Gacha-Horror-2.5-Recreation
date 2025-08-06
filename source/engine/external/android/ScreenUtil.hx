@@ -2,6 +2,7 @@ package external.android;
 
 import lime.math.Rectangle;
 import lime.system.JNI;
+import lime._internal.backend.android.JNICache;
 
 /**
  * From Funkin
@@ -18,7 +19,7 @@ class ScreenUtil
 	 */
 	public static function getCutoutDimensions():Array<Rectangle>
 	{
-		final getCutoutDimensionsJNI:Null<Dynamic> = lime._internal.backend.android.JNICache.createStaticMethod('org/haxe/extension/Tools', 'getCutoutDimensions', '()[Landroid/graphics/Rect;');
+		final getCutoutDimensionsJNI:Null<Dynamic> = JNICache.createStaticMethod('org/haxe/extension/Tools', 'getCutoutDimensions', '()[Landroid/graphics/Rect;');
 
 		if (getCutoutDimensionsJNI != null)
 		{
@@ -29,10 +30,10 @@ class ScreenUtil
 				if (rectangle == null)
 					continue;
 
-				final topJNI:Null<JNIMemberField> = lime._internal.backend.android.JNICache.createMemberField('android/graphics/Rect', 'top', 'I');
-				final leftJNI:Null<JNIMemberField> = lime._internal.backend.android.JNICache.createMemberField('android/graphics/Rect', 'left', 'I');
-				final rightJNI:Null<JNIMemberField> = lime._internal.backend.android.JNICache.createMemberField('android/graphics/Rect', 'right', 'I');
-				final bottomJNI:Null<JNIMemberField> = lime._internal.backend.android.JNICache.createMemberField('android/graphics/Rect', 'bottom', 'I');
+				final topJNI:Null<JNIMemberField> = JNICache.createMemberField('android/graphics/Rect', 'top', 'I');
+				final leftJNI:Null<JNIMemberField> = JNICache.createMemberField('android/graphics/Rect', 'left', 'I');
+				final rightJNI:Null<JNIMemberField> = JNICache.createMemberField('android/graphics/Rect', 'right', 'I');
+				final bottomJNI:Null<JNIMemberField> = JNICache.createMemberField('android/graphics/Rect', 'bottom', 'I');
 
 				if (topJNI != null && leftJNI != null && rightJNI != null && bottomJNI != null)
 				{

@@ -120,9 +120,7 @@ class Main extends Sprite
 		if (fpsVar != null)
 			fpsVar.visible = ClientPrefs.data.showFPS;
 
-		#if mobile
-		FlxG.scaleMode = new backend.scalemodes.FullScreenScaleMode();
-		#end
+		FlxG.scaleMode = new FullScreenScaleMode();
 
 		#if (linux || mac)
 		final icon:Image = Image.fromFile("icon.png");
