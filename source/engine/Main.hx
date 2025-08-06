@@ -29,7 +29,7 @@ class Main extends Sprite
 		width: 1280, // WINDOW width
 		height: 720, // WINDOW height
 		initialState: TitleState, // initial game state
-		zoom: -1.0, // game state bounds
+		zoom: 1.0, // game state bounds
 		framerate: 60, // default framerate
 		skipSplash: true, // if the default flixel splash screen should be skipped
 		startFullscreen: false // if the game should start at fullscreen mode
@@ -94,23 +94,6 @@ class Main extends Sprite
 
 	private function setupGame():Void
 	{
-		#if mobile
-		var stageWidth:Int = Lib.current.stage.stageWidth;
-		var stageHeight:Int = Lib.current.stage.stageHeight;
-
-		if (game.zoom == -1.0)
-		{
-			var ratioX:Float = stageWidth / game.width;
-			var ratioY:Float = stageHeight / game.height;
-			game.zoom = Math.min(ratioX, ratioY);
-			game.width = Math.ceil(stageWidth / game.zoom);
-			game.height = Math.ceil(stageHeight / game.zoom);
-		}
-		#else
-		if (game.zoom == -1.0)
-			game.zoom = 1.0;
-		#end
-
 		#if LUA_ALLOWED Lua.set_callbacks_function(cpp.Callable.fromStaticFunction(psychlua.CallbackHandler.call)); #end
 		Controls.instance = new Controls();
 		ClientPrefs.loadDefaultKeys();
@@ -127,19 +110,19 @@ class Main extends Sprite
 
 		addChild(funkinGame);
 
-		#if mobile
-		FlxG.scaleMode = new backend.scalemodes.FullScreenScaleMode();
-		#end
-
 		fpsVar = new FPSCounter(10, 3, 0xFFFFFF);
 		addChild(fpsVar);
-		Lib.current.stage.align = "tl";
+		//Lib.current.stage.align = "tl";
 		//Lib.current.stage.scaleMode = StageScaleMode.NO_SCALE;
 		#if mobile
 		//FlxG.game.stage.quality = openfl.display.StageQuality.LOW;
 		#end
 		if (fpsVar != null)
 			fpsVar.visible = ClientPrefs.data.showFPS;
+
+		#if mobile
+		FlxG.scaleMode = new backend.scalemodes.FullScreenScaleMode();
+		#end
 
 		#if (linux || mac)
 		final icon:Image = Image.fromFile("icon.png");
