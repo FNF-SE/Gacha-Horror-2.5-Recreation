@@ -109,6 +109,7 @@ class FunkinLua
 		// Screen stuff
 		set('screenWidth', FlxG.width);
 		set('screenHeight', FlxG.height);
+		set('gameCutoutSize', #if mobile backend.scalemodes.FullScreenScaleMode.gameCutoutSize #else {x: 0, y: 0} #end); 
 
 		// PlayState variables
 		set('curSection', 0);
