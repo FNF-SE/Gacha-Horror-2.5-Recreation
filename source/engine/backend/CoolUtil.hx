@@ -211,4 +211,39 @@ class CoolUtil
 		FlxG.stage.window.alert(message, title);
 		//#end
 	}
+
+	private static var sizeLabels:Array<String> = ["B", "KB", "MB", "GB", "TB"];
+
+	public static inline function addZeros(str:String, num:Int) {
+		while(str.length < num) str = '0${str}';
+		return str;
+	}
+
+	public static inline function getFPSRatio(ratio:Float, ?delta:Float):Float
+		return 1.0 - Math.pow(1.0 - ratio, (delta == null ? FlxG.elapsed : delta) * 60);
+
+	public static inline function fpsLerp(v1:Float, v2:Float, ratio:Float):Float
+		return FlxMath.lerp(v1, v2, getFPSRatio(ratio));
+
+	public static function getSizeString(size:Float):String {
+		var rSize:Float = size;
+		var label:Int = 0;
+		var len = sizeLabels.length;
+		while(rSize >= 1024 && label < len-1) {
+			label++;
+			rSize /= 1024;
+		}
+		return Std.int(rSize) + ((label <= 1) ? "" : "." + addZeros(Std.string(Std.int((rSize % 1) * 100)), 2)) + sizeLabels[label];
+	}
+
+	public static function getSizeString64(size: #if cpp cpp.Float64 #else Float #end):String {
+		var rSize: #if cpp cpp.Float64 #else Float #end = size;
+		var label:Int = 0;
+		var len = sizeLabels.length;
+		while(rSize >= 1024 && label < len-1) {
+			label++;
+			rSize /= 1024;
+		}
+		return Std.int(rSize) + ((label <= 1) ? "" : "." + addZeros(Std.string(Std.int((rSize % 1) * 100)), 2)) + sizeLabels[label];
+	}
 }

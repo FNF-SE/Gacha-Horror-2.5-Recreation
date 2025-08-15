@@ -1,6 +1,6 @@
 package;
 
-import debug.FPSCounter;
+import debug.codename.Framerate;
 import flixel.graphics.FlxGraphic;
 import flixel.FlxGame;
 import flixel.FlxState;
@@ -35,7 +35,7 @@ class Main extends Sprite
 		startFullscreen: false // if the game should start at fullscreen mode
 	};
 
-	public static var fpsVar:FPSCounter;
+	public static var fpsVar:Framerate;
 
 	#if mobile
 	public static final platform:String = "Phones";
@@ -113,8 +113,9 @@ class Main extends Sprite
 
 		addChild(funkinGame);
 
-		fpsVar = new FPSCounter(10, 3, 0xFFFFFF);
-		addChild(fpsVar);
+		addChild(fpsVar = new Framerate());
+		debug.codename.SystemInfo.init();
+
 		Lib.current.stage.align = "tl";
 		Lib.current.stage.scaleMode = StageScaleMode.NO_SCALE;
 		#if mobile
@@ -149,8 +150,10 @@ class Main extends Sprite
 		// shader coords fix
 		FlxG.signals.gameResized.add(function(w, h)
 		{
+			#if mobile
 			if (fpsVar != null)
-				fpsVar.positionFPS(10, 3, Math.min(Lib.current.stage.stageWidth / FlxG.width, Lib.current.stage.stageHeight / FlxG.height));
+				fpsVar.setScale(Math.min(Lib.current.stage.stageWidth / FlxG.width, Lib.current.stage.stageHeight / FlxG.height));
+			#end
 
 			if (FlxG.cameras != null)
 			{
