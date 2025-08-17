@@ -392,7 +392,7 @@ class Character extends FlxSprite
 
 	public function playGhostAnim(GhostNum:Int, AnimName:String, Force:Bool = false, Reversed:Bool = false, Frame:Int = 0):Void
 	{
-		trace(GhostNum);
+		// trace(GhostNum);
 		if(!allowGhost /* || ghostSprites[GhostNum] == null*/) return;
 
 		if(AnimName.endsWith('alt') && animation.getByName(AnimName) == null)
