@@ -68,6 +68,7 @@ class Main extends Sprite
 
 		#if (cpp && windows)
 		backend.Native.fixScaling();
+		backend.Native.setDarkMode(true);
 		#end
 
 		trace(openfl.system.Capabilities.version);
