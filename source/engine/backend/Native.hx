@@ -18,12 +18,6 @@ import flixel.util.FlxColor;
 #include <winuser.h>
 #include <wingdi.h>
 
-#define DWMWA_USE_IMMERSIVE_DARK_MODE 20
-#define DWMWA_USE_IMMERSIVE_DARK_MODE_BEFORE_20 19
-#define DWMWA_CAPTION_COLOR 34
-#define DWMWA_TEXT_COLOR 35
-#define DWMWA_BORDER_COLOR 36
-
 struct HandleData {
 	DWORD pid = 0;
 	HWND handle = 0;
@@ -113,23 +107,10 @@ class Native
 	
 	#if windows
 	@:functionCode('
-		getHandle();
-		if (curHandle == (HWND)0) return;
-
-		BOOL dark = enable ? TRUE : FALSE;
-
-		if (S_OK != DwmSetWindowAttribute(curHandle, DWMWA_USE_IMMERSIVE_DARK_MODE_BEFORE_20, &dark, sizeof(dark))) {
-			DwmSetWindowAttribute(curHandle, DWMWA_USE_IMMERSIVE_DARK_MODE, &dark, sizeof(dark));
-		}
-
-		if (enable) {
-			COLORREF captionColor = RGB(32, 32, 32);
-			COLORREF textColor = RGB(255, 255, 255);
-			COLORREF borderColor = RGB(64, 64, 64);
-
-			DwmSetWindowAttribute(curHandle, DWMWA_CAPTION_COLOR, &captionColor, sizeof(captionColor));
-			DwmSetWindowAttribute(curHandle, DWMWA_TEXT_COLOR, &textColor, sizeof(textColor));
-			DwmSetWindowAttribute(curHandle, DWMWA_BORDER_COLOR, &borderColor, sizeof(borderColor));
+		int darkMode = enable ? 1 : 0;
+		HWND window = GetActiveWindow();
+		if (S_OK != DwmSetWindowAttribute(window, 19, &darkMode, sizeof(darkMode))) {
+			DwmSetWindowAttribute(window, 20, &darkMode, sizeof(darkMode));
 		}
 	')
 	private static function setDarkMode(enable:Bool):Void {}
