@@ -18,11 +18,10 @@ import openfl.events.KeyboardEvent;
 #if (linux || mac)
 import lime.graphics.Image;
 #end
-
 #if (linux && !debug)
-@:cppInclude('./external/gamemode_client.h')
-@:cppFileCode('#define GAMEMODE_AUTO')
+import hxgamemode.GamemodeClient;
 #end
+
 class Main extends Sprite
 {
 	public static final game = {
@@ -43,7 +42,18 @@ class Main extends Sprite
 	public static final platform:String = "PCs";
 	#end
 
-	// You can pretty much ignore everything from here on - your code should go in your states.
+	@:noCompletion
+	private static function __init__():Void
+	{
+		#if linux
+		// request start game mode
+		if (GamemodeClient.request_start() != 0) {
+			Sys.println('Failed to request gamemode start: ${GamemodeClient.error_string()}...');
+			//Sys.exit(1);
+		} else
+			Sys.println('Succesfully requested gamemode to start...');
+		#end
+	}
 
 	public static function main():Void
 	{

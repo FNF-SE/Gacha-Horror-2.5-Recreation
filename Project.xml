@@ -53,6 +53,8 @@
 	<define name="NO_TEXTURE_FORMAT" unless="ASTC || ETC2 || S3TC || PNG" />
 	<error if="NO_TEXTURE_FORMAT" value="No texture format defined! Please define one of: -D ASTC, -D ETC2, -D S3TC, or -D PNG" />
 
+	<assets path="gamemode.ini" if="linux" />
+
 	<!-- _______________________________ Libraries ______________________________ -->
 
 	<haxelib name="flixel" />
@@ -70,6 +72,8 @@
 
 	<!-- Enables a terminal log prompt on debug builds -->
 	<haxelib name="hxcpp-debug-server" if="debug cpp" optional="true" />
+
+	<haxelib name="hxgamemode" if="linux" />
 
 	<!-- ______________________________ Haxedefines _____________________________ -->
 
