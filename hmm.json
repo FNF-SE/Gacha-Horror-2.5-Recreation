@@ -4,22 +4,18 @@
       "name": "lime",
       "type": "git",
       "dir": null,
-      "ref": null,
-      "url": "https://github.com/th2l-devs/lime"
+      "ref": "int-delta",
+      "url": "https://github.com/HomuHomu833/lime"
     },
     {
       "name": "openfl",
-      "type": "git",
-      "dir": null,
-      "ref": null,
-      "url": "https://github.com/th2l-devs/openfl"
+      "type": "haxelib",
+      "version": "9.3.3"
     },
     {
       "name": "flixel",
-      "type": "git",
-      "dir": null,
-      "ref": null,
-      "url": "https://github.com/th2l-devs/flixel"
+      "type": "haxelib",
+      "version": "5.6.1"
     },
     {
       "name": "flixel-addons",
@@ -41,14 +37,14 @@
       "type": "git",
       "dir": null,
       "ref": null,
-      "url": "https://github.com/th2l-devs/hxcpp"
+      "url": "https://github.com/HomuHomu833/hxcpp"
     },
     {
       "name": "SScript",
       "type": "git",
       "dir": null,
       "ref": null,
-      "url": "https://github.com/th2l-devs/SScript"
+      "url": "https://github.com/HomuHomu833/SScript"
     },
     {
       "name": "hxdiscord_rpc",
@@ -60,7 +56,7 @@
       "type": "git",
       "dir": null,
       "ref": null,
-      "url": "https://github.com/th2l-devs/linc_luajit"
+      "url": "https://github.com/HomuHomu833/linc_luajit"
     }
   ]
 }
