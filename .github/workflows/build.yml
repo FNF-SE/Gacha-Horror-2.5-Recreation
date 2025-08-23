@@ -48,6 +48,12 @@ jobs:
           sudo apt-get install -y haxe neko
           haxelib setup ~/haxelib
 
+      - name: Setup Xcode
+        if: inputs.name == 'iOS'
+        uses: maxim-lobanov/setup-xcode@master
+        with:
+          xcode-version: '16.4'
+
       - name: Install Libraries
         run: |
           haxelib install hmm --quiet
