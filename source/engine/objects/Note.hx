@@ -121,10 +121,6 @@ class Note extends FlxSprite
 	public var hitCausesMiss:Bool = false;
 	public var distance:Float = 2000; // plan on doing scroll directions soon -bb
 
-	// for the double ghost shit
-	public var mainRow:Int = -1;
-	public var subRow:Int = -1;
-
 	public var hitsoundDisabled:Bool = false;
 	public var hitsoundChartEditor:Bool = true;
 	public var hitsound:String = 'hitsound';
@@ -188,10 +184,8 @@ class Note extends FlxSprite
 					noMissAnimation = true;
 				case 'GF Sing':
 					gfNote = true;
-					mainRow = 2;
 				case 'Sarah Sing':
 					sarahNote = true;
-					mainRow = 3; // ig?
 			}
 			if (value != null && value.length > 1)
 				NoteTypesConfig.applyNoteTypeData(this, value);

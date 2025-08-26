@@ -79,14 +79,6 @@ class Character extends FlxSprite
 
 	public var isMultiAtlas:Bool = false;
 
-	// ghosties
-	public var allowGhost:Bool = true;
-	public var prevRow:Int = -1;
-	public var ghostMovement:Bool = false;
-	public var ghostDistance:Float = 50;
-	public var ghostSprites:Array<FlxSprite> = [];
-	public var ghostTweens:Array<FlxTween> = [];
-
 	public function new(x:Float, y:Float, ?character:String = 'bf', ?isPlayer:Bool = false)
 	{
 		super(x, y);
@@ -96,52 +88,42 @@ class Character extends FlxSprite
 		animOffsets = new Map<String, Array<Dynamic>>();
 		curCharacter = character;
 		this.isPlayer = isPlayer;
-		changeCharacter(character);
-
-		// key amount
-		for(i in 0...4)
+		switch (curCharacter)
 		{
-			var ghost:FlxSprite = new FlxSprite();
-			ghost.alpha = 0;
-			ghostSprites.push(ghost);
-		}
-	}
+			// case 'your character name in case you want to hardcode them instead':
 
-	public function changeCharacter(character:String)
-	{
-		animationsArray = [];
-		animOffsets = [];
-		curCharacter = character;
-		var characterPath:String = 'characters/$character.json';
+			default:
+				var characterPath:String = 'characters/$curCharacter.json';
 
-		var path:String = Paths.getPath(characterPath, TEXT);
-		#if MODS_ALLOWED
-		if (!FileSystem.exists(path))
-		#else
-		if (!Assets.exists(path))
-		#end
-		{
-			path = Paths.getSharedPath('characters/' + DEFAULT_CHARACTER +
-				'.json'); // If a character couldn't be found, change him to BF just to prevent a crash
-			color = FlxColor.BLACK;
-			alpha = 0.6;
-		}
+				var path:String = Paths.getPath(characterPath, TEXT, null, true);
+				#if MODS_ALLOWED
+				if (!FileSystem.exists(path))
+				#else
+				if (!Assets.exists(path))
+				#end
+				{
+					path = Paths.getSharedPath('characters/' + DEFAULT_CHARACTER +
+						'.json'); // If a character couldn't be found, change him to BF just to prevent a crash
+					color = FlxColor.BLACK;
+					alpha = 0.6;
+				}
 
-		try
-		{
-			#if MODS_ALLOWED
-			loadCharacterFile(haxe.Json.parse(File.getContent(path)));
-			#else
-			loadCharacterFile(haxe.Json.parse(Assets.getText(path)));
-			#end
-		}
-		catch(e:Dynamic)
-		{
-			trace('Error loading character file of "$character": $e');
+				try
+				{
+					#if MODS_ALLOWED
+					loadCharacterFile(haxe.Json.parse(File.getContent(path)));
+					#else
+					loadCharacterFile(haxe.Json.parse(Assets.getText(path)));
+					#end
+				}
+				catch (e:Dynamic)
+				{
+					trace('Error loading character file of "$character": $e');
+				}
 		}
 
-		skipDance = false;
-		hasMissAnimations = hasAnimation('singLEFTmiss') || hasAnimation('singDOWNmiss') || hasAnimation('singUPmiss') || hasAnimation('singRIGHTmiss');
+		if (animOffsets.exists('singLEFTmiss') || animOffsets.exists('singDOWNmiss') || animOffsets.exists('singUPmiss') || animOffsets.exists('singRIGHTmiss'))
+			hasMissAnimations = true;
 		recalculateDanceIdle();
 		dance();
 	}
@@ -163,17 +145,17 @@ class Character extends FlxSprite
 		updateHitbox();
 		isMultiAtlas = !(json.image is String);
 
-		if (isMultiAtlas) // idk if ghosts can work with this or not
+		if (isMultiAtlas)
 		{
 			frames = Paths.getAtlas(json.image[0]);
 			final split:Array<String> = json.image;
 			if (frames != null)
-			for (imgFile in split)
-			{
-				final daAtlas = Paths.getAtlas(imgFile);
-				if (daAtlas != null)
-					cast(frames, flixel.graphics.frames.FlxAtlasFrames).addAtlas(daAtlas);
-			}
+				for (imgFile in split)
+				{
+					final daAtlas = Paths.getAtlas(imgFile);
+					if (daAtlas != null)
+						cast(frames, flixel.graphics.frames.FlxAtlasFrames).addAtlas(daAtlas);
+				}
 			imageFile = json.image[0];
 		}
 		else
@@ -279,13 +261,8 @@ class Character extends FlxSprite
 		}
 
 		var name:String = getAnimationName();
-		if (isAnimationFinished() && hasAnimation('$name-loop'))
+		if (isAnimationFinished() && animOffsets.exists('$name-loop'))
 			playAnim('$name-loop');
-
-		for(ghost in ghostSprites)
-		{
-			ghost?.update(elapsed);
-		}
 
 		super.update(elapsed);
 	}
@@ -317,11 +294,6 @@ class Character extends FlxSprite
 		animation.curAnim.finish();
 	}
 
-	public function hasAnimation(anim:String):Bool
-	{
-		return animOffsets.exists(anim);
-	}
-
 	public var animPaused(get, set):Bool;
 
 	private function get_animPaused():Bool
@@ -344,7 +316,7 @@ class Character extends FlxSprite
 	public var danced:Bool = false;
 
 	/**
-	 * Plays the characters idle animation
+	 * FOR GF DANCING SHIT
 	 */
 	public function dance()
 	{
@@ -359,7 +331,7 @@ class Character extends FlxSprite
 				else
 					playAnim('danceLeft' + idleSuffix);
 			}
-			else if (hasAnimation('idle' + idleSuffix))
+			else if (animOffsets.exists('idle' + idleSuffix))
 			{
 				playAnim('idle' + idleSuffix);
 			}
@@ -371,7 +343,7 @@ class Character extends FlxSprite
 		specialAnim = false;
 		animation.play(AnimName, Force, Reversed, Frame);
 
-		if (hasAnimation(AnimName))
+		if (animOffsets.exists(AnimName))
 		{
 			var daOffset = animOffsets.get(AnimName);
 			offset.set(daOffset[0], daOffset[1]);
@@ -388,61 +360,6 @@ class Character extends FlxSprite
 			if (AnimName == 'singUP' || AnimName == 'singDOWN')
 				danced = !danced;
 		}
-	}
-
-	public function playGhostAnim(GhostNum:Int, AnimName:String, Force:Bool = false, Reversed:Bool = false, Frame:Int = 0):Void
-	{
-		trace(GhostNum);
-		if(!allowGhost /* || ghostSprites[GhostNum] == null*/) return;
-
-		if(AnimName.endsWith('alt') && animation.getByName(AnimName) == null)
-			AnimName = AnimName.split('-')[0];
-
-		if(ghostTweens[GhostNum] != null)
-			ghostTweens[GhostNum].cancel();
-
-		var ghost:FlxSprite = ghostSprites[GhostNum];
-		ghost.frames = frames;
-		ghost.animation.copyFrom(animation);
-		ghost.scale.copyFrom(scale);
-		ghost.updateHitbox();
-		ghost.antialiasing = antialiasing;
-		ghost.x = x;
-		ghost.y = y;
-		ghost.flipX = flipX;
-		ghost.flipY = flipY;
-		ghost.angle = angle;
-		ghost.alpha = alpha * 0.8;
-		ghost.visible = visible;
-		if (!PlayState.instance.inSilhouette)
-			ghost.color = color;
-		else
-			ghost.color = FlxColor.BLACK;
-
-		ghost.animation.play(AnimName, Force, Reversed, Frame);
-		if(hasAnimation(AnimName))
-		{
-			final daOffset = animOffsets.get(AnimName);
-			ghost.offset.set(daOffset[0], daOffset[1]);
-		}
-		var moveOffset:Array<Float> = [0, 0];
-		if (ghostMovement)
-		{
-			if (AnimName.startsWith('singLEFT')) moveOffset[0] = -ghostDistance;
-			else if (AnimName.startsWith('singRIGHT')) moveOffset[0] = ghostDistance;
-			else if (AnimName.startsWith('singUP')) moveOffset[1] = -ghostDistance;
-			else if (AnimName.startsWith('singDOWN')) moveOffset[1] = ghostDistance;
-		}
-
-		ghostTweens[GhostNum] = FlxTween.tween(ghost, {x: ghost.x + moveOffset[0], y: ghost.y + moveOffset[1], alpha: 0}, 0.7,
-		{
-			ease: FlxEase.quartOut, // linear was BORING    - DM
-			onComplete: function(no:FlxTween)
-			{
-				ghost.alpha = 0;
-				ghostTweens[GhostNum] = null;
-			}
-		});
 	}
 
 	function loadMappedAnims():Void
@@ -476,7 +393,7 @@ class Character extends FlxSprite
 	public function recalculateDanceIdle()
 	{
 		var lastDanceIdle:Bool = danceIdle;
-		danceIdle = (hasAnimation('danceLeft' + idleSuffix) && hasAnimation('danceRight' + idleSuffix));
+		danceIdle = (animOffsets.exists('danceLeft' + idleSuffix) && animOffsets.exists('danceRight' + idleSuffix));
 
 		if (settingCharacterUp)
 		{
@@ -503,37 +420,5 @@ class Character extends FlxSprite
 	public function quickAnimAdd(name:String, anim:String)
 	{
 		animation.addByPrefix(name, anim, 24, false);
-	}
-	/*
-	public function copyGhostValues()
-	{
-		if(ghost == null) return;
-		@:privateAccess
-		{
-			ghost.cameras = cameras;
-			ghost.scrollFactor = scrollFactor;
-			ghost.scale = scale;
-			ghost.origin = origin;
-			ghost.x = x;
-			ghost.y = y;
-			ghost.angle = angle;
-			ghost.visible = visible;
-			ghost.flipX = flipX;
-			ghost.flipY = flipY;
-		}
-	}
-	*/
-	override function draw()
-	{
-		for (ghost in ghostSprites)
-		{
-			if (ghost.visible && ghost.alpha != 0) ghost.draw();
-		}
-		super.draw();
-	}
-	public override function destroy()
-	{
-		for(ghost in ghostSprites) ghost = FlxDestroyUtil.destroy(ghost);
-		super.destroy();
 	}
 }

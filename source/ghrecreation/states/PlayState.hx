@@ -140,7 +140,6 @@ class PlayState extends MusicBeatState
 	public var notes:FlxTypedGroup<Note>;
 	public var unspawnNotes:Array<Note> = [];
 	public var eventNotes:Array<EventNote> = [];
-	var noteRows:Array<Array<Array<Note>>> = [[/*0 = bf*/], [/*1 = dad*/], [/*2 = gf*/], [/*3 = sarah*/]];
 
 	public var camFollow:FlxObject;
 
@@ -1442,19 +1441,11 @@ class PlayState extends MusicBeatState
 				else
 					oldNote = null;
 
-				function getMainRow(swagNote:Note){
-					if (swagNote.gfNote)
-						return 2;
-					return (swagNote.sarahNote ? 3 : swagNote.mustPress ? 0 : 1);
-				}
-
 				var swagNote:Note = new Note(daStrumTime, daNoteData, oldNote);
 				swagNote.mustPress = gottaHitNote;
 				if (!gottaHitNote && allowedNotes.contains(swagNote.noteType))
 					swagNote.texture = SONG.opponentArrowSkin;
 				swagNote.sustainLength = songNotes[2];
-				if(swagNote.mainRow == -1) swagNote.mainRow = getMainRow(swagNote);
-				swagNote.subRow = Conductor.secsToRow(spawnTime);
 				swagNote.gfNote = (section.gfSection && (songNotes[1] < 4));
 				swagNote.noteType = songNotes[3];
 				if (!Std.isOfType(songNotes[3], String))
@@ -1463,11 +1454,6 @@ class PlayState extends MusicBeatState
 				swagNote.scrollFactor.set();
 
 				unspawnNotes.push(swagNote);
-
-				if(noteRows[swagNote.mainRow][swagNote.subRow] == null)
-					noteRows[swagNote.mainRow][swagNote.subRow] = [];
-
-				if(!swagNote.hitCausesMiss) noteRows[swagNote.mainRow][swagNote.subRow].push(swagNote);
 
 				final susLength:Float = swagNote.sustainLength / Conductor.stepCrochet;
 				final floorSus:Int = Math.floor(susLength);
@@ -1481,8 +1467,6 @@ class PlayState extends MusicBeatState
 						var sustainNote:Note = new Note(daStrumTime + (Conductor.stepCrochet * susNote), daNoteData, oldNote, true);
 						sustainNote.mustPress = gottaHitNote;
 						sustainNote.gfNote = (section.gfSection && (songNotes[1] < 4));
-						// sustainNote.mainRow = swagNote.mainRow;
-						// sustainNote.subRow = swagNote.subRow;
 						sustainNote.noteType = swagNote.noteType;
 						sustainNote.scrollFactor.set();
 						sustainNote.parent = swagNote;
@@ -1685,17 +1669,6 @@ class PlayState extends MusicBeatState
 				tmr.active = false);
 			FlxTween.globalManager.forEach(function(twn:FlxTween) if (!twn.finished)
 				twn.active = false);
-
-			final characters:Array<Character> = [boyfriend, gf, dad, sarah];
-			for(chr in characters)
-			{
-				if(chr == null) continue;
-				for(twn in chr.ghostTweens)
-				{
-					if(twn == null || twn.finished) continue;
-					twn.active = false;
-				}
-			}
 		}
 
 		super.openSubState(SubState);
@@ -1719,17 +1692,6 @@ class PlayState extends MusicBeatState
 			true;
 			callOnScripts('onResume');
 			resetRPC(startTimer != null && startTimer.finished);
-
-			final characters:Array<Character> = [boyfriend, gf, dad, sarah];
-			for(chr in characters)
-			{
-				if(chr == null) continue;
-				for(twn in chr.ghostTweens)
-				{
-					if(twn == null || twn.finished) continue;
-					twn.active = true;
-				}
-			}
 		}
 		super.closeSubState();
 	}
@@ -3256,29 +3218,8 @@ class PlayState extends MusicBeatState
 
 			if (char != null)
 			{
-				char.playAnim(animToPlay + note.animSuffix, true);
+				char.playAnim(animToPlay, true);
 				char.holdTimer = 0;
-
-				if(!note.isSustainNote && noteRows[note.mainRow][note.subRow] != null
-					&& noteRows[note.mainRow][note.subRow].length > 1 && char.allowGhost)
-				{
-					var chord:Array<Note> = noteRows[note.mainRow][note.subRow];
-					var animNote:Note = chord[0];
-					/*for (ghostNote in chord)
-					{
-						if(ghostNote.tail.length > animNote.tail.length)
-							animNote = ghostNote;
-					}*/
-					var realAnim:String = singAnimations[Std.int(Math.abs(animNote.noteData))] + animNote.animSuffix;
-					// trace(realAnim);
-					// trace(animToPlay);
-					if(char.prevRow != note.subRow) char.playAnim(realAnim, true);
-					if(note != animNote) char.playGhostAnim(note.noteData, animToPlay, true);
-
-					char.prevRow = note.subRow;
-				}
-				else
-					char.playAnim(animToPlay + note.animSuffix, true);
 			}
 		}
 
@@ -3352,24 +3293,7 @@ class PlayState extends MusicBeatState
 			{
 				char.playAnim(animToPlay + note.animSuffix, true);
 				char.holdTimer = 0;
-			
-				if(!note.isSustainNote && noteRows[note.mainRow][note.subRow] != null
-					&& noteRows[note.mainRow][note.subRow].length > 1 && char.allowGhost)
-				{
-					var chord:Array<Note> = noteRows[note.mainRow][note.subRow];
-					var animNote:Note = chord[0];
-					var realAnim:String = singAnimations[Std.int(Math.abs(animNote.noteData))] + animNote.animSuffix;
-					// trace(realAnim);
-					// trace(animToPlay);
-					if(char.prevRow != note.subRow) char.playAnim(realAnim, true);
-					if(note != animNote) char.playGhostAnim(note.noteData, animToPlay, true);
 
-					char.prevRow = note.subRow;
-				}
-				else
-				{
-					char.playAnim(animToPlay + note.animSuffix, true);
-				}
 				if (note.noteType == 'Hey!')
 				{
 					if (char.animOffsets.exists(animCheck))
