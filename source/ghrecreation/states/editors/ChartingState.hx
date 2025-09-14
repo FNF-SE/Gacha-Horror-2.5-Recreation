@@ -43,6 +43,8 @@ class ChartingState extends MusicBeatState
 
 	public var ignoreWarnings = false;
 
+	static var tab:String = '	';
+
 	var curNoteTypes:Array<String> = [];
 	var undos = [];
 	var redos = [];
@@ -84,6 +86,10 @@ class ChartingState extends MusicBeatState
 		[
 			'Play Sound',
 			"Value 1: Sound file name\nValue 2: Volume (Default: 1), ranges from 0 to 1"
+		],
+		[
+			"Better Cinematic",
+			'CINEMATIC TYPE : Stationary StrumLine\nValue 1 : SPEED\n${tab}Mark this with with how fast you would like the\n${tab}bars move In/Out in seconds.\n${tab}(Minimum is 0.2).\nValue 2 : DISTANCE\n${tab}Mark this with how far you want to bars to move in.\n${tab}(Recommended 90)\n${tab}(If marked with 0, then the event will end).'
 		]
 	];
 

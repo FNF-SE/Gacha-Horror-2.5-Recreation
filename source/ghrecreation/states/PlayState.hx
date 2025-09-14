@@ -1,5 +1,6 @@
 package states;
 
+import events.Events;
 import backend.Highscore;
 import backend.StageData;
 import backend.WeekData;
@@ -289,6 +290,8 @@ class PlayState extends MusicBeatState
 	public var SARAH_X:Float = 1080;
 	public var SARAH_Y:Float = 0;
 
+	public var hud:HUDImpl;
+
 	override public function create()
 	{
 		// trace('Playback Rate: ' + playbackRate);
@@ -424,6 +427,8 @@ class PlayState extends MusicBeatState
 				new states.stages.Nothing();
 		}
 
+		Events.initEvents();
+
 		if (isPixelStage)
 		{
 			introSoundsSuffix = '-pixel';
@@ -512,7 +517,6 @@ class PlayState extends MusicBeatState
 			if (gf != null)
 				gf.visible = false;
 		}
-		stagesFunc(function(stage:BaseStage) stage.createPost());
 
 		comboGroup = new FlxSpriteGroup();
 		add(comboGroup);
@@ -539,8 +543,8 @@ class PlayState extends MusicBeatState
 		timeBar.screenCenter(X);
 		timeBar.alpha = 0;
 		timeBar.visible = showTime;
-		uiGroup.add(timeBar);
-		uiGroup.add(timeTxt);
+		// uiGroup.add(timeBar);
+		// uiGroup.add(timeTxt);
 
 		strumLineNotes = new FlxTypedGroup<StrumNote>();
 		noteGroup.add(strumLineNotes);
@@ -608,12 +612,12 @@ class PlayState extends MusicBeatState
 		uiGroup.add(iconP2);
 
 		scoreTxt = new FlxText(0, healthBar.y + 40, FlxG.width, "", 20);
-		scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		scoreTxt.scrollFactor.set();
-		scoreTxt.borderSize = 1.25;
-		scoreTxt.visible = !ClientPrefs.data.hideHud;
+		// scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		// scoreTxt.scrollFactor.set();
+		// scoreTxt.borderSize = 1.25;
+		// scoreTxt.visible = !ClientPrefs.data.hideHud;
 		updateScore(false);
-		uiGroup.add(scoreTxt);
+		// uiGroup.add(scoreTxt);
 
 		botplayTxt = new FlxText(400, timeBar.y + 55, FlxG.width - 800, "BOTPLAY", 32);
 		botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -623,6 +627,10 @@ class PlayState extends MusicBeatState
 		uiGroup.add(botplayTxt);
 		if (ClientPrefs.data.downScroll)
 			botplayTxt.y = timeBar.y - 78;
+
+		hud = new GHRHUD(this);
+		hud.create();
+		uiGroup.add(hud.instance);
 
 		noteGroup.cameras = [camHUD];
 		uiGroup.cameras = [camHUD];
@@ -695,6 +703,8 @@ class PlayState extends MusicBeatState
 
 		resetRPC();
 
+		hud.createPost();
+		stagesFunc(function(stage:BaseStage) stage.createPost());
 		callOnScripts('onCreatePost');
 
 		cacheCountdown();
@@ -1215,7 +1225,7 @@ class PlayState extends MusicBeatState
 	public dynamic function updateScore(miss:Bool = false)
 	{
 		var ret:Dynamic = callOnScripts('preUpdateScore', [miss], true);
-		if (ret == LuaUtils.Function_Stop)
+		if (ret == LuaUtils.Function_Stop || (hud != null && hud.scoreUpdateType == SEPERATE))
 			return;
 
 		var str:String = ratingName;
@@ -1225,6 +1235,8 @@ class PlayState extends MusicBeatState
 			str += ' (${percent}%) - ${ratingFC}';
 		}
 
+		if (hud != null)
+			hud.updateScoreText(songScore, songMisses, ratingPercent);
 		var tempScore:String = 'Score: ${songScore}' + (!instakillOnMiss ? ' | Misses: ${songMisses}' : "") + ' | Rating: ${str}';
 		// "tempScore" variable is used to prevent another memory leak, just in case
 		// "\n" here prevents the text from being cut off by beat zooms
@@ -1829,19 +1841,20 @@ class PlayState extends MusicBeatState
 		}
 		else if (!paused && updateTime)
 		{
-			var curTime:Float = Math.max(0, Conductor.songPosition - ClientPrefs.data.noteOffset);
-			songPercent = (curTime / songLength);
+			// Remove this crap because it's just useless bs like this
+			// var curTime:Float = Math.max(0, Conductor.songPosition - ClientPrefs.data.noteOffset);
+			// songPercent = (curTime / songLength);
 
-			var songCalc:Float = (songLength - curTime);
-			if (ClientPrefs.data.timeBarType == 'Time Elapsed')
-				songCalc = curTime;
+			// var songCalc:Float = (songLength - curTime);
+			// if (ClientPrefs.data.timeBarType == 'Time Elapsed')
+			// 	songCalc = curTime;
 
-			var secondsTotal:Int = Math.floor(songCalc / 1000);
-			if (secondsTotal < 0)
-				secondsTotal = 0;
+			// var secondsTotal:Int = Math.floor(songCalc / 1000);
+			// if (secondsTotal < 0)
+			// 	secondsTotal = 0;
 
-			if (ClientPrefs.data.timeBarType != 'Song Name')
-				timeTxt.text = FlxStringUtil.formatTime(secondsTotal, false);
+			// if (ClientPrefs.data.timeBarType != 'Song Name')
+			// 	timeTxt.text = FlxStringUtil.formatTime(secondsTotal, false);
 		}
 
 		if (camZooming)
@@ -1984,6 +1997,8 @@ class PlayState extends MusicBeatState
 		setOnScripts('cameraY', camFollow.y);
 		setOnScripts('botPlay', cpuControlled);
 		callOnScripts('onUpdatePost', [elapsed]);
+		if (hud != null)
+			hud.updatePost(elapsed);
 	}
 
 	// Health icon updaters
@@ -2678,6 +2693,10 @@ class PlayState extends MusicBeatState
 		if (!practiceMode && !cpuControlled)
 		{
 			songScore += score;
+
+			if (hud != null && hud.scoreUpdateType == SEPERATE)
+				hud.updateScore(songScore);
+
 			if (!note.ratingDisabled)
 			{
 				songHits++;
@@ -3152,7 +3171,11 @@ class PlayState extends MusicBeatState
 		if (!practiceMode)
 			songScore -= 10;
 		if (!endingSong)
+		{
 			songMisses++;
+			if (hud != null && hud.scoreUpdateType == SEPERATE)
+				hud.updateMisses(songMisses);
+		}
 		totalPlayed++;
 		RecalculateRating(true);
 
@@ -3477,6 +3500,8 @@ class PlayState extends MusicBeatState
 		}
 
 		lastStepHit = curStep;
+		if (hud != null)
+			hud.onStepHit(curStep);
 		setOnScripts('curStep', curStep);
 		callOnScripts('onStepHit');
 
@@ -3508,6 +3533,8 @@ class PlayState extends MusicBeatState
 		super.beatHit();
 		lastBeatHit = curBeat;
 
+		if (hud != null)
+			hud.onBeatHit(curBeat);
 		setOnScripts('curBeat', curBeat);
 		callOnScripts('onBeatHit');
 	}
@@ -3884,6 +3911,10 @@ class PlayState extends MusicBeatState
 			}
 			fullComboFunction();
 		}
+
+		if (hud != null && hud.scoreUpdateType == SEPERATE)
+			hud.updateAccuracy(ratingPercent);
+
 		updateScore(badHit); // score will only update after rating is calculated, if it's a badHit, it shouldn't bounce
 		setOnScripts('rating', ratingPercent);
 		setOnScripts('ratingName', ratingName);

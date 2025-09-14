@@ -15,9 +15,10 @@ enum Countdown
 	START;
 }
 
+@:access(states.PlayState)
 class BaseStage extends FlxBasic
 {
-	private var game(get, never):Dynamic;
+	private var game(get, never):PlayState;
 
 	public var onPlayState(get, never):Bool;
 
