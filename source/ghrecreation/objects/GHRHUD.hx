@@ -6,7 +6,6 @@ import objects.HUDImpl.ScoreUpdateTypes;
 import flixel.text.FlxText;
 import flixel.util.FlxStringUtil;
 
-
 class GHRHUD extends BaseHUD
 {
     public final TEXT_FONT:String = Paths.font("Comfortaa-Bold.ttf");
@@ -49,7 +48,7 @@ class GHRHUD extends BaseHUD
         fields.set('missesText', cast(add(missesText = new FlxText(326, isDownscroll ? 18 : 662, 200, "X: ?")), FlxText));
         fields.set('accuracyText', cast(add(accuracyText = new FlxText(-12, isDownscroll ? 20 : 665, 180, "A: N/A")), FlxText));
         fields.set('timeText', cast(add(timeText = new FlxText(714, isDownscroll ? 18 : 662, 205, " ")), FlxText));
-        fields.set('songText', cast(add(songText = new FlxText(518, isDownscroll ? 5 : 676, 1235, playState.songName)), FlxText));
+        fields.set('songText', cast(add(songText = new FlxText(518, isDownscroll ? 5 : 676, 1235, playState.SONG.song)), FlxText));
 
         final textFields:Array<FlxText> = [scoreText, missesText, accuracyText, timeText, songText];
         final sizes:Array<Int> = [30, 30, 30, 34, 36];
