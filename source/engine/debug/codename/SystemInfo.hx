@@ -6,7 +6,9 @@ import lime.utils.Log;
 import android.os.Build;
 import android.os.Build.VERSION;
 #end
+#if sys
 import sys.io.Process;
+#end
 #if cpp
 import cpp.Float64;
 import cpp.UInt64;
@@ -89,7 +91,11 @@ class SystemInfo extends FramerateCategory {
 		if (lime.system.System.platformLabel != null && lime.system.System.platformLabel != "" && lime.system.System.platformVersion != null && lime.system.System.platformVersion != "")
 			osInfo = '${lime.system.System.platformLabel.replace(lime.system.System.platformVersion, "").trim()} ${lime.system.System.platformVersion}';
 		else
+			#if html5
+			osInfo = 'HTML5';
+			#else
 			Log.error('Unable to grab OS Label');
+			#end
 		#end
 
 		try {
@@ -114,7 +120,9 @@ class SystemInfo extends FramerateCategory {
 			cpuName = (VERSION.SDK_INT >= VERSION_CODES.S) ? Build.SOC_MODEL : Build.HARDWARE;
 			#end
 		} catch (e) {
+			#if !html5
 			Log.error('Unable to grab CPU Name: $e');
+			#end
 		}
 
 		@:privateAccess if(FlxG.renderTile) { // Blit doesn't enable the gpu. Idk if we should fix this
@@ -134,8 +142,8 @@ class SystemInfo extends FramerateCategory {
 						vRAM = CoolUtil.getSizeString64(vRAMBytesFloat);
 					}
 				}
-			} else
-				Log.error('Unable to grab GPU Info');
+			} #if !html5 else
+				Log.error('Unable to grab GPU Info'); #end
 		}
 		formatSysInfo();
 	}

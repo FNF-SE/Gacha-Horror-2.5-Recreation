@@ -9,7 +9,7 @@ import states.TitleState;
 @:structInit class SaveVariables
 {
 	// Mobile and Mobile Controls Releated
-	public var controlsAlpha:Float = FlxG.onMobile ? 0.6 : 0;
+	public var controlsAlpha:Float = #if web 0.6 #else FlxG.onMobile ? 0.6 : 0 #end;
 	#if mobile
 	public var screensaver:Bool = false;
 	#end

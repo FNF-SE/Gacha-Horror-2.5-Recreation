@@ -1,5 +1,6 @@
 package backend;
 
+#if (desktop || mobile)
 import lime.system.System;
 import haxe.macro.Context;
 import haxe.macro.Expr;
@@ -69,3 +70,4 @@ class ALSoftConfig
 	}
 	#end
 }
+#end
