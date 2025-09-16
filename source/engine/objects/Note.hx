@@ -126,7 +126,7 @@ class Note extends FlxSprite
 	public var hitsound:String = 'hitsound';
 
 	// Betrayal thing
-	public var sarahNote:Bool = false;
+	public var isSarahNote:Bool = false;
 
 	private function set_multSpeed(value:Float):Float
 	{
@@ -185,7 +185,7 @@ class Note extends FlxSprite
 				case 'GF Sing':
 					gfNote = true;
 				case 'Sarah Sing':
-					sarahNote = true;
+					isSarahNote = true;
 			}
 			if (value != null && value.length > 1)
 				NoteTypesConfig.applyNoteTypeData(this, value);

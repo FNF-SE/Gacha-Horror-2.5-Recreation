@@ -3184,7 +3184,7 @@ class PlayState extends MusicBeatState
 		if ((note != null && note.gfNote) || (SONG.notes[curSection] != null && SONG.notes[curSection].gfSection))
 			char = gf;
 
-		if (note != null && note.sarahNote)
+		if (note != null && note.isSarahNote)
 			char = sarah;
 
 		if (char != null && (note == null || !note.noMissAnimation) && char.hasMissAnimations)
@@ -3236,7 +3236,7 @@ class PlayState extends MusicBeatState
 			var animToPlay:String = singAnimations[Std.int(Math.abs(Math.min(singAnimations.length - 1, note.noteData)))] + altAnim;
 			if (note.gfNote)
 				char = gf;
-			else if (note.sarahNote)
+			else if (note.isSarahNote)
 				char = sarah;
 
 			if (char != null)
@@ -3252,6 +3252,11 @@ class PlayState extends MusicBeatState
 		note.hitByOpponent = true;
 
 		spawnHoldSplashOnNote(note);
+
+		if (health > 0.3 && (!ClientPrefs.data.guitarHeroSustains || !note.isSustainNote))
+			health -= note.hitHealth * healthGain;
+		if ((note.isSarahNote && !note.gfNote) && (!ClientPrefs.data.guitarHeroSustains || !note.isSustainNote))
+			health += note.hitHealth * healthGain;
 
 		var result:Dynamic = callOnLuas('opponentNoteHit', [
 			notes.members.indexOf(note),
@@ -3309,7 +3314,7 @@ class PlayState extends MusicBeatState
 				char = gf;
 				animCheck = 'cheer';
 			}
-			else if (note.sarahNote)
+			else if (note.isSarahNote)
 				char = sarah;
 
 			if (char != null)
