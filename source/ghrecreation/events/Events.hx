@@ -2,7 +2,13 @@ package events;
 
 class Events
 {
-	public static var events:Array<Class<BaseStage>> = [BetterCinematic];
+	// oh boy this is gonna be LONG...
+	public static var events:Array<Class<BaseStage>> = [
+		BetterCinematic,
+		BlackFlashCamera,
+		BlackOut,
+		CamBoomSpeed
+	];
 
 	public static function initEvents():Void
 	{

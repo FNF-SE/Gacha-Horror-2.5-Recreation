@@ -518,10 +518,11 @@ class PlayState extends MusicBeatState
 				gf.visible = false;
 		}
 
-		comboGroup = new FlxSpriteGroup();
-		add(comboGroup);
+
 		uiGroup = new FlxSpriteGroup();
 		add(uiGroup);
+		comboGroup = new FlxSpriteGroup();
+		add(comboGroup);
 		noteGroup = new FlxTypedGroup<FlxBasic>();
 		add(noteGroup);
 
@@ -565,8 +566,6 @@ class PlayState extends MusicBeatState
 
 		opponentStrums = new FlxTypedGroup<StrumNote>();
 		playerStrums = new FlxTypedGroup<StrumNote>();
-
-		generateSong(SONG.song);
 
 		noteGroup.add(grpNoteSplashes);
 		noteGroup.add(grpHoldSplashes);
@@ -616,7 +615,6 @@ class PlayState extends MusicBeatState
 		// scoreTxt.scrollFactor.set();
 		// scoreTxt.borderSize = 1.25;
 		// scoreTxt.visible = !ClientPrefs.data.hideHud;
-		updateScore(false);
 		// uiGroup.add(scoreTxt);
 
 		botplayTxt = new FlxText(400, timeBar.y + 55, FlxG.width - 800, "BOTPLAY", 32);
@@ -624,17 +622,21 @@ class PlayState extends MusicBeatState
 		botplayTxt.scrollFactor.set();
 		botplayTxt.borderSize = 1.25;
 		botplayTxt.visible = cpuControlled;
-		uiGroup.add(botplayTxt);
+		botplayTxt.cameras = [camHUD];
+		add(botplayTxt);
 		if (ClientPrefs.data.downScroll)
 			botplayTxt.y = timeBar.y - 78;
+		
+		noteGroup.cameras = [camHUD];
+		uiGroup.cameras = [camHUD];
+		comboGroup.cameras = [camHUD];
 
 		hud = new GHRHUD(this);
 		hud.create();
 		uiGroup.add(hud.instance);
+		updateScore(false, true);
 
-		noteGroup.cameras = [camHUD];
-		uiGroup.cameras = [camHUD];
-		comboGroup.cameras = [camHUD];
+		generateSong(SONG.song);
 
 		startingSong = true;
 
@@ -1222,10 +1224,10 @@ class PlayState extends MusicBeatState
 	// `updateScore = function(miss:Bool = false) { ... }
 	// its like if it was a variable but its just a function!
 	// cool right? -Crow
-	public dynamic function updateScore(miss:Bool = false)
+	public dynamic function updateScore(miss:Bool = false, forcy:Bool = false)
 	{
 		var ret:Dynamic = callOnScripts('preUpdateScore', [miss], true);
-		if (ret == LuaUtils.Function_Stop || (hud != null && hud.scoreUpdateType == SEPERATE))
+		if (ret == LuaUtils.Function_Stop || (hud != null && hud.scoreUpdateType == SEPERATE && !forcy))
 			return;
 
 		var str:String = ratingName;

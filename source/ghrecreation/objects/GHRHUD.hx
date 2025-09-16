@@ -145,4 +145,11 @@ class GHRHUD extends BaseHUD
 	{
 		accuracyText.text = 'A: ${CoolUtil.floorDecimal(accuracy * 100, 2)}%';
 	}
+
+	override public function updateScoreText(score:Int, misses:Int, accuracy:Float):Void
+	{
+		updateScore(score);
+		updateMisses(misses);
+		updateAccuracy(accuracy);
+	}
 }

@@ -90,6 +90,18 @@ class ChartingState extends MusicBeatState
 		[
 			"Better Cinematic",
 			'CINEMATIC TYPE : Stationary StrumLine\nValue 1 : SPEED\n${tab}Mark this with with how fast you would like the\n${tab}bars move In/Out in seconds.\n${tab}(Minimum is 0.2).\nValue 2 : DISTANCE\n${tab}Mark this with how far you want to bars to move in.\n${tab}(Recommended 90)\n${tab}(If marked with 0, then the event will end).'
+		],
+		[
+			"Black Flash Camera",
+			'Flashes Camera\n\nValue 1: speed'
+		],
+		[
+			"BlacOut",
+			'Blackout Characters and BG\nSet Value 1 to true to blackout\nanything else to end'
+		],
+		[
+			'Cam Boom Speed',
+			'Value 1: Speed\nValue 2: Intensity'
 		]
 	];
 

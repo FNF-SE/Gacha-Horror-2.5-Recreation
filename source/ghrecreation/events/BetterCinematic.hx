@@ -1,7 +1,10 @@
 package events;
 
+import objects.Note.EventNote;
+
 class BetterCinematic extends backend.BaseStage
 {
+	public static final eventName:String = "Better Cinematic";
 	public var upperBar:FlxSprite;
 	public var lowerBar:FlxSprite;
 
@@ -13,9 +16,14 @@ class BetterCinematic extends backend.BaseStage
 	var defaultOpponentStrumX:Array<Float> = [];
 	var defaultOpponentStrumY:Array<Float> = [];
 	var hudAssets:Array<FlxSprite> = [];
+	var _isUsed:Bool = false;
 
-	override function createPost()
+	override function eventPushed(event:EventNote)
 	{
+		if (event.event != eventName) return;
+
+		_isUsed = true;
+
 		hudAssets = [
 			game.healthBar,
 			game.healthBar.bg,
@@ -35,27 +43,26 @@ class BetterCinematic extends backend.BaseStage
 		];
 
 		upperBar = new FlxSprite(-110, -350);
-		upperBar.makeGraphic(1500, 350, CoolUtil.colorFromString("000000"));
+		upperBar.makeGraphic(1500, 350, FlxColor.BLACK);
 		upperBar.cameras = [camHUD];
-		game.add(upperBar);
+		game.uiGroup.add(upperBar);
 
 		lowerBar = new FlxSprite(-110, 720);
-		lowerBar.makeGraphic(1500, 350, CoolUtil.colorFromString("000000"));
+		lowerBar.loadGraphicFromSprite(upperBar);
 		lowerBar.cameras = [camHUD];
-		game.add(lowerBar);
+		game.uiGroup.add(lowerBar);
 
 		upperBarY = upperBar.y;
 		lowerBarY = lowerBar.y;
 	}
 
-	override function eventCalled(eventName:String, value1:String, value2:String, flValue1:Null<Float>, flValue2:Null<Float>, strumTime:Float)
+	override function eventCalled(name:String, value1:String, value2:String, flValue1:Null<Float>, flValue2:Null<Float>, strumTime:Float)
 	{
-		if (eventName != "Better Cinematic")
-			return;
+		if (name != eventName) return;
 
 		var speed:Float = flValue1;
 		var distance:Float = flValue2;
-		//trace('called better cinematic with speed: ${speed} and distance: ${distance}');
+		// trace('called better cinematic with speed: ${speed} and distance: ${distance}');
 
 		if (speed > 0 && distance > 0)
 		{
@@ -110,6 +117,8 @@ class BetterCinematic extends backend.BaseStage
 
 	override function countdownTick(count:Countdown, num:Int)
 	{
+		if (!_isUsed) return;
+
 		if (count == START)
 		{
 			for (i in 0...game.playerStrums.length)
