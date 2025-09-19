@@ -133,7 +133,7 @@ class Main extends Sprite
 		//FlxG.game.stage.quality = openfl.display.StageQuality.LOW;
 		#end
 		if (fpsVar != null)
-			fpsVar.visible = ClientPrefs.data.showFPS;
+			fpsVar.visible = true;
 
 		#if (linux || mac)
 		final icon:Image = Image.fromFile("icon.png");
