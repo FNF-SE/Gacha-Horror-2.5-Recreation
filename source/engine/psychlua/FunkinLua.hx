@@ -1760,7 +1760,7 @@ class FunkinLua
 		}
 		catch (e:Dynamic)
 		{
-			trace(e);
+			trace('$scriptName: $e');
 			return;
 		}
 		call('onCreate', []);

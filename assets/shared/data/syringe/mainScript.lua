@@ -86,15 +86,15 @@ function onBeatHit()
         end
 
         if not middlescroll then
-            noteTweenX("NoteMove1", 0, 435, 1, 'cubeOut')
-            noteTweenX("NoteMove2", 1, 545, 1, 'cubeOut')
-            noteTweenX("NoteMove3", 2, 655, 1, 'cubeOut')
-            noteTweenX("NoteMove4", 3, 765, 1, 'cubeOut')
+            noteTweenX("NoteMove1", 0, 420, 1, 'cubeOut')
+            noteTweenX("NoteMove2", 1, 530, 1, 'cubeOut')
+            noteTweenX("NoteMove3", 2, 640, 1, 'cubeOut')
+            noteTweenX("NoteMove4", 3, 750, 1, 'cubeOut')
 
-            noteTweenX("NoteMove5", 4, 435, 1, 'cubeOut')
-            noteTweenX("NoteMove6", 5, 545, 1, 'cubeOut')
-            noteTweenX("NoteMove7", 6, 655, 1, 'cubeOut')
-            noteTweenX("NoteMove8", 7, 765, 1, 'cubeOut')
+            noteTweenX("NoteMove5", 4, 420, 1, 'cubeOut')
+            noteTweenX("NoteMove6", 5, 530, 1, 'cubeOut')
+            noteTweenX("NoteMove7", 6, 640, 1, 'cubeOut')
+            noteTweenX("NoteMove8", 7, 750, 1, 'cubeOut')
 
             noteTweenAngle("MNoteAngle1", 0, 360, 1, 'cubeOut')
             noteTweenAngle("MNoteAngle2", 1, 360, 1, 'cubeOut')

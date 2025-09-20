@@ -1,0 +1,3 @@
+- HUD Zoom in some songs that aren't supposed to happen (camZooming?)
+- HealthDrain half working
+- when in Flashing New Flash doesn't clear old Flash (might need make global flas FlxSprite in PlayState)

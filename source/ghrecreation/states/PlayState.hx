@@ -280,8 +280,8 @@ class PlayState extends MusicBeatState
 	// gacha horror related
 	public var characterPlayingAsDad:Bool = false;
 	public var inSilhouette:Bool = false;
-	public var oppoNoteAlpha:Float = 0;
 	public var loadedOldSong:Bool = Paths.LOADOLD;
+	public var moepart:Bool = false;
 
 	// Betrayal thing
 	public var sarah:Character = null;
@@ -591,7 +591,6 @@ class PlayState extends MusicBeatState
 		healthBar = new Bar(0, FlxG.height * (!ClientPrefs.data.downScroll ? 0.89 : 0.11), 'healthBar', function() return health, 0, 2);
 		healthBar.screenCenter(X);
 		healthBar.leftToRight = false;
-		healthBar.flipX = (!characterPlayingAsDad) ? false : true;
 		healthBar.scrollFactor.set();
 		healthBar.visible = !ClientPrefs.data.hideHud;
 		healthBar.alpha = ClientPrefs.data.healthBarAlpha;
@@ -1660,7 +1659,6 @@ class PlayState extends MusicBeatState
 						babyArrow.x += FlxG.width / 2 + 25;
 					}
 				}
-				oppoNoteAlpha = targetAlpha;
 				opponentStrums.add(babyArrow);
 			}
 
@@ -1786,6 +1784,12 @@ class PlayState extends MusicBeatState
 			FlxG.camera.followLerp = 2.4 * cameraSpeed * playbackRate;
 		else
 			FlxG.camera.followLerp = 0;
+
+		if ((SONG.song == "Crisis" || SONG.song == "Sentient") && cpuControlled)
+		{
+        	CoolUtil.showPopUp('NO CHEATING\nNO CHEATING\nNO CHEATING\nNO CHEATING', 'GINA');
+			lime.system.System.exit(1);
+		}
 
 		callOnScripts('onUpdate', [elapsed]);
 
@@ -2559,6 +2563,16 @@ class PlayState extends MusicBeatState
 
 		deathCounter = 0;
 		seenCutscene = false;
+
+		if (SONG.song == "Sentient")
+			CoolUtil.showPopUp('See you soon...', 'SECURITY ERROR: GINA');
+		else if (SONG.song == "Red Slot")
+		{
+			if (loadedOldSong)
+        		CoolUtil.showPopUp('YOU ARE DEAD', ' ');
+    		else
+        		CoolUtil.showPopUp(' ', ' ');
+		}
 
 		var ret:Dynamic = callOnScripts('onEndSong', null, true);
 		if (ret != LuaUtils.Function_Stop && !transitioning)
@@ -3512,8 +3526,72 @@ class PlayState extends MusicBeatState
 		setOnScripts('curStep', curStep);
 		callOnScripts('onStepHit');
 
+		if (SONG.song == 'Betalation')
+		{
+			if (curStep == 256 || curStep == 276 || curStep == 328 || curStep == 552 || curStep == 720 || curStep == 736 || curStep == 742
+				|| curStep == 748 || curStep == 758 || curStep == 762 || curStep == 766 || curStep == 800 || curStep == 802 || curStep == 803
+				|| curStep == 805 || curStep == 807 || curStep == 809 || curStep == 811 || curStep == 813 || curStep == 815)
+				moepart = true;
+
+			if (curStep == 272 || curStep == 308 || curStep == 472 || curStep == 656 || curStep == 728 || curStep == 740 || curStep == 744
+				|| curStep == 756 || curStep == 760 || curStep == 764 || curStep == 772 || curStep == 801 || curStep == 803 || curStep == 804
+				|| curStep == 806 || curStep == 808 || curStep == 810 || curStep == 812 || curStep == 814)
+				moepart = false;
+		}
+
+		if (SONG.song == 'Isolation')
+		{
+			if (!loadedOldSong)
+			{
+				if (curStep == 1088)
+					moepart = true;
+				if (curStep == 1344)
+					moepart == false;
+			}
+			else
+			{
+				if (curStep == 352)
+					moepart = true;
+				if (curStep == 464)
+					moepart = false;
+				if (curStep == 508)
+					moepart = true;
+				if (curStep == 572)
+					moepart = false;
+				if (curStep == 596)
+					moepart = true;
+				if (curStep == 628)
+					moepart = false;
+				if (curStep == 660)
+					moepart = true;
+				if (curStep == 832)
+					moepart = false;
+				if (curStep == 864)
+					moepart = true;
+				if (curStep == 912)
+					moepart = false;
+			}
+		}
+
+		if (SONG.song == 'Enraged' || SONG.song == 'Isolation' || SONG.song == 'Betalation')
+			if (!moepart)
+				PlayState.instance.changeNoteSkin(false, "noteSkins/M-O-Arrows");
+			else
+				PlayState.instance.changeNoteSkin(false, "noteSkins/MoeArrows");
+
+		if (PlayState.SONG.song == 'Enraged' || PlayState.SONG.song == 'Isolation' || PlayState.SONG.song == 'Betalation')
+			iconP2.flipX = moepart;
+
 		if (curStep == 1728 && sarah != null && SONG.song == "Betrayal")
 			sarahGroup.visible = true;
+
+		if (SONG.song == "Despair" && !loadedOldSong)
+		{
+			if (curStep == 768)
+				PlayState.instance.changeNoteSkin(false, "noteSkins/NOTE_assets");
+			else if (curStep == 1024)
+				PlayState.instance.changeNoteSkin(false, "noteSkins/CCArrows");
+		}
 	}
 
 	var lastBeatHit:Int = -1;
@@ -4034,6 +4112,9 @@ class PlayState extends MusicBeatState
 
 	public function changeNoteSkin(player:Bool, skin:String)
 	{
+		if ((player ? noteSkin1 : noteSkin) == skin)
+			return;
+
 		if (!player)
 		{
 			if (skin != null || skin != '')

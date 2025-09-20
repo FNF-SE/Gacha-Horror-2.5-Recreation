@@ -75,6 +75,9 @@ class GameOverSubstate extends MusicBeatSubstate
 		FlxG.camera.focusOn(FlxPoint.weak(FlxG.camera.scroll.x + (FlxG.camera.width / 2), FlxG.camera.scroll.y + (FlxG.camera.height / 2)));
 		add(camFollow);
 
+		if (PlayState.SONG.song == "Sentient")
+			CoolUtil.showPopUp('Come back. I\'m not done playing yet.', 'GINA');
+
 		PlayState.instance.setOnScripts('inGameOver', true);
 		PlayState.instance.callOnScripts('onGameOverStart', []);
 

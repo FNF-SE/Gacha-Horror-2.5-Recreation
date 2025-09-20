@@ -197,7 +197,7 @@ class FreeplayState extends MusicBeatState
 				}
 			}
 		}
-		if (FlxG.keys.justPressed.CONTROL || touchPad.buttonC.justPressed && !selectedSomethin)
+		if ((FlxG.keys.justPressed.CONTROL || touchPad.buttonC.justPressed) && !selectedSomethin)
 		{
 			persistentUpdate = false;
 			openSubState(new GameplayChangersSubstate());

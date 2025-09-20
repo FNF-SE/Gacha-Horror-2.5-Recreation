@@ -25,8 +25,14 @@ class GHRHUD extends BaseHUD
 	public var dadColors:Array<Int> = [80, 90, 143];
 
 	private var playState:PlayState;
-	private var isDownscroll:Bool = ClientPrefs.data.downScroll;
+	private var isDownscroll:Bool;
+	private var playingAsDad:Bool;
 	private var cachedTime:Int = 0;
+
+	private var evil = false;
+
+	private var singleDad = false;
+	private var singleBf = false;
 
 	public function new(playState:PlayState)
 	{
@@ -36,6 +42,7 @@ class GHRHUD extends BaseHUD
 		scoreUpdateType = ScoreUpdateTypes.SEPERATE;
 
 		isDownscroll = ClientPrefs.data.downScroll;
+		playingAsDad = (playState.characterPlayingAsDad || PlayState.SONG.song == "Gates Of Hell");
 
 		fields.set('topBar', add(topBar = new FlxSprite(345, isDownscroll ? -20 : 640).loadGraphic(Paths.image("hudassets/topBar"))));
 		fields.set('scoreBar', add(scoreBar = new FlxSprite(176, isDownscroll ? 0 : 643).loadGraphic(Paths.image("hudassets/bar"))));
@@ -64,6 +71,13 @@ class GHRHUD extends BaseHUD
 		playState.healthBar.bg.x -= 18;
 		playState.healthBar.y += isDownscroll ? -28 : 13;
 		playState.healthBar.bg.y += isDownscroll ? -28 : 13;
+		playState.healthBar.flipX = playingAsDad;
+
+		if (PlayState.SONG.song != "Gates Of Hell")
+			playState.iconP1.flipX = playingAsDad;
+
+		if (PlayState.SONG.song == "Crisis" || PlayState.SONG.song == "Sentient")
+			singleDad = true;
 
 		this.cameras = [playState.camHUD];
 	}
@@ -91,10 +105,22 @@ class GHRHUD extends BaseHUD
 			timeText.text = FlxStringUtil.formatTime(secondsTotal);
 		}
 
-		playState.iconP1.x = playState.characterPlayingAsDad ? 15 : 1100;
-		playState.iconP1.y = isDownscroll ? 70 : 500;
-		playState.iconP2.x = playState.characterPlayingAsDad ? 1100 : 15;
-		playState.iconP2.y = isDownscroll ? 70 : 500;
+		if (singleDad)
+		{
+			playState.iconP1.x = playingAsDad ? 555 : -200;
+			playState.iconP2.x = playingAsDad ? -200 : 555;
+		}
+		else if (singleBf)
+		{
+			playState.iconP1.x = playingAsDad ? -200 : 555;
+			playState.iconP2.x = playingAsDad ? 555 : -200;
+		}
+		else
+		{
+			playState.iconP1.x = playingAsDad ? 15 : 1100;
+			playState.iconP2.x = playingAsDad ? 1100 : 15;
+		}
+		playState.iconP1.y = playState.iconP2.y = isDownscroll ? 70 : 500;
 
 		var needsReload:Bool = false;
 		if (playState.boyfriend.healthColorArray.toString() != bfColors.toString())
@@ -115,21 +141,107 @@ class GHRHUD extends BaseHUD
 
 	override public function onBeatHit(beat:Int):Void
 	{
-		final iconP1 = (playState.characterPlayingAsDad && PlayState.SONG.song != "Gates Of Hell") ? playState.iconP2 : playState.iconP1;
-		final iconP2 = (playState.characterPlayingAsDad && PlayState.SONG.song != "Gates Of Hell") ? playState.iconP1 : playState.iconP2;
-		if (beat % 2 == 0)
+		if (beat % 2 == 0 && PlayState.SONG.song != "Syringe")
 		{
+			if (!playingAsDad)
+			{
+				if (playState.healthBar.percent < 80)
+				{
+					playState.iconP2.angle = 20;
+					FlxTween.tween(playState.iconP2, {angle: 0}, 0.2, {ease: FlxEase.cubeOut});
+				}
+
+				if (playState.healthBar.percent > 20)
+				{
+					playState.iconP1.angle = -20;
+					FlxTween.tween(playState.iconP1, {angle: 0}, 0.2, {ease: FlxEase.cubeOut});
+				}
+			}
+			else
+			{
+				if (playState.healthBar.percent < 80)
+				{
+					playState.iconP2.angle = playState.moepart ? -20 : 20;
+					FlxTween.tween(playState.iconP2, {angle: 0}, 0.2, {ease: FlxEase.cubeOut});
+				}
+
+				if (playState.healthBar.percent > 20)
+				{
+					playState.iconP1.angle = 20;
+					FlxTween.tween(playState.iconP1, {angle: 0}, 0.2, {ease: FlxEase.cubeOut});
+				}
+			}
+		}
+
+		if (PlayState.SONG.song == "Syringe")
+		{
+			if (beat % 2 == 0)
+				if (playState.healthBar.percent > 20)
+				{
+					playState.iconP1.angle = -20;
+					FlxTween.tween(playState.iconP1, {angle: 0}, 0.2, {ease: FlxEase.cubeOut});
+				}
+
 			if (playState.healthBar.percent < 80)
 			{
-				iconP2.angle = 20;
+				if (beat % 2 == 0)
+					playState.iconP2.angle = 20;
+				else if (beat % 2 == 1 && evil)
+					playState.iconP2.angle = -20;
+
 				FlxTween.tween(playState.iconP2, {angle: 0}, 0.2, {ease: FlxEase.cubeOut});
 			}
+		}
 
-			if (playState.healthBar.percent > 20)
+		if (PlayState.SONG.song == "Scrub")
+		{
+			if (beat == 256)
+				singleDad = true;
+			else if (beat == 288)
+				singleDad = false;
+		}
+	}
+
+	override public function onStepHit(step:Int):Void
+	{
+		if (PlayState.SONG.song == 'Syringe' && step == 320)
+			evil = true;
+
+		if (PlayState.SONG.song == 'Gates Of Hell')
+		{
+			if (step == 768 || step == 2304)
+				singleDad = true;
+			else if (step == 2048)
 			{
-				iconP1.angle = -20;
-				FlxTween.tween(playState.iconP1, {angle: 0}, 0.2, {ease: FlxEase.cubeOut});
+				singleBf = true;
+				singleDad = false;
 			}
+			else if (step == 1536)
+				singleBf = singleDad = false;
+		}
+
+		if (PlayState.SONG.song == "Last Game")
+		{
+			if (step == 512)
+				singleDad = false;
+			else if (step == 768)
+				singleDad = true;
+			else if (step == 1568)
+				singleDad = false;
+			else if (step == 1824)
+				singleDad = true;
+		}
+
+		if (PlayState.SONG.song == "Red Slot")
+		{
+			if (step == 512)
+				singleDad = true;
+			else if (step == 1024)
+				singleDad = false;
+			else if (step == 1536 && !playState.loadedOldSong)
+				singleDad = true;
+			else if (step == 1408 && playState.loadedOldSong)
+				singleDad = true;
 		}
 	}
 
