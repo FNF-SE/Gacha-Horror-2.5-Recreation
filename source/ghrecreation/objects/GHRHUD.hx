@@ -91,9 +91,9 @@ class GHRHUD extends BaseHUD
 			timeText.text = FlxStringUtil.formatTime(secondsTotal);
 		}
 
-		playState.iconP1.x = 1100;
+		playState.iconP1.x = playState.characterPlayingAsDad ? 15 : 1100;
 		playState.iconP1.y = isDownscroll ? 70 : 500;
-		playState.iconP2.x = 15;
+		playState.iconP2.x = playState.characterPlayingAsDad ? 1100 : 15;
 		playState.iconP2.y = isDownscroll ? 70 : 500;
 
 		var needsReload:Bool = false;
@@ -115,17 +115,19 @@ class GHRHUD extends BaseHUD
 
 	override public function onBeatHit(beat:Int):Void
 	{
+		final iconP1 = (playState.characterPlayingAsDad && PlayState.SONG.song != "Gates Of Hell") ? playState.iconP2 : playState.iconP1;
+		final iconP2 = (playState.characterPlayingAsDad && PlayState.SONG.song != "Gates Of Hell") ? playState.iconP1 : playState.iconP2;
 		if (beat % 2 == 0)
 		{
 			if (playState.healthBar.percent < 80)
 			{
-				playState.iconP2.angle = 20;
+				iconP2.angle = 20;
 				FlxTween.tween(playState.iconP2, {angle: 0}, 0.2, {ease: FlxEase.cubeOut});
 			}
 
 			if (playState.healthBar.percent > 20)
 			{
-				playState.iconP1.angle = -20;
+				iconP1.angle = -20;
 				FlxTween.tween(playState.iconP1, {angle: 0}, 0.2, {ease: FlxEase.cubeOut});
 			}
 		}
