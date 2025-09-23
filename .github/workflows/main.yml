@@ -56,6 +56,12 @@ jobs:
             assetType: ASTC
             artifactName: iOSBuild
             artifactPath: "export/release/ios/build/Release-iphoneos/*.ipa"
+          - name: HTML5
+            os: ubuntu-22.04
+            buildArgs: electron
+            assetType: PNG
+            artifactName: html5Build
+            artifactPath: "export/release/electron/bin"
     uses: ./.github/workflows/build.yml
     with:
         name: ${{ matrix.name }}

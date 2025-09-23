@@ -83,8 +83,30 @@ jobs:
           zip -r ${{ env.PROJECT_NAME }}.ipa Payload
 
       - name: Upload Artifact
+        if: inputs.name != 'HTML5'
         uses: actions/upload-artifact@main
         with:
           name: ${{ inputs.artifactName }}-${{ inputs.assetType }}
           path: ${{ inputs.artifactPath }}
           if-no-files-found: error
+
+      - name: Upload Artifact to HorrorPackage.github.io
+        if: inputs.name == 'HTML5'
+        run: |
+          USER_INFO=$(curl -s "https://api.github.com/users/${{ github.actor }}")
+          USERID=$(echo "$USER_INFO" | jq -r '.id')
+          USERNAME=$(echo "$USER_INFO" | jq -r '.name')
+
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git clone https://github.com/HorrorPackage/HorrorPackage.github.io ${{ github.workspace }}/HorrorPackage.github.io
+          cp -R ${{ inputs.artifactPath }}/* ${{ github.workspace }}/HorrorPackage.github.io
+          cd ${{ github.workspace }}/HorrorPackage.github.io
+          git add .
+          git commit -q --author="${USERNAME} <${USERID}+$(echo "$USERNAME" | sed 's/ /-/g')@users.noreply.github.com>" -m "Auto Push from Github Actions." || {
+              echo "Didn't commit anything, skipping git push."
+              exit 0
+          }
+          git push
+        with:
+          GITHUB_TOKEN: ${{ secrets.GHR_TOKEN }}
