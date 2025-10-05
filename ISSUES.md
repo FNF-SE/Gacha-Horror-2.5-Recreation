@@ -1,2 +1,2 @@
-
+- Gates Of Hell without middlescroll
 - Silhouette shouldn't affect icon if Better Cinematic is running
