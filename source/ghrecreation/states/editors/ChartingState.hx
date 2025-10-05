@@ -96,7 +96,15 @@ class ChartingState extends MusicBeatState
 			'Flashes Camera\n\nValue 1: speed'
 		],
 		[
-			"BlacOut",
+			"Flash Camera",
+			'Flashes Camera\n\nValue 1: speed'
+		],
+		[
+			"Red Flash Camera",
+			'Flashes Camera\n\nValue 1: speed'
+		],
+		[
+			"BlackOut",
 			'Blackout Characters and BG\nSet Value 1 to true to blackout\nanything else to end'
 		],
 		[

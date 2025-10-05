@@ -292,6 +292,12 @@ class PlayState extends MusicBeatState
 
 	public var hud:HUDImpl;
 
+	public var flashRed:FlxSprite;
+	public var flashBlack:FlxSprite;
+	public var flashWhite:FlxSprite;
+	public var flashBlackOut:FlxSprite;
+	public var flashTween:FlxTween;
+
 	override public function create()
 	{
 		// trace('Playback Rate: ' + playbackRate);

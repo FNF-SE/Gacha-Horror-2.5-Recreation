@@ -6,8 +6,10 @@ class Events
 	public static var events:Array<Class<BaseStage>> = [
 		BetterCinematic,
 		BlackFlashCamera,
+		FlashCamera,
 		BlackOut,
-		CamBoomSpeed
+		CamBoomSpeed,
+		RedFlashCamera
 	];
 
 	public static function initEvents():Void
