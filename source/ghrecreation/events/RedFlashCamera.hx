@@ -22,8 +22,9 @@ class RedFlashCamera extends backend.BaseStage
 	{
 		if (eventName != name) return;
 
-		game.flashBlack.visible = false;
+		if (game.flashBlack != null)
+			game.flashBlack.visible = false;
 		game.flashRed.alpha = 1;
-		game.flashTween = FlxTween.tween(game.flashRed, {alpha: 0}, flValue1 ?? 0.1, {ease: FlxEase.linear});
+		FlxTween.tween(game.flashRed, {alpha: 0}, flValue1 ?? 0.1, {ease: FlxEase.linear});
 	}
 }

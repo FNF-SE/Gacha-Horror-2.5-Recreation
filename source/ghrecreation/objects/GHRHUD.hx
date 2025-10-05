@@ -161,7 +161,7 @@ class GHRHUD extends BaseHUD
 			{
 				if (playState.healthBar.percent < 80)
 				{
-					playState.iconP2.angle = playState.moepart ? -20 : 20;
+					playState.iconP2.angle = ((PlayState.SONG.song == 'Enraged' || PlayState.SONG.song == 'Isolation' || PlayState.SONG.song == 'Betalation') && !playState.moepart) ? 20 : -20;
 					FlxTween.tween(playState.iconP2, {angle: 0}, 0.2, {ease: FlxEase.cubeOut});
 				}
 
@@ -210,11 +210,11 @@ class GHRHUD extends BaseHUD
 		if (PlayState.SONG.song == 'Gates Of Hell')
 		{
 			if (step == 768 || step == 2304)
-				singleDad = true;
+				singleBf = true;
 			else if (step == 2048)
 			{
-				singleBf = true;
-				singleDad = false;
+				singleDad = true;
+				singleBf = false;
 			}
 			else if (step == 1536)
 				singleBf = singleDad = false;

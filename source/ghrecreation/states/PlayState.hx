@@ -297,6 +297,10 @@ class PlayState extends MusicBeatState
 	public var flashWhite:FlxSprite;
 	public var flashBlackOut:FlxSprite;
 
+	var healthDrainActive:Bool = false;
+	var healthDrainAmount:Float = 0;
+	var healthDrainMin:Float = 0;
+
 	override public function create()
 	{
 		// trace('Playback Rate: ' + playbackRate);
@@ -2450,6 +2454,14 @@ class PlayState extends MusicBeatState
 				if (flValue2 == null)
 					flValue2 = 1;
 				FlxG.sound.play(Paths.sound(value1), flValue2);
+
+			case 'HealthDrain':
+				final v1:Float = flValue1 / 50;
+				final v2:Float = flValue2 / 50;
+
+				healthDrainActive = (v1 != 0);
+				healthDrainAmount = v1;
+				healthDrainMin = v2;
 		}
 
 		stagesFunc(function(stage:BaseStage) stage.eventCalled(eventName, value1, value2, flValue1, flValue2, strumTime));
@@ -3278,6 +3290,24 @@ class PlayState extends MusicBeatState
 			health -= note.hitHealth * healthGain;
 		if ((note.isSarahNote && !note.gfNote) && (!ClientPrefs.data.guitarHeroSustains || !note.isSustainNote))
 			health += note.hitHealth * healthGain;
+		if (healthDrainActive)
+		{
+			if (ClientPrefs.data.guitarHeroSustains)
+				if (!note.isSustainNote)
+				{
+					if (health > healthDrainMin && health < healthDrainAmount)
+						health = healthDrainMin;
+					else if (health > healthDrainMin && health > healthDrainAmount)
+						health -= healthDrainAmount;
+				}
+			else
+			{
+				if (health > healthDrainMin && health < healthDrainAmount)
+					health = healthDrainMin;
+				else if (health > healthDrainMin && health > healthDrainAmount)
+					health -= healthDrainAmount;
+			}
+		}
 
 		var result:Dynamic = callOnLuas('opponentNoteHit', [
 			notes.members.indexOf(note),

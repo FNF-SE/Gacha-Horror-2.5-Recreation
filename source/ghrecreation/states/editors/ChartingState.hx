@@ -110,6 +110,10 @@ class ChartingState extends MusicBeatState
 		[
 			'Cam Boom Speed',
 			'Value 1: Speed\nValue 2: Intensity'
+		],
+		[
+			"HealthDrain",
+			'Drains players health when opponent sings\nAt a specific time.\n\n\nValue 1: How much health to drain when opponent sings (0.5 recommended)\nValue 2: Lowest Health Possible From Drain (0.01 recommened)'
 		]
 	];
 

@@ -22,7 +22,8 @@ class BlackFlashCamera extends backend.BaseStage
 	{
 		if (eventName != name) return;
 
-		game.flashBlack.visible = true;
+		if (game.flashBlack != null)
+			game.flashBlack.visible = true;
 		game.flashBlack.alpha = 1;
 		FlxTween.tween(game.flashBlack, {alpha: 0}, flValue1 ?? 0.1, {ease: FlxEase.linear});
 	}
