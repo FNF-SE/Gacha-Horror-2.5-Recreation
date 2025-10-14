@@ -2,6 +2,8 @@ local defaultNotePos = {}
 local spin = false
 local arrowMoveX = 14
 local arrowMoveY = 14
+-- GHTODO
+--local oppoNoteAlpha;
 
 function onCreate()
     addCharacterToList('Isabelle', 'dad')
@@ -79,26 +81,28 @@ end
 
 function onSongStart()
     if not middlescroll then
-        noteTweenX(defaultPlayerStrumX0, 4, defaultPlayerStrumX0 - 650, 0.5, "cubeOut")
-        noteTweenX(defaultPlayerStrumX1, 5, defaultPlayerStrumX1 - 650, 0.5, "cubeOut")
-        noteTweenX(defaultPlayerStrumX2, 6, defaultPlayerStrumX2 - 650, 0.5, "cubeOut")
-        noteTweenX(defaultPlayerStrumX3, 7, defaultPlayerStrumX3 - 650, 0.5, "cubeOut")
+        noteTweenX(defaultPlayerStrumX0, 4, defaultOpponentStrumX0, 0.5, "cubeOut")
+        noteTweenX(defaultPlayerStrumX1, 5, defaultOpponentStrumX1, 0.5, "cubeOut")
+        noteTweenX(defaultPlayerStrumX2, 6, defaultOpponentStrumX2, 0.5, "cubeOut")
+        noteTweenX(defaultPlayerStrumX3, 7, defaultOpponentStrumX3, 0.5, "cubeOut")
 
         noteTweenAngle("NoteAngle1", 4, -360, 0.25, cubeOut)
         noteTweenAngle("NoteAngle2", 5, -360, 0.25, cubeOut)
         noteTweenAngle("NoteAngle3", 6, -360, 0.25, cubeOut)
         noteTweenAngle("NoteAngle4", 7, -360, 0.25, cubeOut)
 
-        noteTweenX(defaultOpponentStrumX0, 0, defaultOpponentStrumX0 + 650, 0.5, "cubeOut")
-        noteTweenX(defaultOpponentStrumX1, 1, defaultOpponentStrumX1 + 650, 0.5, "cubeOut")
-        noteTweenX(defaultOpponentStrumX2, 2, defaultOpponentStrumX2 + 650, 0.5, "cubeOut")
-        noteTweenX(defaultOpponentStrumX3, 3, defaultOpponentStrumX3 + 650, 0.5, "cubeOut")
+        noteTweenX(defaultOpponentStrumX0, 0, defaultPlayerStrumX0, 0.5, "cubeOut")
+        noteTweenX(defaultOpponentStrumX1, 1, defaultPlayerStrumX1, 0.5, "cubeOut")
+        noteTweenX(defaultOpponentStrumX2, 2, defaultPlayerStrumX2, 0.5, "cubeOut")
+        noteTweenX(defaultOpponentStrumX3, 3, defaultPlayerStrumX3, 0.5, "cubeOut")
 
         noteTweenAngle("NoteAngle5", 0, 360, 0.25, cubeOut)
         noteTweenAngle("NoteAngle6", 1, 360, 0.25, cubeOut)
         noteTweenAngle("NoteAngle7", 2, 360, 0.25, cubeOut)
         noteTweenAngle("NoteAngle8", 3, 360, 0.25, cubeOut)
     end
+    -- GHTODO
+    --oppoNoteAlpha = getPropertyFromClass('states.PlayState', 'opponentStrums.members[0].alpha')
 end
 
 function opponentNoteHit(id, direction, noteType, isSustainNote)
@@ -118,10 +122,10 @@ function onBeatHit()
         setProperty("dad.y", 0)
 
         if not middlescroll then
-            noteTweenX("NoteMove1", 4, 435, 1, 'cubeOut')
-            noteTweenX("NoteMove2", 5, 545, 1, 'cubeOut')
-            noteTweenX("NoteMove3", 6, 655, 1, 'cubeOut')
-            noteTweenX("NoteMove4", 7, 765, 1, 'cubeOut')
+            noteTweenX("NoteMove1", 4, 420, 1, 'cubeOut')
+            noteTweenX("NoteMove2", 5, 530, 1, 'cubeOut')
+            noteTweenX("NoteMove3", 6, 640, 1, 'cubeOut')
+            noteTweenX("NoteMove4", 7, 750, 1, 'cubeOut')
 
             noteTweenAngle("MNoteAngle1", 4, 360, 1, 'cubeOut')
             noteTweenAngle("MNoteAngle2", 5, 360, 1, 'cubeOut')
@@ -165,20 +169,20 @@ function onBeatHit()
         noteTweenAlpha("NoteMove82", 3, getProperty(oppoNoteAlpha), 0.01, 'cubeOut')
 
         if not middlescroll then
-            noteTweenX(defaultPlayerStrumX0 .. "2", 4, defaultPlayerStrumX0 - 650, 0.5, "cubeOut")
-            noteTweenX(defaultPlayerStrumX1 .. "2", 5, defaultPlayerStrumX1 - 650, 0.5, "cubeOut")
-            noteTweenX(defaultPlayerStrumX2 .. "2", 6, defaultPlayerStrumX2 - 650, 0.5, "cubeOut")
-            noteTweenX(defaultPlayerStrumX3 .. "2", 7, defaultPlayerStrumX3 - 650, 0.5, "cubeOut")
+            noteTweenX(defaultPlayerStrumX0 .. 2, 4, defaultOpponentStrumX0, 0.5, "cubeOut")
+            noteTweenX(defaultPlayerStrumX1 .. 2, 5, defaultOpponentStrumX1, 0.5, "cubeOut")
+            noteTweenX(defaultPlayerStrumX2 .. 2, 6, defaultOpponentStrumX2, 0.5, "cubeOut")
+            noteTweenX(defaultPlayerStrumX3 .. 2, 7, defaultOpponentStrumX3, 0.5, "cubeOut")
 
             noteTweenAngle("NoteAngle1" .. "2", 4, -360, 0.25, cubeOut)
             noteTweenAngle("NoteAngle2" .. "2", 5, -360, 0.25, cubeOut)
             noteTweenAngle("NoteAngle3" .. "2", 6, -360, 0.25, cubeOut)
             noteTweenAngle("NoteAngle4" .. "2", 7, -360, 0.25, cubeOut)
 
-            noteTweenX(defaultOpponentStrumX0 .. "2", 0, defaultOpponentStrumX0 + 650, 0.5, "cubeOut")
-            noteTweenX(defaultOpponentStrumX1 .. "2", 1, defaultOpponentStrumX1 + 650, 0.5, "cubeOut")
-            noteTweenX(defaultOpponentStrumX2 .. "2", 2, defaultOpponentStrumX2 + 650, 0.5, "cubeOut")
-            noteTweenX(defaultOpponentStrumX3 .. "2", 3, defaultOpponentStrumX3 + 650, 0.5, "cubeOut")
+            noteTweenX(defaultOpponentStrumX0 .. 2, 0, defaultPlayerStrumX0, 0.5, "cubeOut")
+            noteTweenX(defaultOpponentStrumX1 .. 2, 1, defaultPlayerStrumX1, 0.5, "cubeOut")
+            noteTweenX(defaultOpponentStrumX2 .. 2, 2, defaultPlayerStrumX2, 0.5, "cubeOut")
+            noteTweenX(defaultOpponentStrumX3 .. 2, 3, defaultPlayerStrumX3, 0.5, "cubeOut")
 
             noteTweenAngle("NoteAngle5" .. "2", 0, 360, 0.25, cubeOut)
             noteTweenAngle("NoteAngle6" .. "2", 1, 360, 0.25, cubeOut)
@@ -190,10 +194,10 @@ function onBeatHit()
     if curBeat == 512 then
         setProperty("Stage3.visible", false)
         if not middlescroll then
-            noteTweenX("NoteMove12", 4, 435, 1, 'cubeOut')
-            noteTweenX("NoteMove22", 5, 545, 1, 'cubeOut')
-            noteTweenX("NoteMove32", 6, 655, 1, 'cubeOut')
-            noteTweenX("NoteMove42", 7, 765, 1, 'cubeOut')
+            noteTweenX("NoteMove12", 4, 420, 1, 'cubeOut')
+            noteTweenX("NoteMove22", 5, 530, 1, 'cubeOut')
+            noteTweenX("NoteMove32", 6, 640, 1, 'cubeOut')
+            noteTweenX("NoteMove42", 7, 750, 1, 'cubeOut')
 
             noteTweenAngle("MNoteAngle12", 4, 360, 1, 'cubeOut')
             noteTweenAngle("MNoteAngle22", 5, 360, 1, 'cubeOut')

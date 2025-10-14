@@ -1,9 +1,9 @@
 function onCreatePost()
     if not middlescroll then
-        noteTweenX("NoteMove1", 4, 435, 1, 'cubeOut')
-        noteTweenX("NoteMove2", 5, 545, 1, 'cubeOut')
-        noteTweenX("NoteMove3", 6, 655, 1, 'cubeOut')
-        noteTweenX("NoteMove4", 7, 765, 1, 'cubeOut')
+        noteTweenX("NoteMove1", 4, 420, 1, 'cubeOut')
+        noteTweenX("NoteMove2", 5, 530, 1, 'cubeOut')
+        noteTweenX("NoteMove3", 6, 640, 1, 'cubeOut')
+        noteTweenX("NoteMove4", 7, 750, 1, 'cubeOut')
 
         noteTweenAngle("MNoteAngle1", 4, -360, 1, 'cubeOut')
         noteTweenAngle("MNoteAngle2", 5, -360, 1, 'cubeOut')

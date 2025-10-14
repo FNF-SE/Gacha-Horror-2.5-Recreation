@@ -46,10 +46,6 @@ class VisualsUISubState extends BaseOptionsMenu
 		option.decimals = 1;
 		addOption(option);
 
-		var option:Option = new Option('FPS Counter', 'If unchecked, hides the FPS Counter.', 'showFPS', 'bool');
-		addOption(option);
-		option.onChange = onChangeFPSCounter;
-
 		#if native
 		var option:Option = new Option('VSync',
 			'If checked, Enables VSync fixing any screen tearing at the cost of capping the FPS to screen refresh rate.\n(Must restart the game to have an effect)',
@@ -93,12 +89,6 @@ class VisualsUISubState extends BaseOptionsMenu
 		if (changedMusic && !OptionsState.onPlayState)
 			FlxG.sound.playMusic(Paths.music('freakyMenu'), 1, true);
 		super.destroy();
-	}
-
-	function onChangeFPSCounter()
-	{
-		if (Main.fpsVar != null)
-			Main.fpsVar.visible = ClientPrefs.data.showFPS;
 	}
 
 	#if native
