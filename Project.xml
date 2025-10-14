@@ -37,17 +37,17 @@
 
 	<classpath name="source/engine" />
 	<classpath name="source/ghrecreation" />
-	<classpath name="source/library_shadows" />
 
 	<!-- Assets -->
 	<assets path="assets/embed" embed="true" />
 	<assets path="assets/fonts" embed="true" />
-	<assets path="assets/shared" embed="true" unless="ASTC || ETC2" />
-	<assets path="assets/shared" if="ASTC || ETC2"  />
+	<assets path="assets/shared" embed="true" unless="ASTC || ETC2 || NOEMBED" />
+	<assets path="assets/shared" if="ASTC || ETC2 || NOEMBED" />
 	<assets path="images-astc" rename="assets/shared/images" if="ASTC" />
 	<assets path="images-ktx" rename="assets/shared/images" if="ETC2" />
 	<assets path="images-dds" rename="assets/shared/images" if="S3TC" />
-	<assets path="images-png" rename="assets/shared/images" embed="true" if="PNG" />
+	<assets path="images-png" rename="assets/shared/images" embed="true" if="PNG" unless="NOEMBED" />
+	<assets path="images-png" rename="assets/shared/images" if="PNG NOEMBED" />
 	
 	<define name="PNG" if="display" /> <!-- vscode shit -->
 	<define name="NO_TEXTURE_FORMAT" unless="ASTC || ETC2 || S3TC || PNG" />
