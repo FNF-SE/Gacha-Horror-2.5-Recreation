@@ -26,6 +26,7 @@ body:
         - "Linux"
         - "Mac"
         - "Android"
+        - "iOS"
         - "Other"
     validations:
       required: true
