@@ -2,7 +2,7 @@
 <project>
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="Friday Night Funkin': Gacha Horror V2.5" file="HorrorPackage" packageName="com.homuhomu833.gachahorrorrecreation" package="com.homuhomu833.gachahorrorrecreation" main="Main" version="0.2.8" company="HomuHomu833" />
+	<app title="Friday Night Funkin': Gacha Horror V2.5" file="HorrorPackage" packageName="com.homuhomu833.gachahorrorrecreation" package="com.homuhomu833.gachahorrorrecreation" main="Main" version="0.2.8" company="FNF-SE" />
 
 	<!-- NOTE TO SELF: DISABLE THIS IF ISSUES ARE FOUND -->
 	<haxedef name="LINC_LUA_RELATIVE_DYNAMIC_LIB" /> <!-- stable luas PUT AFTER FIRST LINE WITH APP NAME AND ETC -->
