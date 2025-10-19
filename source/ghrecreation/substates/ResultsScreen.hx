@@ -436,7 +436,7 @@ class HitGraph extends Sprite
 
 	public function fitX(x:Float)
 	{
-		return ((x / (FlxG.sound.music.length / PlayState.instance.playbackRate)) * width) * PlayState.instance.playbackRate;
+		return (x / FlxG.sound.music.length) * _width;
 	}
 
 	public function addToHistory(diff:Float, judge:String, time:Float)
