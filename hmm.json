@@ -40,14 +40,14 @@
       "type": "git",
       "dir": null,
       "ref": null,
-      "url": "https://github.com/HomuHomu833/hxcpp"
+      "url": "https://github.com/HomuHomu833-haxelibs/hxcpp"
     },
     {
       "name": "SScript",
       "type": "git",
       "dir": null,
       "ref": null,
-      "url": "https://github.com/HomuHomu833-haxelibs/SScript"
+      "url": "https://github.com/FNF-SE/SScript"
     },
     {
       "name": "hxdiscord_rpc",
@@ -59,7 +59,7 @@
       "type": "git",
       "dir": null,
       "ref": null,
-      "url": "https://github.com/HomuHomu833-haxelibs/linc_luajit"
+      "url": "https://github.com/FNF-SE/linc_luajit"
     },
     {
       "name": "hxgamemode",
