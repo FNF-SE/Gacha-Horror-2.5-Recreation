@@ -54,7 +54,7 @@ class FlxShader extends OriginalFlxShader
 		#if lime_opengles
 		var prefix = "#version 300 es\n";
 		#else
-		var prefix = "#version 330\n";
+		var prefix = "#version 400 core\n";
 		#end
 
 		prefix += "#ifdef GL_ES\n"
