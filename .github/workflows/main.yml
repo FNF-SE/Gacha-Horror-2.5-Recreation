@@ -71,7 +71,7 @@ jobs:
           - name: Android (Legacy)
             os: macos-26
             buildArgs: "android -ONLY_ARMV7"
-            assetType: ASTC
+            assetType: ETC2
             artifactName: androidBuild-legacy
             artifactPath: "export/release/android/bin/app/build/outputs/apk/release/*.apk"
           - name: iOS
