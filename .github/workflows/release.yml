@@ -103,15 +103,6 @@ jobs:
       - name: Move Android File
         run: mv /home/runner/${{ env.PROJECT_NAME }}-release.apk /home/runner/${{ env.PROJECT_NAME }}-ASTC-Android.apk
 
-      - name: Download Android (Legacy) Build
-        uses: actions/download-artifact@main
-        with:
-          name: androidBuild-legacy-ASTC
-          path: /home/runner
-
-      - name: Move Android (Legacy) File
-        run: mv /home/runner/${{ env.PROJECT_NAME }}-release.apk /home/runner/${{ env.PROJECT_NAME }}-ASTC-Android-Legacy.apk
-
       - name: Download iOS Build
         uses: actions/download-artifact@main
         with:
