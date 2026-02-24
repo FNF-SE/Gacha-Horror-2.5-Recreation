@@ -74,6 +74,7 @@ jobs:
           add-to-path: false
 
       - name: Install Libraries
+        shell: bash
         run: |
           haxelib git hmm https://github.com/ShadowEngineTeam/hmm --skip-dependencies --quiet
           haxelib run hmm install --quiet
@@ -84,6 +85,7 @@ jobs:
 
       - name: Configure Android
         if: inputs.name == 'Android'
+        shell: bash
         run: |
           haxelib run lime config ANDROID_SDK $ANDROID_HOME
           if [[ "${{ inputs.name }}" == "Android (Legacy)" ]]; then
