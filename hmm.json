@@ -4,14 +4,14 @@
       "name": "lime",
       "type": "git",
       "dir": null,
-      "ref": "38b5e915ecb79915fab96752819cac0596188457",
+      "ref": "551bb21e2c9cdd2e1277f9548f141bb93fcad65c",
       "url": "https://github.com/ShadowEngineTeam/lime"
     },
     {
       "name": "openfl",
       "type": "git",
       "dir": null,
-      "ref": "08c14760bbcce4e2ac7f9e5e87965901a592745f",
+      "ref": "12e70cf46b74f9f5e279062a11985bd94bcfe32b",
       "url": "https://github.com/FunkinCrew/openfl"
     },
     {
